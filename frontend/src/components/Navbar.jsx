@@ -6,7 +6,6 @@ import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
@@ -42,7 +41,7 @@ function ResponsiveAppBar() {
             alignItems: 'center',
           }}
         >
-          {/* Left side can be empty or used if needed for something else */}
+          {/* Left side - empty box or logo */}
           <Box />
 
           {/* Centered container for Logo and Pages */}
@@ -73,12 +72,14 @@ function ResponsiveAppBar() {
               </Typography>
             </Box>
 
-            {/* Navigation Buttons */}
+            {/* Navigation Buttons - directly using fontFamily in sx */}
             <Box sx={{ display: 'flex', gap: 2 }}>
               {pages.map((page) => (
                 <Button
                   key={page}
                   sx={{
+                    fontFamily: '"Cormorant Garamond", serif',
+                    fontSize: '1.1rem', // change font size for buttons here
                     color: 'black',
                     fontWeight: 'bold',
                     textTransform: 'none',
@@ -94,7 +95,7 @@ function ResponsiveAppBar() {
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-              <AccountCircleIcon sx={{ mr: 0, color: 'black', fontSize: 35 }} />
+                <AccountCircleIcon sx={{ mr: 0, color: 'black', fontSize: 35 }} />
               </IconButton>
             </Tooltip>
             <Menu
