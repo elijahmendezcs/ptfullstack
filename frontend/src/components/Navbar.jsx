@@ -1,18 +1,25 @@
-import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import Menu from '@mui/material/Menu';
-import Container from '@mui/material/Container';
-import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
-import MenuItem from '@mui/material/MenuItem';
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import * as React from "react";
+import AppBar from "@mui/material/AppBar";
+import Box from "@mui/material/Box";
+import Toolbar from "@mui/material/Toolbar";
+import IconButton from "@mui/material/IconButton";
+import Typography from "@mui/material/Typography";
+import Menu from "@mui/material/Menu";
+import Container from "@mui/material/Container";
+import Button from "@mui/material/Button";
+import Tooltip from "@mui/material/Tooltip";
+import MenuItem from "@mui/material/MenuItem";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 
-const pages = ['Products', 'Pricing', 'Blog'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+const pages = [
+  "Family",
+  "Senior",
+  "Wedding",
+  "Events",
+  "About",
+  "Book a Session",
+];
+const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 function ResponsiveAppBar() {
   const [anchorElUser, setAnchorElUser] = React.useState(null);
@@ -28,17 +35,17 @@ function ResponsiveAppBar() {
     <AppBar
       position="static"
       sx={{
-        backgroundColor: 'white',
-        color: 'black',
+        backgroundColor: "rgba(128, 128, 128, 0.1)", // changes background color of the navbar
+        color: "black",
       }}
     >
       <Container maxWidth="xl">
         <Toolbar
           disableGutters
           sx={{
-            display: 'flex',
-            justifyContent: 'space-between',
-            alignItems: 'center',
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
           }}
         >
           {/* Left side - empty box or logo */}
@@ -47,42 +54,70 @@ function ResponsiveAppBar() {
           {/* Centered container for Logo and Pages */}
           <Box
             sx={{
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-              justifyContent: 'center',
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center",
             }}
           >
             {/* Logo */}
-            <Box sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
+
+            <Box
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                mb: 1,
+                mt: 2, // This adds a small top margin
+              }}
+            >
+              <Typography
+                variant="h4"
+                noWrap
+                component="a"
+                href="#app-bar-with-responsive-menu"
+                sx={{
+                  fontFamily: '"Cormorant Garamond", serif',
+                  fontWeight: 350,
+                  fontSize: "3rem",
+                  textDecoration: "none",
+                  color: "black",
+                }}
+              >
+                LUIGI MANGIONE
+              </Typography>
+            </Box>
+
+            <Box sx={{ display: "flex", alignItems: "center", mb: 1 }}>
               <Typography
                 variant="h6"
                 noWrap
                 component="a"
                 href="#app-bar-with-responsive-menu"
                 sx={{
-                  fontFamily: 'monospace',
+                  fontFamily: '"Cormorant Garamond", serif',
                   fontWeight: 700,
-                  letterSpacing: '.3rem',
-                  textDecoration: 'none',
-                  color: 'black',
+                  fontSize: "1rem", // change font size for logo here
+                  letterSpacing: "5px",
+                  textDecoration: "none",
+                  color: "black",
+                  fontStyle: "bold",
                 }}
               >
-                Photography
+                PHOTOGRAPHY
               </Typography>
             </Box>
 
             {/* Navigation Buttons - directly using fontFamily in sx */}
-            <Box sx={{ display: 'flex', gap: 2 }}>
+            <Box sx={{ display: "flex", gap: 2 }}>
               {pages.map((page) => (
                 <Button
                   key={page}
                   sx={{
                     fontFamily: '"Cormorant Garamond", serif',
-                    fontSize: '1.1rem', // change font size for buttons here
-                    color: 'black',
-                    fontWeight: 'bold',
-                    textTransform: 'none',
+                    fontSize: "1.1rem", // change font size for buttons here
+                    color: "black",
+                    textTransform: "none",
+                    fontStyle: "italic",
                   }}
                 >
                   {page}
@@ -95,22 +130,24 @@ function ResponsiveAppBar() {
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <AccountCircleIcon sx={{ mr: 0, color: 'black', fontSize: 35 }} />
+                <AccountCircleIcon
+                  sx={{ mr: 0, color: "black", fontSize: 35 }}
+                />
               </IconButton>
             </Tooltip>
             <Menu
-              sx={{ mt: '45px' }}
+              sx={{ mt: "45px" }}
               id="menu-appbar"
               anchorEl={anchorElUser}
-              anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
+              anchorOrigin={{ vertical: "top", horizontal: "right" }}
               keepMounted
-              transformOrigin={{ vertical: 'top', horizontal: 'right' }}
+              transformOrigin={{ vertical: "top", horizontal: "right" }}
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
             >
               {settings.map((setting) => (
                 <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography sx={{ textAlign: 'center', color: 'black' }}>
+                  <Typography sx={{ textAlign: "center", color: "black" }}>
                     {setting}
                   </Typography>
                 </MenuItem>
@@ -124,4 +161,3 @@ function ResponsiveAppBar() {
 }
 
 export default ResponsiveAppBar;
-
