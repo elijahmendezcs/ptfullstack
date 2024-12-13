@@ -5,7 +5,6 @@ const App = () => {
   return (
     <div>
       <Navbar />
-      <h1>React App</h1>
     </div>
   );
 };
