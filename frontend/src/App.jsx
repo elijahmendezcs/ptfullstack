@@ -3,10 +3,11 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import './index.css';
+// import Card from "./components/Card";
 
 // Pages
 import About from "./pages/About";
-import BookASession from "./pages/BookASession";
+import BookASession from "./pages/Book";
 import Events from "./pages/Events";
 import Family from "./pages/Family";
 import Senior from "./pages/Senior";
@@ -17,6 +18,7 @@ const App = () => {
     <BrowserRouter>
       <div>
         <Navbar />
+        {/* <Card/> */}
         <Routes>
           <Route path="/about" element={<About />} />
           <Route path="/bookasession" element={<BookASession />} />

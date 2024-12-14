@@ -1,9 +1,12 @@
 import React from 'react'
+import Card from "../components/Card";
 
 const BookASession = () => {
   return (
     <div>
-      book a session
+      <Card/>
+      <Card/>
+      <Card/>
     </div>
   )
 }
