@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Link } from "react-router-dom";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -10,8 +11,6 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-
-// comment to push
 
 const pages = [
   "Family",
@@ -29,6 +28,7 @@ function ResponsiveAppBar() {
   const handleOpenUserMenu = (event) => {
     setAnchorElUser(event.currentTarget);
   };
+
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
@@ -50,10 +50,8 @@ function ResponsiveAppBar() {
             alignItems: "center",
           }}
         >
-          {/* Left side - empty box or logo */}
           <Box />
 
-          {/* Centered container for Logo and Pages */}
           <Box
             sx={{
               display: "flex",
@@ -62,21 +60,17 @@ function ResponsiveAppBar() {
               justifyContent: "center",
             }}
           >
-            {/* Logo */}
-
             <Box
               sx={{
                 display: "flex",
                 alignItems: "center",
                 mb: 1,
-                mt: 2, // This adds a small top margin
+                mt: 2,
               }}
             >
               <Typography
                 variant="h4"
                 noWrap
-                component="a"
-                href="#app-bar-with-responsive-menu"
                 sx={{
                   fontFamily: '"Cormorant Garamond", serif',
                   fontWeight: 350,
@@ -93,12 +87,10 @@ function ResponsiveAppBar() {
               <Typography
                 variant="h6"
                 noWrap
-                component="a"
-                href="#app-bar-with-responsive-menu"
                 sx={{
                   fontFamily: '"Cormorant Garamond", serif',
                   fontWeight: 700,
-                  fontSize: "1rem", // change font size for logo here
+                  fontSize: "1rem",
                   letterSpacing: "5px",
                   textDecoration: "none",
                   color: "black",
@@ -109,14 +101,15 @@ function ResponsiveAppBar() {
               </Typography>
             </Box>
 
-            {/* Navigation Buttons - directly using fontFamily in sx */}
             <Box sx={{ display: "flex", gap: 2 }}>
               {pages.map((page) => (
                 <Button
                   key={page}
+                  component={Link}
+                  to={`/${page.replace(/\s/g, '').toLowerCase()}`} // Ensure path conversion is correct
                   sx={{
                     fontFamily: '"Cormorant Garamond", serif',
-                    fontSize: "1.1rem", // change font size for buttons here
+                    fontSize: "1.1rem",
                     color: "black",
                     textTransform: "none",
                     fontStyle: "italic",
@@ -128,7 +121,6 @@ function ResponsiveAppBar() {
             </Box>
           </Box>
 
-          {/* User Avatar / Settings Menu (Right side) */}
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
