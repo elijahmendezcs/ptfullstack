@@ -5,7 +5,7 @@ import PregCard from "../components/PregCard";
 
 const BookASession = () => {
   return (
-    <div className="flex justify-center items-center gap-4 mt-24">
+    <div className="flex justify-center items-center gap-10 mt-24">
       <FamCard />
       <PregCard />
       <BabyCard />

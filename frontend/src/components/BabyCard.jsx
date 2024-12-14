@@ -59,21 +59,23 @@ export default function RecipeReviewCard() {
             fontFamily: "'Cormorant Garamond', serif",
             color: "text.primary",
             marginBottom: 2,
-            fontWeight: 600,
+            fontWeight: 500,
             fontStyle: "italic",
+            paddingLeft: 1,
+            fontSize: 22,
           }}
         >
-          Title of the Card
+          Baby Photography
         </Typography>
         <Typography
           variant="body2"
-          sx={{ color: "text.secondary", fontSize: 16 }}
+          sx={{ color: "text.secondary", fontSize: 16, paddingLeft: 1 }}
         >
           2 hr 30 min
         </Typography>
         <Typography
           variant="body2"
-          sx={{ color: "text.secondary", marginTop: 1, fontSize: 16 }}
+          sx={{ color: "text.secondary", marginTop: 1, fontSize: 16, paddingLeft: 1 }}
         >
           $150
         </Typography>
@@ -91,6 +93,7 @@ export default function RecipeReviewCard() {
             },
             marginBottom: 2,
             fontSize: 16,
+            marginLeft: 2, 
           }}
         >
           Book Now
