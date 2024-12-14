@@ -13,7 +13,7 @@ export default function SimpleBottomNavigation() {
   return (
     <Box
       className="fixed bottom-0 left-1/2 transform -translate-x-1/2"
-      sx={{ width: 500 }}
+      sx={{ width: 2000 }}
     >
       <BottomNavigation
         showLabels
@@ -22,7 +22,7 @@ export default function SimpleBottomNavigation() {
           setValue(newValue);
         }}
         sx={{
-          backgroundColor: "transparent",
+          backgroundColor: "rgba(255, 255, 255, 0.5)", // change background color of footer
           boxShadow: "none",
           padding: 0,
         }}
@@ -33,9 +33,9 @@ export default function SimpleBottomNavigation() {
             display: "flex",
             justifyContent: "center",
             gap: 0,
-            width: "50%", // adjusts the gap inbetween the icons
+            width: "15%",
           }}
-          className="space-x-2" // Tailwind CSS for additional control
+          className="space-x-2"
         >
           <BottomNavigationAction
             icon={<FacebookIcon sx={{ color: "black", fontSize: 20 }} />}
