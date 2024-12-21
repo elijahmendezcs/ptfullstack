@@ -44,7 +44,7 @@ export default function QuiltedImageList() {
 
 const itemData = [
   {
-    img: 'https://images.unsplash.com/photo-1551963831-b3b1ca40c98e',
+    img: 'frontend/src/images/FamilyImages/maternity.jpg',
     title: 'Breakfast',
     rows: 2,
     cols: 2,
