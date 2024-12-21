@@ -4,7 +4,17 @@ import ImageListItem from '@mui/material/ImageListItem';
 
 // Import local images
 import maternityImg from '../images/FamilyImages/maternity.jpg';
-
+import maternityImg2 from '../images/FamilyImages/maternity2.jpg';
+import maternityImg3 from '../images/FamilyImages/maternity3.jpg';
+import maternityImg4 from '../images/FamilyImages/maternity4.jpg';
+import maternityImg5 from '../images/FamilyImages/maternity5.jpg';
+import maternityImg6 from '../images/FamilyImages/maternity6.jpg';
+import maternityImg7 from '../images/FamilyImages/maternity7.jpg';
+import maternityImg8 from '../images/FamilyImages/maternity8.jpg';
+import maternityImg9 from '../images/FamilyImages/maternity9.jpg';
+import maternityImg10 from '../images/FamilyImages/maternity10.jpg';
+import maternityImg11 from '../images/FamilyImages/maternity11.jpg';
+import maternityImg12 from '../images/FamilyImages/maternity12.jpg';
 // Helper function for responsive image sources
 function srcset(image, size, rows = 1, cols = 1) {
   return {
@@ -49,59 +59,59 @@ export default function QuiltedImageList() {
 const itemData = [
   {
     img: maternityImg, // Local image imported above
-    title: 'Breakfast',
+    title: 'Couple',
     rows: 2,
     cols: 2,
   },
   {
-    img: 'https://images.unsplash.com/photo-1551782450-a2132b4ba21d',
-    title: 'Burger',
+    img: maternityImg2,
+    title: 'Couple2',
   },
   {
-    img: 'https://images.unsplash.com/photo-1522770179533-24471fcdba45',
-    title: 'Camera',
+    img: maternityImg3,
+    title: 'BabyAndMother',
   },
   {
-    img: 'https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c',
-    title: 'Coffee',
+    img: maternityImg4,
+    title: 'BabySlepping',
     cols: 2,
   },
   {
-    img: 'https://images.unsplash.com/photo-1533827432537-70133748f5c8',
-    title: 'Hats',
+    img: maternityImg5,
+    title: 'Baby',
     cols: 2,
   },
   {
-    img: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62',
-    title: 'Honey',
+    img: maternityImg6,
+    title: 'Mother Beach',
     rows: 2,
     cols: 2,
   },
   {
-    img: 'https://images.unsplash.com/photo-1516802273409-68526ee1bdd6',
-    title: 'Basketball',
+    img: maternityImg7,
+    title: 'Mother Sunflowers',
   },
   {
-    img: 'https://images.unsplash.com/photo-1518756131217-31eb79b20e8f',
-    title: 'Fern',
+    img: maternityImg8,
+    title: 'Mother Forest',
   },
   {
-    img: 'https://images.unsplash.com/photo-1597645587822-e99fa5d45d25',
-    title: 'Mushrooms',
+    img: maternityImg9,
+    title: 'Mother Dress',
     rows: 2,
     cols: 2,
   },
   {
-    img: 'https://images.unsplash.com/photo-1567306301408-9b74779a11af',
-    title: 'Tomato basil',
+    img: maternityImg10,
+    title: 'Mother and baby',
   },
   {
-    img: 'https://images.unsplash.com/photo-1471357674240-e1a485acb3e1',
-    title: 'Sea star',
+    img: maternityImg11,
+    title: 'Mother and Son Feild',
   },
   {
-    img: 'https://images.unsplash.com/photo-1589118949245-7d38baf380d6',
-    title: 'Bike',
+    img: maternityImg12,
+    title: 'Mom and Son',
     cols: 2,
   },
 ];
