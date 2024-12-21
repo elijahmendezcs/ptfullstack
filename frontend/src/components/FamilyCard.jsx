@@ -48,7 +48,7 @@ export default function RecipeReviewCard() {
       <CardMedia
         component="img"
         height="194"
-        image="/src/images/fam.jpg"
+        image="/src/images/BookImages/fam.jpg"
         alt="default card"
       />
       <CardContent>
