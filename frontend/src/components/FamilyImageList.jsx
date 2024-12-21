@@ -2,6 +2,10 @@ import * as React from 'react';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 
+// Import local images
+import maternityImg from '../images/FamilyImages/maternity.jpg';
+
+// Helper function for responsive image sources
 function srcset(image, size, rows = 1, cols = 1) {
   return {
     src: `${image}?w=${size * cols}&h=${size * rows}&fit=crop&auto=format`,
@@ -44,7 +48,7 @@ export default function QuiltedImageList() {
 
 const itemData = [
   {
-    img: 'frontend/src/images/FamilyImages/maternity.jpg',
+    img: maternityImg, // Local image imported above
     title: 'Breakfast',
     rows: 2,
     cols: 2,
@@ -101,3 +105,4 @@ const itemData = [
     cols: 2,
   },
 ];
+
