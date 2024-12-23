@@ -1,12 +1,33 @@
-import React from 'react'
-import HomePageImageList from "../components/HomePageImageList"
+import React from "react";
+import HomePageImageList from "../components/HomePageImageList";
+import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box";
 
 const Home = () => {
   return (
-    <div>
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        textAlign: "center",
+      }}
+    >
+      <Typography
+        sx={{
+          fontFamily: '"Cormorant Garamond", serif',
+          fontSize: "24px",
+          fontStyle: "italic",
+          fontWeight: 400,
+          marginTop: "20px",
+        }}
+      >
+        Professional Photography
+      </Typography>
       <HomePageImageList />
-    </div>
-  )
-}
+    </Box>
+  );
+};
 
-export default Home
+export default Home;
