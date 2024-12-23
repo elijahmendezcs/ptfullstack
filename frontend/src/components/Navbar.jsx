@@ -79,7 +79,7 @@ function ResponsiveAppBar() {
                   color: "black",
                 }}
               >
-                LUIGI MANGIONE
+                LUXE CREATIVE
               </Typography>
             </Box>
 
