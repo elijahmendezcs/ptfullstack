@@ -68,19 +68,21 @@ function ResponsiveAppBar() {
                 mt: 2,
               }}
             >
-              <Typography
-                variant="h4"
-                noWrap
-                sx={{
-                  fontFamily: '"Cormorant Garamond", serif',
-                  fontWeight: 350,
-                  fontSize: "3rem",
-                  textDecoration: "none",
-                  color: "black",
-                }}
-              >
-                LUXE CREATIVE
-              </Typography>
+              <Link to="/" style={{ textDecoration: "none" }}>
+                <Typography
+                  variant="h4"
+                  noWrap
+                  sx={{
+                    fontFamily: '"Cormorant Garamond", serif',
+                    fontWeight: 350,
+                    fontSize: "3rem",
+                    textDecoration: "none",
+                    color: "black",
+                  }}
+                >
+                  LUXE CREATIVE
+                </Typography>
+              </Link>
             </Box>
 
             <Box sx={{ display: "flex", alignItems: "center", mb: 1 }}>
@@ -106,7 +108,7 @@ function ResponsiveAppBar() {
                 <Button
                   key={page}
                   component={Link}
-                  to={`/${page.replace(/\s/g, '').toLowerCase()}`} // Ensure path conversion is correct
+                  to={`/${page.replace(/\s/g, "").toLowerCase()}`} // Ensure path conversion is correct
                   sx={{
                     fontFamily: '"Cormorant Garamond", serif',
                     fontSize: "1.1rem",

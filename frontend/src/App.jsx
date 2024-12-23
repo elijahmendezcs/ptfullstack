@@ -12,7 +12,7 @@ import Events from "./pages/Events";
 import Family from "./pages/Family";
 import Senior from "./pages/Senior";
 import Wedding from "./pages/Wedding";
-import MainPageImageList from "./components/MainPageImageList";
+import Home from "./pages/Home";
 
 const App = () => {
   return (
@@ -22,6 +22,7 @@ const App = () => {
         {/* <MainPageImageList /> */}
         {/* <Card/> */}
         <Routes>
+          <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/bookasession" element={<BookASession />} />
           <Route path="/events" element={<Events />} />
