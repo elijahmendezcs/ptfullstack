@@ -2,6 +2,20 @@ import * as React from 'react';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 
+import weddingImg from '../images/WeddingImages/wedding.jpg'
+import weddingImg2 from '../images/WeddingImages/wedding2.jpg'
+import weddingImg3 from '../images/WeddingImages/wedding3.jpg'
+import weddingImg4 from '../images/WeddingImages/wedding4.jpg'
+import weddingImg5 from '../images/WeddingImages/wedding5.jpg'
+import weddingImg6 from '../images/WeddingImages/wedding6.jpg'
+import weddingImg7 from '../images/WeddingImages/wedding7.jpg'
+import weddingImg8 from '../images/WeddingImages/wedding8.jpg'
+import weddingImg9 from '../images/WeddingImages/wedding9.jpg'
+import weddingImg10 from '../images/WeddingImages/wedding10.jpg'
+import weddingImg11 from '../images/WeddingImages/wedding11.jpg'
+import weddingImg12 from '../images/WeddingImages/wedding12.jpg'
+
+
 function srcset(image, size, rows = 1, cols = 1) {
   return {
     src: `${image}?w=${size * cols}&h=${size * rows}&fit=crop&auto=format`,
@@ -44,59 +58,59 @@ export default function QuiltedImageList() {
 
 const itemData = [
   {
-    img: 'https://images.unsplash.com/photo-1551963831-b3b1ca40c98e',
+    img: weddingImg,
     title: 'Breakfast',
     rows: 2,
     cols: 2,
   },
   {
-    img: 'https://images.unsplash.com/photo-1551782450-a2132b4ba21d',
+    img: weddingImg2,
     title: 'Burger',
   },
   {
-    img: 'https://images.unsplash.com/photo-1522770179533-24471fcdba45',
+    img: weddingImg3,
     title: 'Camera',
   },
   {
-    img: 'https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c',
+    img: weddingImg4,
     title: 'Coffee',
     cols: 2,
   },
   {
-    img: 'https://images.unsplash.com/photo-1533827432537-70133748f5c8',
+    img: weddingImg5,
     title: 'Hats',
     cols: 2,
   },
   {
-    img: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62',
+    img: weddingImg6,
     title: 'Honey',
     rows: 2,
     cols: 2,
   },
   {
-    img: 'https://images.unsplash.com/photo-1516802273409-68526ee1bdd6',
+    img: weddingImg7,
     title: 'Basketball',
   },
   {
-    img: 'https://images.unsplash.com/photo-1518756131217-31eb79b20e8f',
+    img: weddingImg8,
     title: 'Fern',
   },
   {
-    img: 'https://images.unsplash.com/photo-1597645587822-e99fa5d45d25',
+    img: weddingImg9,
     title: 'Mushrooms',
     rows: 2,
     cols: 2,
   },
   {
-    img: 'https://images.unsplash.com/photo-1567306301408-9b74779a11af',
+    img: weddingImg10,
     title: 'Tomato basil',
   },
   {
-    img: 'https://images.unsplash.com/photo-1471357674240-e1a485acb3e1',
+    img: weddingImg11,
     title: 'Sea star',
   },
   {
-    img: 'https://images.unsplash.com/photo-1589118949245-7d38baf380d6',
+    img: weddingImg12,
     title: 'Bike',
     cols: 2,
   },
