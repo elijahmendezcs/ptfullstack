@@ -27,9 +27,10 @@ function srcset(image, size, rows = 1, cols = 1) {
 
 export default function QuiltedImageList() {
   return (
-    <div className="mt-[900px] px-4 min-h-screen">
+    <div className="mt-[900px] px-4 min-h-screen mb-[60px]">
       {/* Adjust margin-top (mt-16) to match your header height */}
       <ImageList
+      className='mb-[60px]'
         sx={{
           width: '100%',
           height: 'auto',

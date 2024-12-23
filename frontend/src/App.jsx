@@ -12,12 +12,14 @@ import Events from "./pages/Events";
 import Family from "./pages/Family";
 import Senior from "./pages/Senior";
 import Wedding from "./pages/Wedding";
+import MainPageImageList from "./components/MainPageImageList";
 
 const App = () => {
   return (
     <BrowserRouter>
       <div>
         <Navbar />
+        {/* <MainPageImageList /> */}
         {/* <Card/> */}
         <Routes>
           <Route path="/about" element={<About />} />

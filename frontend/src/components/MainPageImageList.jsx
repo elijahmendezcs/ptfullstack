@@ -1,7 +1,6 @@
 import * as React from 'react';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
-
 import seniorImg from '../images/SeniorImages/senior1.jpg'
 import seniorImg2 from '../images/SeniorImages/senior2.jpg'
 import seniorImg3 from '../images/SeniorImages/senior3.jpg'
@@ -26,10 +25,9 @@ function srcset(image, size, rows = 1, cols = 1) {
 
 export default function QuiltedImageList() {
   return (
-    <div className="mt-[900px] px-4 min-h-screen mb-[60px]">
+    <div className="mt-[200px] px-4 min-h-screen mb-[60px]">
       {/* Adjust margin-top (mt-16) to match your header height */}
       <ImageList
-      className='mb-[60px]'
         sx={{
           width: '100%',
           height: 'auto',
