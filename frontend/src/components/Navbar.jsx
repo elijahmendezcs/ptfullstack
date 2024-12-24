@@ -80,7 +80,7 @@ function ResponsiveAppBar() {
                     color: "black",
                   }}
                 >
-                  LUXE CREATIVE
+                  LUXE CREATIVE STUDIO
                 </Typography>
               </Link>
             </Box>
