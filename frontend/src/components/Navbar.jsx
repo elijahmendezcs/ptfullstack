@@ -15,7 +15,7 @@ import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 const pages = [
   "Family",
   "Senior",
-  "Wedding",
+  "Landscape",
   "Events",
   "About",
   "Book a Session",

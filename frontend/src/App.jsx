@@ -11,7 +11,7 @@ import BookASession from "./pages/Book";
 import Events from "./pages/Events";
 import Family from "./pages/Family";
 import Senior from "./pages/Senior";
-import Wedding from "./pages/Wedding";
+import Landscape from "./pages/Landscape";
 import Home from "./pages/Home";
 
 const App = () => {
@@ -28,7 +28,7 @@ const App = () => {
           <Route path="/events" element={<Events />} />
           <Route path="/family" element={<Family />} />
           <Route path="/senior" element={<Senior />} />
-          <Route path="/wedding" element={<Wedding />} />
+          <Route path="/landscape" element={<Landscape />} />
         </Routes>
         <Footer />
       </div>
