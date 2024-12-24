@@ -12,8 +12,6 @@ import homeImg7 from '../images/RealPhotos/home7.jpg';
 import homeImg8 from '../images/RealPhotos/home8.jpg';
 import homeImg9 from '../images/RealPhotos/home9.jpg';
 
-
-
 export default function ResponsiveImageGrid() {
   return (
     <div className="mt-[20px] px-4 min-h-screen mb-[60px]">
@@ -26,11 +24,12 @@ export default function ResponsiveImageGrid() {
         gap={8} // Adjust the gap between images (optional)
       >
         {itemData.map((item) => (
-          <ImageListItem key={item.img}>
+          <ImageListItem key={item.img} className="group"> {/* Add TailwindCSS `group` class */}
             <img
               src={item.img}
               alt={item.title}
               loading="lazy"
+              className="transition-opacity duration-300 ease-in-out group-hover:opacity-90 group-hover:delay-150 cursor-pointer" 
               style={{
                 width: '100%', // Make each image fill its container
                 height: 'auto', // Maintain aspect ratio
@@ -82,3 +81,6 @@ const itemData = [
     title: 'Senior Laying',
   },
 ];
+
+
+
