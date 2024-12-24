@@ -17,7 +17,7 @@ const Home = () => {
       <Typography
         sx={{
           fontFamily: '"Cormorant Garamond", serif',
-          fontSize: "24px",
+          fontSize: "30px",
           fontStyle: "italic",
           fontWeight: 400,
           marginTop: "20px",

@@ -1,51 +1,41 @@
 import * as React from 'react';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
-import seniorImg from '../images/SeniorImages/senior1.jpg'
-import seniorImg2 from '../images/SeniorImages/senior2.jpg'
-import seniorImg3 from '../images/SeniorImages/senior3.jpg'
-import seniorImg4 from '../images/SeniorImages/senior4.jpg'
-import seniorImg5 from '../images/SeniorImages/senior5.jpg'
-import seniorImg6 from '../images/SeniorImages/senior6.jpg'
-import seniorImg7 from '../images/SeniorImages/senior7.jpg'
-import seniorImg8 from '../images/SeniorImages/senior8.jpg'
-import seniorImg9 from '../images/SeniorImages/senior9.jpg'
-import seniorImg10 from '../images/SeniorImages/senior10.jpg'
-import seniorImg11 from '../images/SeniorImages/senior11.jpg'
-import seniorImg12 from '../images/SeniorImages/senior12.jpg'
 
-function srcset(image, size, rows = 1, cols = 1) {
-  return {
-    src: `${image}?w=${size * cols}&h=${size * rows}&fit=crop&auto=format`,
-    srcSet: `${image}?w=${size * cols}&h=${
-      size * rows
-    }&fit=crop&auto=format&dpr=2 2x`,
-  };
-}
+import homeImg from '../images/RealPhotos/home1.jpg';
+import homeImg2 from '../images/RealPhotos/home2.jpg';
+import homeImg3 from '../images/RealPhotos/home3.jpg';
+import homeImg4 from '../images/RealPhotos/home4.jpg';
+import homeImg5 from '../images/RealPhotos/home5.jpg';
+import homeImg6 from '../images/RealPhotos/home6.jpg';
+import homeImg7 from '../images/RealPhotos/home7.jpg';
+import homeImg8 from '../images/RealPhotos/home8.jpg';
+import homeImg9 from '../images/RealPhotos/home9.jpg';
 
-export default function QuiltedImageList() {
+
+
+export default function ResponsiveImageGrid() {
   return (
-    <div className="mt-[200px] px-4 min-h-screen mb-[60px]">
-      {/* Adjust margin-top (mt-16) to match your header height */}
+    <div className="mt-[20px] px-4 min-h-screen mb-[60px]">
       <ImageList
         sx={{
           width: '100%',
           height: 'auto',
         }}
-        variant="quilted"
-        cols={4}
-        rowHeight={250} // Adjust row height as needed
+        cols={3} // Set the grid to 3 columns
+        gap={8} // Adjust the gap between images (optional)
       >
         {itemData.map((item) => (
-          <ImageListItem
-            key={item.img}
-            cols={item.cols || 1}
-            rows={item.rows || 1}
-          >
+          <ImageListItem key={item.img}>
             <img
-              {...srcset(item.img, 250, item.rows, item.cols)}
+              src={item.img}
               alt={item.title}
               loading="lazy"
+              style={{
+                width: '100%', // Make each image fill its container
+                height: 'auto', // Maintain aspect ratio
+                objectFit: 'cover', // Ensure images fill their space appropriately
+              }}
             />
           </ImageListItem>
         ))}
@@ -56,60 +46,39 @@ export default function QuiltedImageList() {
 
 const itemData = [
   {
-    img: seniorImg,
+    img: homeImg,
     title: 'Senior Male Sitting',
-    rows: 2,
-    cols: 2,
   },
   {
-    img: seniorImg2,
+    img: homeImg2,
     title: 'Senior Female Sitting',
   },
   {
-    img: seniorImg3,
+    img: homeImg3,
     title: 'Male Senior Trees',
   },
   {
-    img: seniorImg4,
-    title: 'MaleSeniorCapGown',
-    cols: 2,
+    img: homeImg4,
+    title: 'Male Senior Cap and Gown',
   },
   {
-    img: seniorImg5,
-    title: 'SeniorBench',
-    cols: 2,
+    img: homeImg5,
+    title: 'Senior Bench',
   },
   {
-    img: seniorImg6,
-    title: 'FemaleSeniorCapGown',
-    rows: 2,
-    cols: 2,
+    img: homeImg6,
+    title: 'Female Senior Cap and Gown',
   },
   {
-    img: seniorImg7,
-    title: 'SeniorFeild',
+    img: homeImg7,
+    title: 'Senior Field',
   },
   {
-    img: seniorImg8,
-    title: 'SeniorPark',
+    img: homeImg8,
+    title: 'Senior Park',
   },
   {
-    img: seniorImg9,
-    title: 'SeniorLaying',
-    rows: 2,
-    cols: 2,
-  },
-  {
-    img: seniorImg10,
-    title: 'SeniorBuilding',
-  },
-  {
-    img: seniorImg11,
-    title: 'SeniorBuilding2',
-  },
-  {
-    img: seniorImg12,
-    title: 'FemaleSeniorSunny',
-    cols: 2,
+    img: homeImg9,
+    title: 'Senior Laying',
   },
 ];
