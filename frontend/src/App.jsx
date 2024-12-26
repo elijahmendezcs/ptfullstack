@@ -1,37 +1,43 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { TransitionGroup, CSSTransition } from "react-transition-group";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import './index.css';
-// import Card from "./components/Card";
-
-// Pages
+import "./index.css";
 import About from "./pages/About";
 import BookASession from "./pages/Book";
-import Events from "./pages/Events";
+import Prints from "./pages/Prints";
 import Family from "./pages/Family";
 import Senior from "./pages/Senior";
 import Landscape from "./pages/Landscape";
 import Home from "./pages/Home";
 
-const App = () => {
+function AnimatedRoutes() {
+  const location = useLocation();
+
   return (
-    <BrowserRouter>
-      <div>
-        <Navbar />
-        {/* <MainPageImageList /> */}
-        {/* <Card/> */}
-        <Routes>
+    <TransitionGroup>
+      <CSSTransition key={location.key} classNames="fade" timeout={700}>
+        <Routes location={location}>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/bookasession" element={<BookASession />} />
-          <Route path="/events" element={<Events />} />
+          <Route path="/prints" element={<Prints />} />
           <Route path="/family" element={<Family />} />
           <Route path="/senior" element={<Senior />} />
           <Route path="/landscape" element={<Landscape />} />
         </Routes>
-        <Footer />
-      </div>
+      </CSSTransition>
+    </TransitionGroup>
+  );
+}
+
+const App = () => {
+  return (
+    <BrowserRouter>
+      <Navbar />
+      <AnimatedRoutes />
+      <Footer />
     </BrowserRouter>
   );
 };

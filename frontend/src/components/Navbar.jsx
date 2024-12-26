@@ -16,7 +16,7 @@ const pages = [
   "Family",
   "Senior",
   "Landscape",
-  "Events",
+  "Prints",
   "About",
   "Book a Session",
 ];
