@@ -2,18 +2,18 @@ import React, { useState } from "react";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 
-import maternityImg from "../images/FamilyImages/maternity.jpg";
-import maternityImg2 from "../images/FamilyImages/maternity2.jpg";
-import maternityImg3 from "../images/FamilyImages/maternity3.jpg";
-import maternityImg4 from "../images/FamilyImages/maternity4.jpg";
-import maternityImg5 from "../images/FamilyImages/maternity5.jpg";
-import maternityImg6 from "../images/FamilyImages/maternity6.jpg";
-import maternityImg7 from "../images/FamilyImages/maternity7.jpg";
-import maternityImg8 from "../images/FamilyImages/maternity8.jpg";
-import maternityImg9 from "../images/FamilyImages/maternity9.jpg";
-import maternityImg10 from "../images/FamilyImages/maternity10.jpg";
-import maternityImg11 from "../images/FamilyImages/maternity11.jpg";
-import maternityImg12 from "../images/FamilyImages/maternity12.jpg";
+import familyImg from "../images/FamilyImages/family.jpg";
+import familyImg2 from "../images/FamilyImages/family2.jpg";
+import familyImg3 from "../images/FamilyImages/family3.jpg";
+import familyImg4 from "../images/FamilyImages/family4.jpg";
+import familyImg5 from "../images/FamilyImages/family5.jpg";
+import familyImg6 from "../images/FamilyImages/family6.jpg";
+import familyImg7 from "../images/FamilyImages/family7.jpg";
+import familyImg8 from "../images/FamilyImages/family8.jpg";
+import familyImg9 from "../images/FamilyImages/family9.jpg";
+import familyImg10 from "../images/FamilyImages/family10.jpg";
+import familyImg11 from "../images/FamilyImages/family11.jpg";
+import familyImg12 from "../images/FamilyImages/family12.jpg";
 
 export default function QuiltedImageList() {
   const [currentIndex, setCurrentIndex] = useState(null); // Track the current image index
@@ -134,16 +134,16 @@ export default function QuiltedImageList() {
 }
 
 const itemData = [
-  { img: maternityImg, title: "Couple", rows: 2, cols: 2 },
-  { img: maternityImg2, title: "Couple2" },
-  { img: maternityImg3, title: "BabyAndMother" },
-  { img: maternityImg4, title: "BabySlepping", cols: 2 },
-  { img: maternityImg5, title: "Baby", cols: 2 },
-  { img: maternityImg6, title: "Mother Beach", rows: 2, cols: 2 },
-  { img: maternityImg7, title: "Mother Sunflowers" },
-  { img: maternityImg8, title: "Mother Forest" },
-  { img: maternityImg9, title: "Mother Dress", rows: 2, cols: 2 },
-  { img: maternityImg10, title: "Mother and baby" },
-  { img: maternityImg11, title: "Mother and Son Field" },
-  { img: maternityImg12, title: "Mom and Son", cols: 2 },
+  { img: familyImg, title: "Couple", rows: 2, cols: 2 },
+  { img: familyImg2, title: "Couple2" },
+  { img: familyImg3, title: "BabyAndMother" },
+  { img: familyImg4, title: "BabySlepping", cols: 2 },
+  { img: familyImg5, title: "Baby", cols: 2 },
+  { img: familyImg6, title: "Mother Beach", rows: 2, cols: 2 },
+  { img: familyImg7, title: "Mother Sunflowers" },
+  { img: familyImg8, title: "Mother Forest" },
+  { img: familyImg9, title: "Mother Dress", rows: 2, cols: 2 },
+  { img: familyImg10, title: "Mother and baby" },
+  { img: familyImg11, title: "Mother and Son Field" },
+  { img: familyImg12, title: "Mom and Son", cols: 2 },
 ];
