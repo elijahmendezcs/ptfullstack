@@ -8,7 +8,7 @@ import './index.css';
 // Pages
 import About from "./pages/About";
 import BookASession from "./pages/Book";
-import Events from "./pages/Events";
+import Prints from "./pages/Prints";
 import Family from "./pages/Family";
 import Senior from "./pages/Senior";
 import Landscape from "./pages/Landscape";
@@ -25,7 +25,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/bookasession" element={<BookASession />} />
-          <Route path="/events" element={<Events />} />
+          <Route path="/prints" element={<Prints />} />
           <Route path="/family" element={<Family />} />
           <Route path="/senior" element={<Senior />} />
           <Route path="/landscape" element={<Landscape />} />
