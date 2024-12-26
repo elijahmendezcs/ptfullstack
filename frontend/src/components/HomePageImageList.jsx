@@ -2,15 +2,15 @@ import React, { useState } from "react";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 
-import homeImg from "../images/RealPhotos/home1.jpg";
-import homeImg2 from "../images/RealPhotos/home2.jpg";
-import homeImg3 from "../images/RealPhotos/home3.jpg";
-import homeImg4 from "../images/RealPhotos/home4.jpg";
-import homeImg5 from "../images/RealPhotos/home5.jpg";
-import homeImg6 from "../images/RealPhotos/home6.jpg";
-import homeImg7 from "../images/RealPhotos/home7.jpg";
-import homeImg8 from "../images/RealPhotos/home8.jpg";
-import homeImg9 from "../images/RealPhotos/home9.jpg";
+import homeImg from "../images/MainImages/home1.jpg";
+import homeImg2 from "../images/MainImages/home2.jpg";
+import homeImg3 from "../images/MainImages/home3.jpg";
+import homeImg4 from "../images/MainImages/home4.jpg";
+import homeImg5 from "../images/MainImages/home5.jpg";
+import homeImg6 from "../images/MainImages/home6.jpg";
+import homeImg7 from "../images/MainImages/home7.jpg";
+import homeImg8 from "../images/MainImages/home8.jpg";
+import homeImg9 from "../images/MainImages/home9.jpg";
 
 export default function ResponsiveImageGrid() {
   const [currentIndex, setCurrentIndex] = useState(null); // Track the current image index

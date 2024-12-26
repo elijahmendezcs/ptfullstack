@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 
-import LandScapeImg from "../images/LandscapeImages/landscape.jpg";
+import LandScapeImg from "../images/LandscapeImages/landscape1.jpg";
 import LandScapeImg2 from "../images/LandscapeImages/landscape2.jpg";
 import LandScapeImg3 from "../images/LandscapeImages/landscape3.jpg";
 import LandScapeImg4 from "../images/LandscapeImages/landscape4.jpg";
