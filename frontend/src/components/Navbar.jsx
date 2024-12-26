@@ -16,7 +16,7 @@ const pages = [
   "Family",
   "Senior",
   "Landscape",
-  "Events",
+  "Prints",
   "About",
   "Book a Session",
 ];
@@ -37,7 +37,7 @@ function ResponsiveAppBar() {
     <AppBar
       position="static"
       sx={{
-        backgroundColor: "rgba(128, 128, 128, 0.1)", // changes background color of the navbar
+        backgroundColor: "rgba(200, 200, 200, 0.15)",
         color: "black",
       }}
     >
@@ -74,8 +74,8 @@ function ResponsiveAppBar() {
                   noWrap
                   sx={{
                     fontFamily: '"Cormorant Garamond", serif',
-                    fontWeight: 350,
-                    fontSize: "3rem",
+                    fontWeight: 400,
+                    fontSize: "2rem",
                     textDecoration: "none",
                     color: "black",
                   }}
@@ -91,7 +91,7 @@ function ResponsiveAppBar() {
                 noWrap
                 sx={{
                   fontFamily: '"Cormorant Garamond", serif',
-                  fontWeight: 700,
+                  fontWeight: 400,
                   fontSize: "1rem",
                   letterSpacing: "5px",
                   textDecoration: "none",
@@ -103,7 +103,7 @@ function ResponsiveAppBar() {
               </Typography>
             </Box>
 
-            <Box sx={{ display: "flex", gap: 2 }}>
+            <Box sx={{ display: "flex", gap: 6 }}>
               {pages.map((page) => (
                 <Button
                   key={page}
@@ -111,10 +111,11 @@ function ResponsiveAppBar() {
                   to={`/${page.replace(/\s/g, "").toLowerCase()}`} // Ensure path conversion is correct
                   sx={{
                     fontFamily: '"Cormorant Garamond", serif',
-                    fontSize: "1.1rem",
+                    fontSize: "1rem",
                     color: "black",
                     textTransform: "none",
                     fontStyle: "italic",
+                    fontWeight: 400,
                   }}
                 >
                   {page}
