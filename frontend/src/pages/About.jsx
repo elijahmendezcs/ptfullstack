@@ -1,85 +1,145 @@
 import React from "react";
-import TextField from "@mui/material/TextField";
-import { Input } from "@/components/ui/input"
-
-
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
 
 const About = () => {
   return (
-    <div className="flex justify-center items-center mb-24 gap-10 mt-24">
-      <TextField
-        variant="outlined"
-        placeholder="Enter Your First Name"
-        sx={{
-          width: "250px",
-          "& .MuiOutlinedInput-root": {
-            height: "50px",
-            fontSize: "16px",
-            borderRadius: "0px", // Removed rounded corners
-            "& fieldset": {
-              borderColor: "#555",
-              borderWidth: "1px",
-            },
-            "&:hover fieldset": {
-              borderColor: "#333",
-            },
-            "&.Mui-focused fieldset": {
-              borderColor: "#111",
-              borderWidth: "1px",
-            },
-            "&.Mui-focused": {
-              boxShadow: "0 0 5px rgba(0, 0, 0, 0.2)",
-            },
-            "& input": {
-              fontFamily: "'Playfair Display', serif",
-            },
-          },
-          "& .MuiInputBase-input::placeholder": {
-            fontFamily: "'Playfair Display', serif",
-            color: "#555",
-            fontSize: "14px",
-          },
-        }}
-      />
+    <div className="flex flex-col items-center mb-12 gap-6 mt-12">
+      {/* First Name and Last Name Fields */}
+      <div className="flex justify-center gap-6 w-full max-w-2xl">
+        <div className="flex flex-col flex-1">
+          <label className="mb-1 text-sm font-medium text-black-700 font-playfair">
+            First Name *
+          </label>
+          <Input
+            placeholder="First Name"
+            className="
+              border border-black 
+              rounded-none 
+              px-2 py-1 text-sm 
+              font-playfair 
+              placeholder:font-playfair
+              placeholder:text-black-700
+              placeholder:italic
+            "
+          />
+        </div>
 
-      <TextField
-        variant="outlined"
-        placeholder="Enter your last name"
-        sx={{
-          width: "250px",
-          "& .MuiOutlinedInput-root": {
-            height: "50px",
-            fontSize: "16px",
-            borderRadius: "0px", // Removed rounded corners
-            "& fieldset": {
-              borderColor: "#555",
-              borderWidth: "1px",
-            },
-            "&:hover fieldset": {
-              borderColor: "#333",
-            },
-            "&.Mui-focused fieldset": {
-              borderColor: "#111",
-              borderWidth: "1px",
-            },
-            "&.Mui-focused": {
-              boxShadow: "0 0 5px rgba(0, 0, 0, 0.2)",
-            },
-            "& input": {
-              fontFamily: "'Playfair Display', serif",
-            },
-          },
-          "& .MuiInputBase-input::placeholder": {
-            fontFamily: "'Playfair Display', serif",
-            color: "#555",
-            fontSize: "14px",
-          },
-        }}
-      />
+        <div className="flex flex-col flex-1">
+          <label className="mb-1 text-sm font-medium text-black-700 font-playfair">
+            Last Name *
+          </label>
+          <Input
+            placeholder="Last Name"
+            className="
+              border border-black 
+              rounded-none 
+              px-2 py-1 text-sm 
+              font-playfair 
+              placeholder:font-playfair
+              placeholder:text-black-700
+              placeholder:italic
+            "
+          />
+        </div>
+      </div>
 
-        <Input />
-        
+      {/* Email Address Field */}
+      <div className="flex flex-col w-full max-w-2xl">
+        <label className="mb-1 text-sm font-medium text-black-700 font-playfair">
+          Email *
+        </label>
+        <Input
+          type="email"
+          placeholder="Enter Your Email Address"
+          className="
+            border border-black 
+            rounded-none 
+            px-2 py-1 text-sm 
+            font-playfair 
+            placeholder:font-playfair
+            placeholder:text-black-700
+            placeholder:italic
+          "
+        />
+      </div>
 
+      {/* Subject Field */}
+      <div className="flex flex-col w-full max-w-2xl">
+        <label className="mb-1 text-sm font-medium text-black-700 font-playfair">
+          Subject *
+        </label>
+        <Input
+          placeholder="Enter Your Subject"
+          className="
+            border border-black 
+            rounded-none 
+            px-2 py-1 text-sm 
+            font-playfair 
+            placeholder:font-playfair
+            placeholder:text-black-700
+            placeholder:italic
+          "
+        />
+      </div>
+
+      {/* Address Field */}
+      <div className="flex flex-col w-full max-w-2xl">
+        <label className="mb-1 text-sm font-medium text-black-700 font-playfair">
+          Address *
+        </label>
+        <Input
+          placeholder="Enter Your Address"
+          className="
+            border border-black 
+            rounded-none 
+            px-2 py-1 text-sm 
+            font-playfair 
+            placeholder:font-playfair
+            placeholder:text-black-700
+            placeholder:italic
+          "
+        />
+      </div>
+
+      {/* Message Field */}
+      <div className="flex flex-col w-full max-w-2xl">
+        <label className="mb-1 text-sm font-medium text-black-700 font-playfair">
+          Message *
+        </label>
+        <textarea
+          placeholder="Enter Your Message"
+          className="
+            border border-black 
+            rounded-none 
+            px-2 py-1 text-sm 
+            font-playfair 
+            placeholder:font-playfair
+            placeholder:text-black-700
+            placeholder:italic
+            h-32
+          "
+        ></textarea>
+      </div>
+
+      {/* Send Button */}
+      <Button
+        className="
+    w-full 
+    max-w-2xl 
+    border 
+    border-black 
+    rounded-none 
+    px-2 
+    py-2 
+    text-sm 
+    font-playfair 
+    text-white 
+    bg-black
+  "
+      >
+        Send
+      </Button>
     </div>
   );
 };
