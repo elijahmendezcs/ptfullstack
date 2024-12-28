@@ -1,5 +1,7 @@
 import React from "react";
 import TextField from "@mui/material/TextField";
+import { Input } from "@/components/ui/input"
+
 
 
 const About = () => {
@@ -74,6 +76,9 @@ const About = () => {
           },
         }}
       />
+
+        <Input />
+        
 
     </div>
   );
