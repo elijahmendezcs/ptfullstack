@@ -1,6 +1,7 @@
 import React from "react";
 import TextField from "@mui/material/TextField";
 
+
 const About = () => {
   return (
     <div className="flex justify-center items-center mb-24 gap-10 mt-24">
@@ -73,6 +74,7 @@ const About = () => {
           },
         }}
       />
+
     </div>
   );
 };
