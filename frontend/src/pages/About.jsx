@@ -1,9 +1,63 @@
-import React from "react";
+import React, { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Box, Typography } from "@mui/material";
 
 const About = () => {
+  // 1) State for each form field
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName]   = useState("");
+  const [email, setEmail]         = useState("");
+  const [subject, setSubject]     = useState("");
+  const [address, setAddress]     = useState("");
+  const [message, setMessage]     = useState("");
+
+  // 2) Handle form submission
+  const handleSubmit = async (e) => {
+    e.preventDefault(); // prevent page refresh
+
+    // Simple front-end validation (optional)
+    if (!email) {
+      alert("Please enter an email address");
+      return;
+    }
+
+    try {
+      // 3) Send data to your backend
+      const response = await fetch("http://localhost:3000/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          firstName,
+          lastName,
+          email,
+          subject,
+          address,
+          message,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to send message");
+      }
+
+      // 4) Clear the form (optional)
+      setFirstName("");
+      setLastName("");
+      setEmail("");
+      setSubject("");
+      setAddress("");
+      setMessage("");
+
+      alert("Message sent successfully!");
+    } catch (error) {
+      console.error(error);
+      alert("An error occurred while sending your message.");
+    }
+  };
+
   return (
     <>
       {/* About Me Section */}
@@ -40,10 +94,10 @@ const About = () => {
             color: "#888",
           }}
         >
-          I'm a paragraph. Click here to add your own text and edit me. It’s
-          easy. Just click “Edit Text” or double click me to add your own
-          content and make changes to the font. I’m a great place for you to
-          tell a story and let your users know a little more about you.
+          I'm a paragraph. Click here to add your own text and edit me. It’s easy.
+          Just click “Edit Text” or double click me to add your own content and
+          make changes to the font. I’m a great place for you to tell a story and
+          let your users know a little more about you.
         </Typography>
       </Box>
 
@@ -90,8 +144,11 @@ const About = () => {
         </Typography>
       </Box>
 
-      {/* Form Content */}
-      <div className="flex flex-col items-center mb-12 gap-6 mt-12">
+      {/* 5) Wrap form fields in a form, attach onSubmit */}
+      <form
+        onSubmit={handleSubmit}
+        className="flex flex-col items-center mb-12 gap-6 mt-12"
+      >
         {/* First Name and Last Name Fields */}
         <div className="flex justify-center gap-6 w-full max-w-2xl">
           <div className="flex flex-col flex-1">
@@ -100,11 +157,13 @@ const About = () => {
             </label>
             <Input
               placeholder="First Name"
+              value={firstName}
+              onChange={(e) => setFirstName(e.target.value)}
               className="
-                border border-black 
-                rounded-none 
-                px-2 py-1 text-sm 
-                font-playfair 
+                border border-black
+                rounded-none
+                px-2 py-1 text-sm
+                font-playfair
                 placeholder:font-playfair
                 placeholder:text-black-700
                 placeholder:italic
@@ -118,11 +177,13 @@ const About = () => {
             </label>
             <Input
               placeholder="Last Name"
+              value={lastName}
+              onChange={(e) => setLastName(e.target.value)}
               className="
-                border border-black 
-                rounded-none 
-                px-2 py-1 text-sm 
-                font-playfair 
+                border border-black
+                rounded-none
+                px-2 py-1 text-sm
+                font-playfair
                 placeholder:font-playfair
                 placeholder:text-black-700
                 placeholder:italic
@@ -139,11 +200,13 @@ const About = () => {
           <Input
             type="email"
             placeholder="Enter Your Email Address"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             className="
-              border border-black 
-              rounded-none 
-              px-2 py-1 text-sm 
-              font-playfair 
+              border border-black
+              rounded-none
+              px-2 py-1 text-sm
+              font-playfair
               placeholder:font-playfair
               placeholder:text-black-700
               placeholder:italic
@@ -158,11 +221,13 @@ const About = () => {
           </label>
           <Input
             placeholder="Enter Your Subject"
+            value={subject}
+            onChange={(e) => setSubject(e.target.value)}
             className="
-              border border-black 
-              rounded-none 
-              px-2 py-1 text-sm 
-              font-playfair 
+              border border-black
+              rounded-none
+              px-2 py-1 text-sm
+              font-playfair
               placeholder:font-playfair
               placeholder:text-black-700
               placeholder:italic
@@ -177,11 +242,13 @@ const About = () => {
           </label>
           <Input
             placeholder="Enter Your Address"
+            value={address}
+            onChange={(e) => setAddress(e.target.value)}
             className="
-              border border-black 
-              rounded-none 
-              px-2 py-1 text-sm 
-              font-playfair 
+              border border-black
+              rounded-none
+              px-2 py-1 text-sm
+              font-playfair
               placeholder:font-playfair
               placeholder:text-black-700
               placeholder:italic
@@ -196,11 +263,13 @@ const About = () => {
           </label>
           <textarea
             placeholder="Enter Your Message"
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
             className="
-              border border-black 
-              rounded-none 
-              px-2 py-1 text-sm 
-              font-playfair 
+              border border-black
+              rounded-none
+              px-2 py-1 text-sm
+              font-playfair
               placeholder:font-playfair
               placeholder:text-black-700
               placeholder:italic
@@ -211,23 +280,24 @@ const About = () => {
 
         {/* Send Button */}
         <Button
+          type="submit"
           className="
-          w-full 
-          max-w-2xl 
-          border 
-          border-black 
-          rounded-none 
-          px-2 
-          py-2 
-          text-sm 
-          font-playfair 
-          text-white 
-          bg-black
-        "
+            w-full
+            max-w-2xl
+            border
+            border-black
+            rounded-none
+            px-2
+            py-2
+            text-sm
+            font-playfair
+            text-white
+            bg-black
+          "
         >
           Send
         </Button>
-      </div>
+      </form>
     </>
   );
 };
