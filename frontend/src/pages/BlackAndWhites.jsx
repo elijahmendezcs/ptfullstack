@@ -1,9 +1,9 @@
 import React from 'react'
-import ImageList from "../components/FamilyImageList"
+import ImageList from "../components/BlackAndWhiteImageList"
 
 const Family = () => {
   return (
-    <div className="flex items-center justify-center h-screen">
+    <div className="mt-[300px] flex items-center justify-center h-screen">
       <ImageList />
     </div>
   )

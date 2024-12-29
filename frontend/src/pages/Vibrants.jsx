@@ -1,5 +1,5 @@
 import React from 'react'
-import ImageList from "../components/SeniorImageList"
+import ImageList from "../components/VibrantImageList"
 import { Typography } from '@mui/material'
 const Senior = () => {
   return (
@@ -14,7 +14,7 @@ const Senior = () => {
           marginTop: "20px",
         }}
       >
-        Senior
+        Vibrance
       </Typography>
     </div>
     <div className='flex flex-col items-right justify-center flex-grow px-20'>
@@ -30,7 +30,7 @@ const Senior = () => {
       This is where the project description goes. Give an overview or go in depth - what it’s all about, what inspired you, how you created it, or anything else you’d like visitors to know. To add Project descriptions, go to Manage Projects.
       </Typography>  
     </div>
-    <div className='flex items-center justify-center h-screen'>
+    <div className='mt-[180px] flex items-center justify-center h-screen'>
         <ImageList />
       </div></>
      )
