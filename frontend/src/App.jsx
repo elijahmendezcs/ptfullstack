@@ -7,9 +7,9 @@ import "./index.css";
 import About from "./pages/About";
 import BookASession from "./pages/Book";
 import Prints from "./pages/Prints";
-import Family from "./pages/Family";
-import Senior from "./pages/Senior";
-import Landscape from "./pages/Landscape";
+import BlackAndWhites from "./pages/BlackAndWhites";
+import Vibrants from "./pages/Vibrants";
+import ClientAlbums from "./pages/ClientAlbums";
 import Home from "./pages/Home";
 
 function AnimatedRoutes() {
@@ -23,9 +23,9 @@ function AnimatedRoutes() {
           <Route path="/about" element={<About />} />
           <Route path="/bookasession" element={<BookASession />} />
           <Route path="/prints" element={<Prints />} />
-          <Route path="/family" element={<Family />} />
-          <Route path="/senior" element={<Senior />} />
-          <Route path="/landscape" element={<Landscape />} />
+          <Route path="/blackandwhites" element={<BlackAndWhites />} />
+          <Route path="/vibrants" element={<Vibrants />} />
+          <Route path="/clientalbums" element={<ClientAlbums />} />
         </Routes>
       </CSSTransition>
     </TransitionGroup>

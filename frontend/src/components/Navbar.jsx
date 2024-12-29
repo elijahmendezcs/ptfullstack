@@ -13,9 +13,9 @@ import MenuItem from "@mui/material/MenuItem";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 
 const pages = [
-  "Family",
-  "Senior",
-  "Landscape",
+  "Black and Whites",
+  "Vibrants",
+  "Client Albums",
   "Prints",
   "About",
   "Book a Session",
