@@ -58,9 +58,9 @@ export default function QuiltedImageList() {
   };
 
   return (
-    <div className="mt-[900px] px-4 min-h-screen mb-[60px] flex justify-center">
-      {/* This wrapper sets a max width so the gallery isn't too wide */}
-      <div className="max-w-4xl w-full">
+    // Constrain width, remove huge margin & min-h
+    <div className="px-4 mb-[60px]">
+      <div className="max-w-4xl mx-auto w-full">
         <ImageList
           variant="quilted"
           cols={3}
@@ -139,33 +139,24 @@ export default function QuiltedImageList() {
   );
 }
 
-/**
- * 7 total images:
- * - 1 big horizontal on top (cols=3, rows=2) => 3 columns wide, 2 * 200px tall
- * - 5 bigger middle images (all rows=2 => 400px tall), with a mix of cols=1 or 2
- * - 1 big horizontal at bottom (cols=3, rows=2)
- */
 const itemData = [
-  // Top image, same as before
   {
     img: vibrantImg,
     title: "Top Large Horizontal",
     cols: 3,
     rows: 2,
   },
-
-  // MIDDLE IMAGES: now each is 2 rows tall => 400px
   {
     img: vibrantImg2,
     title: "Senior Female Sitting",
-    cols: 2, // spans 2/3 width
-    rows: 2, // 400px tall
+    cols: 2,
+    rows: 2,
   },
   {
     img: vibrantImg3,
     title: "Male Senior Trees",
-    cols: 1, // 1/3 width
-    rows: 2, // 400px tall
+    cols: 1,
+    rows: 2,
   },
   {
     img: vibrantImg4,
@@ -182,11 +173,9 @@ const itemData = [
   {
     img: vibrantImg6,
     title: "Female Senior Cap & Gown",
-    cols: 3, // here it spans all 3 columns
+    cols: 3,
     rows: 2,
   },
-
-  // Bottom image, same as before
   {
     img: vibrantImg7,
     title: "Bottom Large Horizontal",
