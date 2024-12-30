@@ -18,7 +18,7 @@ const Vibrants = () => {
             }}
             className="mb-2 text-gray-800 italic"
           >
-            Vibrants
+            Hues
           </Typography>
         </div>
 

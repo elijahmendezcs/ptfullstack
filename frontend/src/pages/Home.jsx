@@ -23,7 +23,7 @@ const Home = () => {
           marginTop: "20px",
         }}
       >
-        Professional Photography
+        Professional Landscape Photography
       </Typography>
       <HomePageImageList />
     </Box>

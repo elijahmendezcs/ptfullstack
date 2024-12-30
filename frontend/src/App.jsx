@@ -8,8 +8,8 @@ import About from "./pages/About";
 import BookASession from "./pages/Book";
 import Prints from "./pages/Prints";
 import BlackAndWhites from "./pages/BlackAndWhites";
-import Vibrants from "./pages/Vibrants";
-import ClientAlbums from "./pages/ClientAlbums";
+import Hues from "./pages/Hues";
+import Collections from "./pages/Collections";
 import Home from "./pages/Home";
 
 function AnimatedRoutes() {
@@ -24,8 +24,8 @@ function AnimatedRoutes() {
           <Route path="/bookasession" element={<BookASession />} />
           <Route path="/prints" element={<Prints />} />
           <Route path="/blackandwhites" element={<BlackAndWhites />} />
-          <Route path="/vibrants" element={<Vibrants />} />
-          <Route path="/clientalbums" element={<ClientAlbums />} />
+          <Route path="/hues" element={<Hues />} />
+          <Route path="/collections" element={<Collections />} />
         </Routes>
       </CSSTransition>
     </TransitionGroup>

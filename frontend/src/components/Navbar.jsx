@@ -14,8 +14,8 @@ import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 
 const pages = [
   "Black and Whites",
-  "Vibrants",
-  "Client Albums",
+  "Hues",
+  "Collections",
   "Prints",
   "About",
   "Book a Session",
