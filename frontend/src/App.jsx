@@ -21,7 +21,6 @@ function AnimatedRoutes() {
         <Routes location={location}>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/bookasession" element={<BookASession />} />
           <Route path="/prints" element={<Prints />} />
           <Route path="/blackandwhites" element={<BlackAndWhites />} />
           <Route path="/hues" element={<Hues />} />

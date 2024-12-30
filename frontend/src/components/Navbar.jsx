@@ -18,7 +18,6 @@ const pages = [
   "Collections",
   "Prints",
   "About",
-  "Book a Session",
 ];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
