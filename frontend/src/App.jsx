@@ -5,7 +5,6 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import "./index.css";
 import About from "./pages/About";
-import BookASession from "./pages/Book";
 import Prints from "./pages/Prints";
 import BlackAndWhites from "./pages/BlackAndWhites";
 import Hues from "./pages/Hues";

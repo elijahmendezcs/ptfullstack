@@ -2,7 +2,7 @@ import React from "react";
 import ImageList from "../components/VibrantImageList";
 import { Typography } from "@mui/material";
 
-const Vibrants = () => {
+const Hues = () => {
   return (
     <div className="max-w-4xl mx-auto px-4 py-10">
       {/* 2-column layout for heading & paragraph on md+ screens */}
@@ -45,4 +45,4 @@ const Vibrants = () => {
   );
 };
 
-export default Vibrants;
+export default Hues;
