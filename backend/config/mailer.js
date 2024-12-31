@@ -1,4 +1,3 @@
-// backend/config/mailer.js
 const nodemailer = require("nodemailer");
 
 exports.sendMail = async ({ firstName, lastName, email, subject, address, message }) => {
@@ -10,7 +9,6 @@ exports.sendMail = async ({ firstName, lastName, email, subject, address, messag
     },
   });
 
-  // 2) Build the mailOptions
   const mailOptions = {
     from: `"Your Website" <${process.env.EMAIL_USER}>`,    
     to: "elijahmendez2022@gmail.com",                          
@@ -23,6 +21,5 @@ exports.sendMail = async ({ firstName, lastName, email, subject, address, messag
     `,
   };
 
-  // 3) Send
   await transporter.sendMail(mailOptions);
 };

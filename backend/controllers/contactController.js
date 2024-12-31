@@ -1,4 +1,3 @@
-// backend/controllers/contactController.js
 const { sendMail } = require("../config/mailer");
 
 exports.handleContactForm = async (req, res) => {
