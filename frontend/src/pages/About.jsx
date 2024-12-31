@@ -293,6 +293,7 @@ const About = () => {
             font-playfair
             text-white
             bg-black
+            mb-[20px]
           "
         >
           Send
