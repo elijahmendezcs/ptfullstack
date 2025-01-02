@@ -11,6 +11,7 @@ import BlackandWhiteImg5 from "../images/BlackandWhiteImages/blackandwhite5.jpg"
 import BlackandWhiteImg6 from "../images/BlackandWhiteImages/blackandwhite6.jpg";
 import BlackandWhiteImg7 from "../images/BlackandWhiteImages/blackandwhite7.jpg";
 
+
 export default function QuiltedImageList() {
   const [currentIndex, setCurrentIndex] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -141,45 +142,46 @@ export default function QuiltedImageList() {
 
 const itemData = [
   {
-    img: BlackandWhiteImg,
-    title: "Top Large Horizontal",
-    cols: 3,
+    img: BlackandWhiteImg2,
+    title: "Black and White Elementary School",
+    cols: 1,
     rows: 2,
   },
   {
-    img: BlackandWhiteImg2,
-    title: "BlackandWhite Female Sitting",
+    img: BlackandWhiteImg,
+    title: "BlackandWhite Forest",
+    cols: 2,
+    rows: 2,
+  },
+  {
+    img: BlackandWhiteImg4,
+    title: "Black and White Wooden Post",
     cols: 2,
     rows: 2,
   },
   {
     img: BlackandWhiteImg3,
-    title: "Male Senior Trees",
+    title: "Black and White Barn",
     cols: 1,
-    rows: 2,
-  },
-  {
-    img: BlackandWhiteImg4,
-    title: "Male Senior Cap & Gown",
-    cols: 2,
     rows: 2,
   },
   {
     img: BlackandWhiteImg5,
-    title: "Senior Bench",
-    cols: 1,
+    title: "Black and White Fence and Treee",
+    cols: 3,
     rows: 2,
   },
   {
     img: BlackandWhiteImg6,
-    title: "Female Senior Cap & Gown",
-    cols: 3,
+    title: "Black and White Bridge",
+    cols: 1,
     rows: 2,
   },
   {
     img: BlackandWhiteImg7,
-    title: "Bottom Large Horizontal",
-    cols: 3,
+    title: "Black and White Double Doors",
+    cols: 2,
     rows: 2,
+  
   },
 ];

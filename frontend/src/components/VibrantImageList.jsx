@@ -10,6 +10,15 @@ import vibrantImg4 from "../images/VibrantImages/vibrant4.jpg";
 import vibrantImg5 from "../images/VibrantImages/vibrant5.jpg";
 import vibrantImg6 from "../images/VibrantImages/vibrant6.jpg";
 import vibrantImg7 from "../images/VibrantImages/vibrant7.jpg";
+import vibrantImg8 from "../images/VibrantImages/vibrant8.jpg";
+import vibrantImg9 from "../images/VibrantImages/vibrant9.jpg";
+import vibrantImg10 from "../images/VibrantImages/vibrant10.jpg";
+import vibrantImg11 from "../images/VibrantImages/vibrant11.jpg";
+import vibrantImg12 from "../images/VibrantImages/vibrant12.jpg";
+import vibrantImg13 from "../images/VibrantImages/vibrant13.jpg";
+import vibrantImg14 from "../images/VibrantImages/vibrant14.jpg";
+import vibrantImg15 from "../images/VibrantImages/vibrant15.jpg";
+
 
 export default function QuiltedImageList() {
   const [currentIndex, setCurrentIndex] = useState(null);
@@ -142,44 +151,92 @@ export default function QuiltedImageList() {
 const itemData = [
   {
     img: vibrantImg,
-    title: "Top Large Horizontal",
+    title: "Ice Trundra",
     cols: 3,
     rows: 2,
   },
   {
     img: vibrantImg2,
-    title: "Senior Female Sitting",
+    title: "Sunset Street",
     cols: 2,
     rows: 2,
   },
   {
     img: vibrantImg3,
-    title: "Male Senior Trees",
+    title: "Sunset Trees Sidewalk",
+    cols: 1,
+    rows: 2,
+  },
+  {
+    img: vibrantImg5,
+    title: "Sunset Street",
     cols: 1,
     rows: 2,
   },
   {
     img: vibrantImg4,
-    title: "Male Senior Cap & Gown",
+    title: "Sunset Chapel",
     cols: 2,
     rows: 2,
   },
   {
-    img: vibrantImg5,
-    title: "Senior Bench",
-    cols: 1,
-    rows: 2,
-  },
-  {
     img: vibrantImg6,
-    title: "Female Senior Cap & Gown",
+    title: "Sunset and Water",
     cols: 3,
     rows: 2,
   },
   {
     img: vibrantImg7,
-    title: "Bottom Large Horizontal",
+    title: "Sunset Autumn River",
+    cols: 2,
+    rows: 2,
+  },
+  {
+    img: vibrantImg9,
+    title: "Owl",
+    cols: 1,
+    rows: 2,
+  },
+  {
+    img: vibrantImg11,
+    title: "Foggy Autumn Trees",
+    cols: 1,
+    rows: 2,
+  },
+  {
+    img: vibrantImg10,
+    title: "Trees and River",
+    cols: 2,
+    rows: 2,
+  },
+  {
+    img: vibrantImg12,
+    title: "Wheat Field",
     cols: 3,
     rows: 2,
   },
+  {
+    img: vibrantImg8,
+    title: "Two Chairs near Water",
+    cols: 1,
+    rows: 2,
+  },
+  {
+    img: vibrantImg13,
+    title: "Open Field",
+    cols: 2,
+    rows: 2,
+  },
+  {
+    img: vibrantImg14,
+    title: "Foggy River Bed",
+    cols: 2,
+    rows: 2,
+  },
+  {
+    img: vibrantImg15,
+    title: "Foggy Forest",
+    cols: 1,
+    rows: 2,
+  }
 ];
