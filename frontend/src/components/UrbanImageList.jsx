@@ -3,13 +3,14 @@ import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 
 // Imports to your actual images...
-import BlackandWhiteImg from "../images/BlackandWhiteImages/blackandwhite.jpg";
-import BlackandWhiteImg2 from "../images/BlackandWhiteImages/blackandwhite2.jpg";
-import BlackandWhiteImg3 from "../images/BlackandWhiteImages/blackandwhite3.jpg";
-import BlackandWhiteImg4 from "../images/BlackandWhiteImages/blackandwhite4.jpg";
-import BlackandWhiteImg5 from "../images/BlackandWhiteImages/blackandwhite5.jpg";
-import BlackandWhiteImg6 from "../images/BlackandWhiteImages/blackandwhite6.jpg";
-import BlackandWhiteImg7 from "../images/BlackandWhiteImages/blackandwhite7.jpg";
+import urbanImg from "../images/UrbanImages/urban.jpeg";
+import urbanImg2 from "../images/UrbanImages/urban2.jpeg";
+import urbanImg3 from "../images/UrbanImages/urban3.jpeg";
+import urbanImg4 from "../images/UrbanImages/urban4.jpeg";
+import urbanImg5 from "../images/UrbanImages/urban5.jpeg";
+import urbanImg6 from "../images/UrbanImages/urban6.jpeg";
+import urbanImg7 from "../images/UrbanImages/urban7.jpeg";
+import urbanImg8 from "../images/UrbanImages/urban8.jpeg";
 
 export default function QuiltedImageList() {
   const [currentIndex, setCurrentIndex] = useState(null);
@@ -141,45 +142,51 @@ export default function QuiltedImageList() {
 
 const itemData = [
   {
-    img: BlackandWhiteImg,
+    img: urbanImg3,
     title: "Top Large Horizontal",
     cols: 3,
     rows: 2,
   },
   {
-    img: BlackandWhiteImg2,
-    title: "BlackandWhite Female Sitting",
+    img: urbanImg2,
+    title: "urban Female Sitting",
     cols: 2,
     rows: 2,
   },
   {
-    img: BlackandWhiteImg3,
+    img: urbanImg,
     title: "Male Senior Trees",
     cols: 1,
     rows: 2,
   },
   {
-    img: BlackandWhiteImg4,
+    img: urbanImg5,
     title: "Male Senior Cap & Gown",
-    cols: 2,
-    rows: 2,
-  },
-  {
-    img: BlackandWhiteImg5,
-    title: "Senior Bench",
     cols: 1,
     rows: 2,
   },
   {
-    img: BlackandWhiteImg6,
-    title: "Female Senior Cap & Gown",
-    cols: 3,
+    img: urbanImg4,
+    title: "Senior Bench",
+    cols: 2,
     rows: 2,
   },
   {
-    img: BlackandWhiteImg7,
-    title: "Bottom Large Horizontal",
+    img: urbanImg6,
+    title: "Female Senior Cap & Gown",
     cols: 3,
+    rows: 4,
+  },
+  {
+    img: urbanImg7,
+    title: "Bottom Large Horizontal",
+    cols: 1,
     rows: 2,
   },
+  {
+    img: urbanImg8,
+    title: "",
+    cols: 2,
+    rows: 2,
+  }
 ];
