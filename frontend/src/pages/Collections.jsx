@@ -34,7 +34,7 @@ const Collections = () => {
           </Typography>
         </div>
 
-        <div className="flex flex-col items-center w-full max-w-[800px]">
+        <div className="mb-[60px] flex flex-col items-center w-full max-w-[800px]">
           <HuesLightBox />
           <Typography
             sx={{

@@ -311,6 +311,7 @@ const About = () => {
       >
         <Typography
           sx={{
+            marginBottom: "40px",
             fontFamily: '"Cormorant Garamond", serif',
             fontSize: "14px",
             fontStyle: "italic",
@@ -318,7 +319,7 @@ const About = () => {
             color: "#666",
           }}
         >
-          Website built by Elijah Mendez and Justin Olivacce
+          Website built by Elijah Mende and Justin Olivacce
         </Typography>
       </Box>
     </>
