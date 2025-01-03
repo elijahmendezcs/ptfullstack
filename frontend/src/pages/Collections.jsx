@@ -5,8 +5,7 @@ import HuesLightBox from "../components/HuesLightBox";
 
 const Collections = () => {
   return (
-    <div className="flex flex-col items-center bg-white min-h-[calc(100vh-100px)] pt-20 space-y-12">
-      {/* Main Title */}
+    <div className="flex flex-col items-center min-h-screen pt-[120px] space-y-10">
       <Typography
         variant="h5"
         sx={{
@@ -20,7 +19,6 @@ const Collections = () => {
       </Typography>
 
       <div className="flex flex-wrap justify-center items-start gap-8 w-full max-w-[1800px] px-4">
-        {/* Black & White Collection */}
         <div className="flex flex-col items-center w-full max-w-[800px]">
           <BlackAndWhiteLightBox />
           <Typography
@@ -36,7 +34,6 @@ const Collections = () => {
           </Typography>
         </div>
 
-        {/* Hues Collection */}
         <div className="flex flex-col items-center w-full max-w-[800px]">
           <HuesLightBox />
           <Typography
