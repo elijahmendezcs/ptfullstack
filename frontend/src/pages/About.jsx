@@ -299,6 +299,28 @@ const About = () => {
           Send
         </Button>
       </form>
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          textAlign: "center",
+          marginTop: "40px",
+          padding: "20px 0",
+        }}
+      >
+        <Typography
+          sx={{
+            fontFamily: '"Cormorant Garamond", serif',
+            fontSize: "14px",
+            fontStyle: "italic",
+            fontWeight: 300,
+            color: "#666",
+          }}
+        >
+          Website built by Elijah Mendez and Justin Olivacce
+        </Typography>
+      </Box>
     </>
   );
 };
