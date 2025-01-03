@@ -4,7 +4,7 @@ import "yet-another-react-lightbox/styles.css";
 import Inline from "yet-another-react-lightbox/plugins/inline";
 import slides from "/src/images/BlackandWhiteImages/index.js";
 
-export default function Carousel() {
+export default function BlackAndWhiteLightBox() {
   const [open, setOpen] = useState(false);
   const [index, setIndex] = useState(0);
 
@@ -31,10 +31,10 @@ export default function Carousel() {
         }}
         inline={{
           style: {
-            width: "80%", 
-            maxWidth: "900px",
-            aspectRatio: "3 / 2",
-            margin: "1rem auto", 
+            width: "100%",
+            maxWidth: "1600px",
+            aspectRatio: "16 / 9",
+            margin: "2rem auto",
           },
         }}
       />
