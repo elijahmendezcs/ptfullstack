@@ -11,6 +11,7 @@ import urbanImg5 from "../images/UrbanImages/urban5.jpeg";
 import urbanImg6 from "../images/UrbanImages/urban6.jpeg";
 import urbanImg7 from "../images/UrbanImages/urban7.jpeg";
 import urbanImg8 from "../images/UrbanImages/urban8.jpeg";
+import urbanImg9 from "../images/UrbanImages/urban9.jpeg";
 
 export default function QuiltedImageList() {
   const [currentIndex, setCurrentIndex] = useState(null);
@@ -188,5 +189,12 @@ const itemData = [
     title: "",
     cols: 2,
     rows: 2,
-  }
+  },
+  {
+    img: urbanImg9,
+    title: "Top Large Horizontal",
+    cols: 3,
+    rows: 2,
+  },
+
 ];

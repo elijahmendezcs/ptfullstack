@@ -10,7 +10,7 @@ import BlackandWhiteImg4 from "../images/BlackandWhiteImages/blackandwhite4.jpg"
 import BlackandWhiteImg5 from "../images/BlackandWhiteImages/blackandwhite5.jpg";
 import BlackandWhiteImg6 from "../images/BlackandWhiteImages/blackandwhite6.jpg";
 import BlackandWhiteImg7 from "../images/BlackandWhiteImages/blackandwhite7.jpg";
-
+import BlackandWhiteImg8 from "../images/BlackandWhiteImages/blackandwhite8.jpeg";
 
 export default function QuiltedImageList() {
   const [currentIndex, setCurrentIndex] = useState(null);
@@ -184,4 +184,10 @@ const itemData = [
     rows: 2,
   
   },
+  {
+    img: BlackandWhiteImg8,
+    title: "Black and White Wooden Post",
+    cols: 3,
+    rows: 2,
+  }
 ];

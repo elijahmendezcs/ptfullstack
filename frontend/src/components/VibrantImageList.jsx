@@ -238,5 +238,5 @@ const itemData = [
     title: "Foggy Forest",
     cols: 1,
     rows: 2,
-  }
+  },
 ];
