@@ -5,7 +5,8 @@ import HuesLightBox from "../components/HuesLightBox";
 
 const Collections = () => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-8">
+    <div className="flex flex-col items-center bg-white min-h-[calc(100vh-100px)] pt-20 space-y-12">
+      {/* Main Title */}
       <Typography
         variant="h5"
         sx={{
@@ -13,21 +14,42 @@ const Collections = () => {
           textAlign: "center",
           fontStyle: "italic",
         }}
-        className="text-4xl mb-12"
+        className="text-4xl"
       >
         Collections
       </Typography>
 
-      <div className="flex justify-center items-start gap-8 w-full max-w-[1800px]">
-        <div className="w-full max-w-[1600px]">
-          <h2 className="text-2xl font-semibold text-center mb-4">
-            Black & White
-          </h2>
+      <div className="flex flex-wrap justify-center items-start gap-8 w-full max-w-[1800px] px-4">
+        {/* Black & White Collection */}
+        <div className="flex flex-col items-center w-full max-w-[800px]">
           <BlackAndWhiteLightBox />
+          <Typography
+            sx={{
+              fontFamily: "Playfair Display, serif",
+              textAlign: "center",
+              fontStyle: "italic",
+              fontSize: "18px",
+              marginTop: "12px",
+            }}
+          >
+            Black and Whites
+          </Typography>
         </div>
-        <div className="w-full max-w-[1600px]">
-          <h2 className="text-2xl font-semibold text-center mb-4">Hues</h2>
+
+        {/* Hues Collection */}
+        <div className="flex flex-col items-center w-full max-w-[800px]">
           <HuesLightBox />
+          <Typography
+            sx={{
+              fontFamily: "Playfair Display, serif",
+              textAlign: "center",
+              fontStyle: "italic",
+              fontSize: "18px",
+              marginTop: "12px",
+            }}
+          >
+            Hues
+          </Typography>
         </div>
       </div>
     </div>

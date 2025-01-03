@@ -16,12 +16,8 @@ import vibrant15 from "./vibrant15.jpg";
 
 const vibrantSlides = [
   {
-    src: vibrant,
-    alt: "Vibrant 1",
-  },
-  {
-    src: vibrant2,
-    alt: "Vibrant 2",
+    src: vibrant7,
+    alt: "Vibrant 7",
   },
   {
     src: vibrant3,
@@ -40,8 +36,8 @@ const vibrantSlides = [
     alt: "Vibrant 6",
   },
   {
-    src: vibrant7,
-    alt: "Vibrant 7",
+    src: vibrant2,
+    alt: "Vibrant 2",
   },
   {
     src: vibrant8,

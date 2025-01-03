@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 
-// Replace these imports with the paths to your actual 7 images
 import vibrantImg from "../images/VibrantImages/vibrant.jpg";
 import vibrantImg2 from "../images/VibrantImages/vibrant2.jpg";
 import vibrantImg3 from "../images/VibrantImages/vibrant3.jpg";
@@ -149,12 +148,6 @@ export default function QuiltedImageList() {
 }
 
 const itemData = [
-  {
-    img: vibrantImg,
-    title: "Ice Trundra",
-    cols: 3,
-    rows: 2,
-  },
   {
     img: vibrantImg2,
     title: "Sunset Street",

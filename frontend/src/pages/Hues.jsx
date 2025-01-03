@@ -1,5 +1,5 @@
 import React from "react";
-import ImageList from "../components/VibrantImageList";
+import ImageList from "../components/HuesImageList";
 import { Typography } from "@mui/material";
 
 const Hues = () => {
