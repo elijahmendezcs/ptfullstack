@@ -319,7 +319,7 @@ const About = () => {
             color: "#666",
           }}
         >
-          Website built by Elijah Mende and Justin Olivacce
+          Website built by Elijah Mendez and Justin Olivacce
         </Typography>
       </Box>
     </>
