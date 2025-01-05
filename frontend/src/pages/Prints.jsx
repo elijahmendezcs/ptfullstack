@@ -29,7 +29,7 @@ const Prints = () => {
     <div className="flex flex-col items-center gap-10 mt-24 mb-24">
       {/* First Row */}
       <div className="flex justify-center items-center gap-10 row-style-1">
-        <BW1 />
+        <BW5 />
         <BW2 />
         <BW3 />
       </div>
@@ -37,13 +37,13 @@ const Prints = () => {
       {/* Second Row */}
       <div className="flex justify-center items-center gap-10 row-style-2">
         <BW4 />
-        <BW5 />
+        <BW7 />
         <BW6 />
       </div>
 
       {/* Third Row */}
       <div className="flex justify-center items-center gap-10 row-style-3">
-        <BW7 />
+        <BW1 />
         <BW8 />
         <H1 />
       </div>
@@ -52,12 +52,12 @@ const Prints = () => {
       <div className="flex justify-center items-center gap-10 row-style-4">
         <H2 />
         <H3 />
-        <H4 />
+        <H5 />
       </div>
 
       {/* Fifth Row */}
       <div className="flex justify-center items-center gap-10 row-style-5">
-        <H5 />
+        <H4 />
         <H6 />
         <H7 />
       </div>
@@ -66,17 +66,17 @@ const Prints = () => {
       <div className="flex justify-center items-center gap-10 row-style-5">
         <H8 />
         <H9 />
-        <H10 />
+        <H11 />
       </div>
 
       {/* Seventh Row */}
       <div className="flex justify-center items-center gap-10 row-style-5">
-        <H11 />
+        <H14 />
         <H12 />
         <H13 />
       </div>
       <div className="flex justify-center items-center gap-10 row-style-5">
-        <H14 />
+        <H10 />
       </div>
     </div>
   );
