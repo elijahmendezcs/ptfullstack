@@ -5,7 +5,7 @@ import HuesLightBox from "../components/HuesLightBox";
 
 const Collections = () => {
   return (
-    <div className="flex flex-col items-center min-h-screen pt-[120px] space-y-10">
+    <div className="flex flex-col items-center min-h-screen pt-[60px] space-y-10">
       <Typography
         variant="h5"
         sx={{
