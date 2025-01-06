@@ -1,5 +1,4 @@
 import React from "react";
-import Card from "../components/Card";
 import BW1 from "../components/Listings/BlackAndWhiteListings/BW1";
 import BW2 from "../components/Listings/BlackAndWhiteListings/BW2";
 import BW3 from "../components/Listings/BlackAndWhiteListings/BW3";
