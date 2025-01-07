@@ -65,7 +65,7 @@ export default function RecipeReviewCard() {
             fontSize: 22,
           }}
         >
-          Baby Photography
+          Hues 6
         </Typography>
         <Typography
           variant="body2"
@@ -96,7 +96,7 @@ export default function RecipeReviewCard() {
             marginLeft: 2, 
           }}
         >
-          Book Now
+          Buy Now
         </Button>
       </CardActions>
     </Card>
