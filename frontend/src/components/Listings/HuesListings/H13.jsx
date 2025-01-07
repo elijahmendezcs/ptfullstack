@@ -46,6 +46,7 @@ export default function RecipeReviewCard() {
       border: '0.5px solid lightgray' // Minimal light gray border
     }}>
       <CardMedia
+        sx={{ width: 400, height: 300}}
         component="img"
         height="194"
         image="/src/images/VibrantImages/vibrant13.jpg"

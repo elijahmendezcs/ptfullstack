@@ -41,11 +41,13 @@ export default function RecipeReviewCard() {
 
   return (
     <Card sx={{
+      height: 425,
       maxWidth: 345,
       borderRadius: 0, // Square corners
       border: '0.5px solid lightgray' // Minimal light gray border
     }}>
       <CardMedia
+        sx={{ width: 400, height: 300}} 
         component="img"
         height="194"
         image="/src/images/BlackAndWhiteImages/blackandwhite.jpg"
