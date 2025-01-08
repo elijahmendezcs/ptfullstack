@@ -73,17 +73,18 @@ export default function RecipeReviewCard() {
           Black and White 1
         </Typography>
         <Typography
-          align = "center"
-          variant="body2"
-          sx={{ 
-            color: "text.secondary",
-            marginTop: 1,
-            fontSize: 20,
-            paddingLeft: 1
-          }}
+        align = "center"
+        variant="body2"
+        sx={{
+          color: "text.secondary",
+          marginTop: -2,
+          fontSize: 20,
+          marginBottom: -2,
+        }}
         >
-          
+          $20
         </Typography>
+        
       </CardContent>
       <CardActions disableSpacing>
         <Button
