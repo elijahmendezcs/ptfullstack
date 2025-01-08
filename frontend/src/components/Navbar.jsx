@@ -11,7 +11,6 @@ const pages = [
   "Black and Whites",
   "Hues",
   "Urban",
-  "Collections",
   "Prints",
   "About",
 ];

@@ -23,7 +23,7 @@ function AnimatedRoutes() {
           <Route path="/prints" element={<Prints />} />
           <Route path="/blackandwhites" element={<BlackAndWhites />} />
           <Route path="/hues" element={<Hues />} />
-          <Route path="/collections" element={<Collections />} />\
+          {/* <Route path="/collections" element={<Collections />} />\ */}
           <Route path="/urban" element={<Urban />} />
         </Routes>
       </CSSTransition>
