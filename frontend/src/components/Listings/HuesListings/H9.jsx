@@ -68,23 +68,12 @@ export default function RecipeReviewCard() {
         >
           Hues 9
         </Typography>
-        <Typography
-          variant="body2"
-          sx={{ color: "text.secondary", fontSize: 16, paddingLeft: 1 }}
-        >
-          2 hr 30 min
-        </Typography>
-        <Typography
-          variant="body2"
-          sx={{ color: "text.secondary", marginTop: 1, fontSize: 16, paddingLeft: 1 }}
-        >
-          $150
-        </Typography>
       </CardContent>
       <CardActions disableSpacing>
         <Button
           variant="contained"
           sx={{
+            width: 300,
             backgroundColor: "black",
             borderRadius: 0,
             fontFamily: "'Cormorant Garamond', serif",
