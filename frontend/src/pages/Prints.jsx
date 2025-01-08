@@ -21,7 +21,6 @@ import H10 from "../components/Listings/HuesListings/H10";
 import H11 from "../components/Listings/HuesListings/H11";
 import H12 from "../components/Listings/HuesListings/H12";
 import H13 from "../components/Listings/HuesListings/H13";
-import H14 from "../components/Listings/HuesListings/H14";
 
 const Prints = () => {
   return (
