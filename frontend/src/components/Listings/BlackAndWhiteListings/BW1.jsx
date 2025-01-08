@@ -55,6 +55,7 @@ export default function RecipeReviewCard() {
       />
       <CardContent>
         <Typography
+          align =  "center"
           variant="h6"
           component="div"
           sx={{
@@ -63,19 +64,20 @@ export default function RecipeReviewCard() {
             marginBottom: 2,
             fontWeight: 500,
             fontStyle: "italic",
-            paddingLeft: 1,
             fontSize: 22,
           }}
         >
           Black and White 1
         </Typography>
         <Typography
+          align = "center"
           variant="body2"
           sx={{ color: "text.secondary", fontSize: 16, paddingLeft: 1 }}
         >
           2 hr 30 min
         </Typography>
         <Typography
+          align = "center"
           variant="body2"
           sx={{ color: "text.secondary", marginTop: 1, fontSize: 16, paddingLeft: 1 }}
         >
@@ -86,6 +88,7 @@ export default function RecipeReviewCard() {
         <Button
           variant="contained"
           sx={{
+            width: 200,
             backgroundColor: "black",
             borderRadius: 0,
             fontFamily: "'Cormorant Garamond', serif",
@@ -95,7 +98,7 @@ export default function RecipeReviewCard() {
             },
             marginBottom: 2,
             fontSize: 16,
-            marginLeft: 2, 
+            marginLeft: 7, 
           }}
         >
           Buy Now
