@@ -63,13 +63,13 @@ const Prints = () => {
       {/* Sixth Row */}
       <div className="flex justify-center items-center gap-10 row-style-5">
         <H8 />
+        <H9 />
         <H10 />
-        <H11 />
       </div>
 
       {/* Seventh Row */}
       <div className="flex justify-center items-center gap-10 row-style-5">
-        <H14 />
+        <H11 />
         <H12 />
         <H13 />
       </div>
