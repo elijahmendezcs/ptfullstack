@@ -49,7 +49,7 @@ export default function RecipeReviewCard() {
         sx={{ width: 400, height: 300}} 
         component="img"
         height="194"
-        image="/src/images/BlackandWhiteImages/blackandwhite7.jpg"
+        image="/src/images/BlackandWhiteImages/blackandwhite.jpg"
         alt="default card"
       />
       <CardContent>

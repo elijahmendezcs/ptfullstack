@@ -1,11 +1,11 @@
 import React from "react";
-import BW1 from "../components/Listings/BlackAndWhiteListings/BW1";
+import BW1 from "../components/Listings/BlackAndWhiteListings/BW7";
 import BW2 from "../components/Listings/BlackAndWhiteListings/BW2";
 import BW3 from "../components/Listings/BlackAndWhiteListings/BW3";
 import BW4 from "../components/Listings/BlackAndWhiteListings/BW4";
-import BW5 from "../components/Listings/BlackAndWhiteListings/BW5";
+import BW5 from "../components/Listings/BlackAndWhiteListings/BW1";
 import BW6 from "../components/Listings/BlackAndWhiteListings/BW6";
-import BW7 from "../components/Listings/BlackAndWhiteListings/BW7";
+import BW7 from "../components/Listings/BlackAndWhiteListings/BW5";
 import BW8 from "../components/Listings/BlackAndWhiteListings/BW8";
 
 import H1 from "../components/Listings/HuesListings/H1";
@@ -50,12 +50,12 @@ const Prints = () => {
       <div className="flex justify-center items-center gap-10 row-style-4">
         <H2 />
         <H3 />
-        <H5 />
+        <H4 />
       </div>
 
       {/* Fifth Row */}
       <div className="flex justify-center items-center gap-10 row-style-5">
-        <H4 />
+        <H5 />
         <H6 />
         <H7 />
       </div>
