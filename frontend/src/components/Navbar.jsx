@@ -9,8 +9,6 @@ import Button from "@mui/material/Button";
 
 const pages = [
   "Black and Whites",
-  "Hues",
-  "Urban",
   "Prints",
   "About",
 ];
