@@ -43,35 +43,6 @@ const Prints = () => {
       <div className="flex justify-center items-center gap-10 row-style-3">
         <BW1 />
         <BW8 />
-        <H1 />
-      </div>
-
-      {/* Fourth Row */}
-      <div className="flex justify-center items-center gap-10 row-style-4">
-        <H2 />
-        <H3 />
-        <H4 />
-      </div>
-
-      {/* Fifth Row */}
-      <div className="flex justify-center items-center gap-10 row-style-5">
-        <H5 />
-        <H6 />
-        <H7 />
-      </div>
-
-      {/* Sixth Row */}
-      <div className="flex justify-center items-center gap-10 row-style-5">
-        <H8 />
-        <H9 />
-        <H10 />
-      </div>
-
-      {/* Seventh Row */}
-      <div className="flex justify-center items-center gap-10 row-style-5">
-        <H11 />
-        <H12 />
-        <H13 />
       </div>
     </div>
   );

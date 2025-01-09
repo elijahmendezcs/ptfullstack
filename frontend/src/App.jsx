@@ -8,7 +8,6 @@ import About from "./pages/About";
 import Prints from "./pages/Prints";
 import BlackAndWhites from "./pages/BlackAndWhites";
 import Hues from "./pages/Hues";
-import Collections from "./pages/Collections";
 import Home from "./pages/Home";
 import Urban from "./pages/Urban"
 function AnimatedRoutes() {
@@ -23,7 +22,6 @@ function AnimatedRoutes() {
           <Route path="/prints" element={<Prints />} />
           <Route path="/blackandwhites" element={<BlackAndWhites />} />
           <Route path="/hues" element={<Hues />} />
-          {/* <Route path="/collections" element={<Collections />} />\ */}
           <Route path="/urban" element={<Urban />} />
         </Routes>
       </CSSTransition>
