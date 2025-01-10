@@ -77,15 +77,15 @@ export default function RecipeReviewCard() {
         align = "center"
         variant="body2"
         sx={{
+          fontFamily: "'Cormorant Garamond', serif",
           color: "text.secondary",
           marginTop: -2,
-          fontSize: 20,
-          marginBottom: -2,
+          fontSize: 25,
+          marginBottom: 0,
         }}
         >
-          $20
+          price
         </Typography>
-        
       </CardContent>
       <CardActions disableSpacing>
       <Link to="bwpage">

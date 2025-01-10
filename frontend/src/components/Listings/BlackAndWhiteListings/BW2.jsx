@@ -64,12 +64,23 @@ export default function RecipeReviewCard() {
             marginBottom: 2,
             fontWeight: 500,
             fontStyle: "italic",
-            paddingLeft: 1,
             fontSize: 22,
           }}
         >
           Black and White 2
         </Typography>
+        <Typography
+          align="center"
+          variant="body2"
+          color="text.secondary"
+          sx={{
+            fontFamily: "'Cormorant Garamond', serif",
+            fontSize: 25,
+            marginTop:-2,
+          }}
+          >
+            price
+          </Typography>
       </CardContent>
       <CardActions disableSpacing>
         <Link to="bwpage2">
