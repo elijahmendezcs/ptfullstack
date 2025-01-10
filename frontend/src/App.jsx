@@ -10,6 +10,16 @@ import BlackAndWhites from "./pages/BlackAndWhites";
 import Hues from "./pages/Hues";
 import Home from "./pages/Home";
 import Urban from "./pages/Urban"
+import BWPage from "./pages/BWPage";
+import BWPage2 from "./pages/BWPage2";
+import BWPage3 from "./pages/BWPage3";
+import BWPage4 from "./pages/BWPage4";
+import BWPage5 from "./pages/BWPage5";
+import BWPage6 from "./pages/BWPage6";
+import BWPage7 from "./pages/BWPage7";
+import BWPage8 from "./pages/BWPage8";
+
+
 function AnimatedRoutes() {
   const location = useLocation();
 
@@ -23,6 +33,14 @@ function AnimatedRoutes() {
           <Route path="/blackandwhites" element={<BlackAndWhites />} />
           <Route path="/hues" element={<Hues />} />
           <Route path="/urban" element={<Urban />} />
+          <Route path="prints/bwpage" element={<BWPage />} />
+          <Route path="prints/bwpage2" element={<BWPage2 />} />
+          <Route path="prints/bwpage3" element={<BWPage3 />} />
+          <Route path="prints/bwpage4" element={<BWPage4 />} />
+          <Route path="prints/bwpage5" element={<BWPage5 />} />
+          <Route path="prints/bwpage6" element={<BWPage6 />} />
+          <Route path="prints/bwpage7" element={<BWPage7 />} />
+          <Route path="prints/bwpage8" element={<BWPage8 />} />
         </Routes>
       </CSSTransition>
     </TransitionGroup>

@@ -7,6 +7,7 @@ import CardActions from "@mui/material/CardActions";
 import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
 import Button from "@mui/material/Button";
+import { Link } from "react-router-dom";
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
@@ -70,6 +71,7 @@ export default function RecipeReviewCard() {
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
+        <Link to = "bwpage6">
         <Button
           variant="contained"
           sx={{
@@ -88,6 +90,7 @@ export default function RecipeReviewCard() {
         >
           Buy Now
         </Button>
+        </Link>
       </CardActions>
     </Card>
   );

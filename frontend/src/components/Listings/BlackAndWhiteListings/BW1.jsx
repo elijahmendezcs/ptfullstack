@@ -88,7 +88,7 @@ export default function RecipeReviewCard() {
         
       </CardContent>
       <CardActions disableSpacing>
-      <Link to="/blackandwhites">
+      <Link to="bwpage">
         <Button
           variant="contained"
           sx={{
