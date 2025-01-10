@@ -55,6 +55,7 @@ export default function RecipeReviewCard() {
       />
       <CardContent>
         <Typography
+          align="center"
           variant="h6"
           component="div"
           sx={{

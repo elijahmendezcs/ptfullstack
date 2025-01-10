@@ -57,6 +57,7 @@ export default function RecipeReviewCard() {
         <Typography
           variant="h6"
           component="div"
+          align = "center"
           sx={{
             fontFamily: "'Cormorant Garamond', serif",
             color: "text.primary",

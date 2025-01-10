@@ -10,14 +10,14 @@ import BlackAndWhites from "./pages/BlackAndWhites";
 import Hues from "./pages/Hues";
 import Home from "./pages/Home";
 import Urban from "./pages/Urban"
-import BWPage from "./pages/BWPage";
-import BWPage2 from "./pages/BWPage2";
-import BWPage3 from "./pages/BWPage3";
-import BWPage4 from "./pages/BWPage4";
-import BWPage5 from "./pages/BWPage5";
-import BWPage6 from "./pages/BWPage6";
-import BWPage7 from "./pages/BWPage7";
-import BWPage8 from "./pages/BWPage8";
+import BWPage from "./pages/BWListings/BWPage";
+import BWPage2 from "./pages/BWListings/BWPage2";
+import BWPage3 from "./pages/BWListings/BWPage3";
+import BWPage4 from "./pages/BWListings/BWPage4";
+import BWPage5 from "./pages/BWListings/BWPage5";
+import BWPage6 from "./pages/BWListings/BWPage6";
+import BWPage7 from "./pages/BWListings/BWPage7";
+import BWPage8 from "./pages/BWListings/BWPage8";
 
 
 function AnimatedRoutes() {

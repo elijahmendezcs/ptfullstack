@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 const BWPage = () => {
   return (
     <div
@@ -10,7 +11,7 @@ const BWPage = () => {
         height: '90vh',
         fontSize: '2rem',
       }}>
-      BW1
+      BWPage
     </div>
   )
 }
