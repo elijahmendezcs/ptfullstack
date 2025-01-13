@@ -2,7 +2,7 @@
 import React from "react";
 import { priceIds } from "../../lib/priceIds";
 
-const BWPage = () => {
+const BWPage1 = () => {
   const handleBuyNow = async () => {
     try {
       const res = await fetch("http://localhost:3000/api/stripe/create-checkout-session", {
@@ -39,4 +39,4 @@ const BWPage = () => {
   );
 };
 
-export default BWPage;
+export default BWPage1;
