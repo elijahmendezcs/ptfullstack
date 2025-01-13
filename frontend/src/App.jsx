@@ -18,7 +18,8 @@ import BWPage5 from "./pages/BWListings/BWPage5";
 import BWPage6 from "./pages/BWListings/BWPage6";
 import BWPage7 from "./pages/BWListings/BWPage7";
 import BWPage8 from "./pages/BWListings/BWPage8";
-
+import ThankYou from "./pages/ThankYou";
+import Cancel from "./pages/Cancel";
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -41,6 +42,8 @@ function AnimatedRoutes() {
           <Route path="prints/bwpage6" element={<BWPage6 />} />
           <Route path="prints/bwpage7" element={<BWPage7 />} />
           <Route path="prints/bwpage8" element={<BWPage8 />} />
+          <Route path="/thankyou" element={<ThankYou />} />
+          <Route path="/cancel" element={<Cancel />} />
         </Routes>
       </CSSTransition>
     </TransitionGroup>

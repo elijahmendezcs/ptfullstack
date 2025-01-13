@@ -22,8 +22,8 @@ router.post("/create-checkout-session", async (req, res) => {
           quantity: 1,
         },
       ],
-      success_url: "http://localhost:3000/thank-you",
-      cancel_url: "http://localhost:3000/cancel",
+      success_url: "http://localhost:5173/thankyou",
+      cancel_url: "http://localhost:5173/cancel",
     });
 
     // 3) Send back the session URL to redirect the user on the front end
