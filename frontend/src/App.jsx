@@ -10,7 +10,7 @@ import BlackAndWhites from "./pages/BlackAndWhites";
 import Hues from "./pages/Hues";
 import Home from "./pages/Home";
 import Urban from "./pages/Urban"
-import BWPage from "./pages/BWListings/BWPage";
+import BWPage from "./pages/BWListings/BWPage1";
 import BWPage2 from "./pages/BWListings/BWPage2";
 import BWPage3 from "./pages/BWListings/BWPage3";
 import BWPage4 from "./pages/BWListings/BWPage4";
