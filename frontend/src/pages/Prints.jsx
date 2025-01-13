@@ -24,6 +24,7 @@ import H13 from "../components/Listings/HuesListings/H13";
 
 const Prints = () => {
   return (
+    
     <div className="flex flex-col items-center gap-10 mt-24 mb-24">
       {/* First Row */}
       <div className="flex justify-center items-center gap-10 row-style-1">

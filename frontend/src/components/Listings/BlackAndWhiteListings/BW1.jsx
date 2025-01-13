@@ -80,11 +80,11 @@ export default function RecipeReviewCard() {
           fontFamily: "'Cormorant Garamond', serif",
           color: "text.secondary",
           marginTop: -2,
-          fontSize: 25,
-          marginBottom: 0,
+          fontSize: 16,
+          marginBottom: -2,
         }}
         >
-          price
+          Starting at: $25
         </Typography>
       </CardContent>
       <CardActions disableSpacing>

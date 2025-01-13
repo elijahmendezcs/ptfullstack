@@ -70,17 +70,18 @@ export default function RecipeReviewCard() {
           Black and White 2
         </Typography>
         <Typography
-          align="center"
-          variant="body2"
-          color="text.secondary"
-          sx={{
-            fontFamily: "'Cormorant Garamond', serif",
-            fontSize: 25,
-            marginTop:-2,
-          }}
-          >
-            price
-          </Typography>
+        align = "center"
+        variant="body2"
+        sx={{
+          fontFamily: "'Cormorant Garamond', serif",
+          color: "text.secondary",
+          marginTop: -2,
+          fontSize: 16,
+          marginBottom: -2,
+        }}
+        >
+          Starting at: $25
+        </Typography>
       </CardContent>
       <CardActions disableSpacing>
         <Link to="bwpage2">
