@@ -67,7 +67,7 @@ const ThankYou = () => {
             marginBottom: "20px",
           }}
         >
-          What would you like to do next?
+          
         </Typography>
 
         {/* Back to Homepage Button */}
@@ -85,6 +85,7 @@ const ThankYou = () => {
               text-white
               bg-black
               mb-4
+              mt-10
             "
           >
             Go to Homepage

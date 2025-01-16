@@ -65,7 +65,7 @@ const CancelTransaction = () => {
             marginBottom: "20px",
           }}
         >
-          What would you like to do next?
+         
         </Typography>
 
         {/* Back to Homepage Button */}
@@ -83,6 +83,7 @@ const CancelTransaction = () => {
               text-white
               bg-black
               mb-4
+              mt-10
             "
           >
             Go to Homepage
@@ -90,7 +91,7 @@ const CancelTransaction = () => {
         </Link>
 
         {/* Contact Support Button */}
-        <Link to="/about" style={{ textDecoration: "none", width: "100%", maxWidth: "600px" }}>
+        <Link to="/prints" style={{ textDecoration: "none", width: "100%", maxWidth: "600px" }}>
           <Button
             className="
               w-full
@@ -106,7 +107,7 @@ const CancelTransaction = () => {
               hover:bg-gray-100
             "
           >
-            Contact Me
+            Browse Products
           </Button>
         </Link>
       </Box>
@@ -132,7 +133,7 @@ const CancelTransaction = () => {
             color: "#666",
           }}
         >
-          All purchases are secure and appreciated. Thank you for supporting me.
+          All purchases are secure and appreciated. Thank you for your support.
         </Typography>
       </Box>
     </>

@@ -35,15 +35,8 @@ const BWPage1 = () => {
   };
 
   return (
-    
-    // TODO: Change Quantity to not have negative numbers.
-    // TODO: Change the fonts for the text on the card.
-    // TODO: When the frame size button is clicked, change the border color to black.
-    // TODO: Adjust positioning of card to fit the page better and possible remove borders? 
-    // TODO: Also, when the quantity and frame size is selected, the price needs to adjust accordingly.
-
     <div className="flex justify-center items-center min-h-screen p-4">
-      <Card className="w-full max-w-3xl shadow">
+      <Card className="w-full max-w-4xl ">
         {/* Card layout can be a split flex if you want image on the left, content on right */}
         <div className="flex flex-col md:flex-row">
           {/* Image section */}
@@ -58,29 +51,42 @@ const BWPage1 = () => {
           {/* Text/content section */}
           <div className="p-6 md:w-1/2 flex flex-col">
             <CardHeader className="p-0">
-              <CardTitle className="text-2xl">Black and White 1</CardTitle>
-              <CardDescription className="text-lg">from $25.00</CardDescription>
+              <CardTitle className="text-2xl font-cormorant italic">Black and White 1</CardTitle>
+              <CardDescription className="text-sm">from $25.00</CardDescription>
             </CardHeader>
 
             <CardContent className="mt-4 p-0">
-              <p className="mb-4 text-sm text-gray-700 leading-relaxed">
+              <p
+              className="
+              rounded-none
+              py-1
+              font-cormorant
+              text-black-700
+              italic
+              mb-4"
+              >
                 This is an art print. The handcrafted canvas makes it perfect
                 for both home and office wall decor. Option to frame.
               </p>
 
               {/* Frame options */}
               <div className="mb-4">
-                <Label className="mb-2 block">Frame Size:</Label>
+                <Label className="
+                mb-2 block 
+                font-cormorant
+                italic
+                "
+                >Frame Size:</Label>
                 <div className="flex space-x-2">
-                  <Button variant="outline">8x10</Button>
-                  <Button variant="outline">11x14</Button>
-                  <Button variant="outline">16x20</Button>
+                  <Button variant="outline" className="font-cormorant">8x10</Button>
+                  <Button variant="outline" className="font-cormorant">11x14</Button>
+                  <Button variant="outline" className="font-cormorant" >16x20</Button>
                 </div>
               </div>
 
               {/* Quantity */}
               <div className="mb-2">
-                <Label htmlFor="quantity" className="mb-2 block">
+                <Label htmlFor="quantity" className="mb-2 block font-cormorant italic">
                   Quantity:
                 </Label>
                 <Input
@@ -92,7 +98,7 @@ const BWPage1 = () => {
               </div>
             </CardContent>
 
-            <CardFooter className="mt-auto p-0 pt-4">
+            <CardFooter className="mt-auto p-0 pt-4 mb-[60">
               <Button onClick={handleBuyNow} className="w-full">
                 Buy Now
               </Button>
