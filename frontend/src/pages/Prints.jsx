@@ -11,6 +11,8 @@ import BW8 from "../components/Listings/BlackAndWhiteListings/BW8";
 
 const Prints = () => {
   return (
+    // TODO: Fix Buy Now button that shit is not centered.
+
     <div className="max-w-4xl mx-auto px-4 py-10">
       {/* Text section */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">

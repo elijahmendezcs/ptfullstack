@@ -1,9 +1,6 @@
-// BWPage.jsx
 import React from "react";
-// Import your price IDs
 import { priceIds } from "../../lib/priceIds";
 
-// Import shadcn/ui components
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -14,8 +11,8 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
-import { Input } from "@/components/ui/input"; // If you want to use the shadcn <Input>
-import blackandwhite5 from "../../images/BlackAndWhiteImages/blackandwhite5.jpg"; // Adjust path if needed
+import { Input } from "@/components/ui/input";
+import blackandwhite5 from "../../images/BlackAndWhiteImages/blackandwhite5.jpg";
 
 const BWPage1 = () => {
   const handleBuyNow = async () => {
@@ -38,6 +35,13 @@ const BWPage1 = () => {
   };
 
   return (
+    
+    // TODO: Change Quantity to not have negative numbers.
+    // TODO: Change the fonts for the text on the card.
+    // TODO: When the frame size button is clicked, change the border color to black.
+    // TODO: Adjust positioning of card to fit the page better and possible remove borders? 
+    // TODO: Also, when the quantity and frame size is selected, the price needs to adjust accordingly.
+
     <div className="flex justify-center items-center min-h-screen p-4">
       <Card className="w-full max-w-3xl shadow">
         {/* Card layout can be a split flex if you want image on the left, content on right */}
@@ -90,7 +94,7 @@ const BWPage1 = () => {
 
             <CardFooter className="mt-auto p-0 pt-4">
               <Button onClick={handleBuyNow} className="w-full">
-                Add To Cart
+                Buy Now
               </Button>
             </CardFooter>
           </div>
