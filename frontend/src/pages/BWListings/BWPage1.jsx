@@ -1,6 +1,5 @@
 import React from "react";
 import { priceIds } from "../../lib/priceIds";
-
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -22,104 +21,98 @@ const BWPage1 = () => {
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            priceId: priceIds["BlackAndWhite1"],
-          }),
+          body: JSON.stringify({ priceId: priceIds["BlackAndWhite1"] }),
         }
       );
       const data = await res.json();
-      window.location.href = data.url; // Redirect to Stripe Checkout
+      window.location.href = data.url;
     } catch (err) {
       console.error(err);
     }
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen p-4">
-      {/*
-        Use border-none and shadow-none to remove the default border and shadow
-        Increase the max-width to something larger, e.g. max-w-screen-xl or max-w-6xl
-      */}
-      <Card className="w-full max-w-screen-xl border-none shadow-none">
-        <div className="flex flex-col md:flex-row">
-          {/* Image section */}
-          <div className="md:w-1/2">
-            <img
-              src={blackandwhite5}
-              alt="Satellite"
-              className="object-cover w-full h-full"
-            />
-          </div>
+    <div className="min-h-screen w-full bg-gray-50 flex items-center justify-center py-8 px-4">
+      {/* Card Container */}
+      <Card className="max-w-5xl w-full md:flex-row flex-col overflow-hidden shadow-lg border border-gray-200">
+        {/* Left side: Image */}
+        <div className="md:w-1/2 w-full h-64 md:h-auto">
+          <img
+            src={blackandwhite5}
+            alt="Black and White Art"
+            className="w-full h-full object-cover"
+          />
+        </div>
 
-          {/* Text/content section */}
-          <div className="p-6 md:w-1/2 flex flex-col">
-            <CardHeader className="p-0">
-              <CardTitle className="text-2xl font-cormorant italic">Black and White 1</CardTitle>
-              <CardDescription className="text-sm">from $25.00</CardDescription>
-            </CardHeader>
+        {/* Right side: Product Details */}
+        <div className="md:w-1/2 w-full p-6 flex flex-col bg-white">
+          <CardHeader className="p-0 mb-4">
+            <CardTitle className="text-3xl font-cormorant italic">
+              Black and White 1
+            </CardTitle>
+            <CardDescription className="text-lg font-light text-gray-600">
+              from $25.00
+            </CardDescription>
+          </CardHeader>
 
-            <CardContent className="mt-4 p-0">
-              <p
-                className="
-                  rounded-none
-                  py-1
-                  font-cormorant
-                  text-black-700
-                  italic
-                  mb-4
-                "
+          <CardContent className="p-0 flex-grow">
+            <p className="my-4 font-cormorant italic text-gray-700 leading-relaxed">
+              This is an art print. The handcrafted canvas makes it perfect for
+              both home and office wall decor. Option to frame.
+            </p>
+
+            {/* Frame Size */}
+            <div className="mb-6">
+              <Label className="mb-2 block font-cormorant italic text-gray-700">
+                Frame Size:
+              </Label>
+              <div className="flex space-x-2">
+                <Button
+                  variant="outline"
+                  className="font-cormorant border-gray-300 bg-white hover:bg-gray-100"
+                >
+                  8x10
+                </Button>
+                <Button
+                  variant="outline"
+                  className="font-cormorant border-gray-300 bg-white hover:bg-gray-100"
+                >
+                  11x14
+                </Button>
+                <Button
+                  variant="outline"
+                  className="font-cormorant border-gray-300 bg-white hover:bg-gray-100"
+                >
+                  16x20
+                </Button>
+              </div>
+            </div>
+
+            {/* Quantity */}
+            <div>
+              <Label
+                htmlFor="quantity"
+                className="mb-2 block font-cormorant italic text-gray-700"
               >
-                This is an art print. The handcrafted canvas makes it perfect
-                for both home and office wall decor. Option to frame.
-              </p>
+                Quantity:
+              </Label>
+              <Input
+                id="quantity"
+                type="number"
+                defaultValue={1}
+                className="w-24 border-gray-300"
+              />
+            </div>
+          </CardContent>
 
-              {/* Frame options */}
-              <div className="mb-4">
-                <Label
-                  className="
-                    mb-2 block 
-                    font-cormorant
-                    italic
-                  "
-                >
-                  Frame Size:
-                </Label>
-                <div className="flex space-x-2">
-                  <Button variant="outline" className="font-cormorant">
-                    8x10
-                  </Button>
-                  <Button variant="outline" className="font-cormorant">
-                    11x14
-                  </Button>
-                  <Button variant="outline" className="font-cormorant">
-                    16x20
-                  </Button>
-                </div>
-              </div>
-
-              {/* Quantity */}
-              <div className="mb-2">
-                <Label
-                  htmlFor="quantity"
-                  className="mb-2 block font-cormorant italic"
-                >
-                  Quantity:
-                </Label>
-                <Input
-                  id="quantity"
-                  type="number"
-                  defaultValue={1}
-                  className="w-24"
-                />
-              </div>
-            </CardContent>
-
-            <CardFooter className="mt-auto p-0 pt-4">
-              <Button onClick={handleBuyNow} className="w-full">
-                Buy Now
-              </Button>
-            </CardFooter>
-          </div>
+          <CardFooter className="mt-6 p-0">
+            <Button
+              onClick={handleBuyNow}
+              className="w-full bg-black text-white hover:bg-gray-900 transition-colors border-none"
+            >
+              Buy Now
+            </Button>
+          </CardFooter>
         </div>
       </Card>
     </div>
