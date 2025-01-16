@@ -36,8 +36,11 @@ const BWPage1 = () => {
 
   return (
     <div className="flex justify-center items-center min-h-screen p-4">
-      <Card className="w-full max-w-4xl ">
-        {/* Card layout can be a split flex if you want image on the left, content on right */}
+      {/*
+        Use border-none and shadow-none to remove the default border and shadow
+        Increase the max-width to something larger, e.g. max-w-screen-xl or max-w-6xl
+      */}
+      <Card className="w-full max-w-screen-xl border-none shadow-none">
         <div className="flex flex-col md:flex-row">
           {/* Image section */}
           <div className="md:w-1/2">
@@ -57,13 +60,14 @@ const BWPage1 = () => {
 
             <CardContent className="mt-4 p-0">
               <p
-              className="
-              rounded-none
-              py-1
-              font-cormorant
-              text-black-700
-              italic
-              mb-4"
+                className="
+                  rounded-none
+                  py-1
+                  font-cormorant
+                  text-black-700
+                  italic
+                  mb-4
+                "
               >
                 This is an art print. The handcrafted canvas makes it perfect
                 for both home and office wall decor. Option to frame.
@@ -71,22 +75,34 @@ const BWPage1 = () => {
 
               {/* Frame options */}
               <div className="mb-4">
-                <Label className="
-                mb-2 block 
-                font-cormorant
-                italic
-                "
-                >Frame Size:</Label>
+                <Label
+                  className="
+                    mb-2 block 
+                    font-cormorant
+                    italic
+                  "
+                >
+                  Frame Size:
+                </Label>
                 <div className="flex space-x-2">
-                  <Button variant="outline" className="font-cormorant">8x10</Button>
-                  <Button variant="outline" className="font-cormorant">11x14</Button>
-                  <Button variant="outline" className="font-cormorant" >16x20</Button>
+                  <Button variant="outline" className="font-cormorant">
+                    8x10
+                  </Button>
+                  <Button variant="outline" className="font-cormorant">
+                    11x14
+                  </Button>
+                  <Button variant="outline" className="font-cormorant">
+                    16x20
+                  </Button>
                 </div>
               </div>
 
               {/* Quantity */}
               <div className="mb-2">
-                <Label htmlFor="quantity" className="mb-2 block font-cormorant italic">
+                <Label
+                  htmlFor="quantity"
+                  className="mb-2 block font-cormorant italic"
+                >
                   Quantity:
                 </Label>
                 <Input
@@ -98,7 +114,7 @@ const BWPage1 = () => {
               </div>
             </CardContent>
 
-            <CardFooter className="mt-auto p-0 pt-4 mb-[60">
+            <CardFooter className="mt-auto p-0 pt-4">
               <Button onClick={handleBuyNow} className="w-full">
                 Buy Now
               </Button>
