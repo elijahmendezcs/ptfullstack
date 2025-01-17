@@ -36,17 +36,14 @@ const BWPage1 = () => {
 
   return (
     <Card className="w-full min-h-screen p-4 md:p-8 bg-gray-50">
-      {/* Flex container for layout */}
       <div className="flex flex-col md:flex-row gap-6 h-full">
         {/* Image section */}
-        <div className="flex-1">
-          <div className="aspect-w-4 aspect-h-3 rounded-lg overflow-hidden bg-gray-200">
-            <img
-              src={blackandwhite5}
-              alt="Art print"
-              className="object-cover w-full h-full"
-            />
-          </div>
+        <div className="flex-1 max-h-[60vh] overflow-hidden rounded-lg">
+          <img
+            src={blackandwhite5}
+            alt="Art print"
+            className="object-cover w-full h-full rounded-lg"
+          />
         </div>
 
         {/* Content section */}
@@ -101,7 +98,7 @@ const BWPage1 = () => {
             </div>
           </CardContent>
 
-          <CardFooter className="mt-auto p-0 pt-4 ">
+          <CardFooter className="mt-auto p-0 pt-4">
             <Button onClick={handleBuyNow} className="w-full">
               Buy Now
             </Button>
