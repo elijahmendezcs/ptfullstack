@@ -35,63 +35,43 @@ const BWPage1 = () => {
   };
 
   return (
-    <Card className="w-screen min-h-screen">
-      {/* Full height flex container to distribute space between image and text */}
-      <div className="flex flex-col md:flex-row h-full">
-        {/* Image section (40% width on medium screens) */}
-        <div className="ml-3 mt-3 mb-[60px] md:w-2/5">
-          <img
-            src={blackandwhite5}
-            alt="Satellite"
-            className="object-cover h-[900px] w-[900px] rounded-lg"
-          />
+    <Card className="w-full min-h-screen p-4 md:p-8 bg-gray-50">
+      {/* Flex container for layout */}
+      <div className="flex flex-col md:flex-row gap-6 h-full">
+        {/* Image section */}
+        <div className="flex-1">
+          <div className="aspect-w-4 aspect-h-3 rounded-lg overflow-hidden bg-gray-200">
+            <img
+              src={blackandwhite5}
+              alt="Art print"
+              className="object-cover w-full h-full"
+            />
+          </div>
         </div>
 
-        {/* Content section (60% width on medium screens) */}
-        <div className="p-8
-         md:w-3/5 
-         h-full flex 
-         flex-col">
+        {/* Content section */}
+        <div className="flex-1 flex flex-col">
           <CardHeader className="p-0">
-            <CardTitle className="
-             text-3xl
-             font-cormorant
-              italic
-               mb-2">
+            <CardTitle className="text-2xl md:text-3xl font-cormorant italic mb-2">
               Black and White 1
             </CardTitle>
-            <CardDescription className="text-lg">
+            <CardDescription className="text-base md:text-lg">
               from $25.00
             </CardDescription>
           </CardHeader>
 
-          <CardContent className="mt-6 p-0">
-            <p
-              className="
-                font-cormorant
-                text-lg
-                italic
-                mb-6
-                text-black-700
-              "
-            >
+          <CardContent className="mt-4 md:mt-6 p-0">
+            <p className="font-cormorant text-base md:text-lg italic mb-6 text-black-700">
               This is an art print. The handcrafted canvas makes it perfect
               for both home and office wall decor. Option to frame.
             </p>
 
             {/* Frame options */}
             <div className="mb-6">
-              <Label
-                className="
-                  mb-2 block 
-                  font-cormorant
-                  italic
-                  text-lg
-                "
-              >
+              <Label className="mb-2 block font-cormorant italic text-base md:text-lg">
                 Frame Size:
               </Label>
-              <div className="flex space-x-2">
+              <div className="flex gap-2">
                 <Button variant="outline" className="font-cormorant">
                   8x10
                 </Button>
@@ -108,7 +88,7 @@ const BWPage1 = () => {
             <div className="mb-6">
               <Label
                 htmlFor="quantity"
-                className="mb-2 block font-cormorant italic text-lg"
+                className="mb-2 block font-cormorant italic text-base md:text-lg"
               >
                 Quantity:
               </Label>
@@ -121,7 +101,7 @@ const BWPage1 = () => {
             </div>
           </CardContent>
 
-          <CardFooter className="mt-[475px] p-0 pt-4">
+          <CardFooter className="mt-auto p-0 pt-4 ">
             <Button onClick={handleBuyNow} className="w-full">
               Buy Now
             </Button>
