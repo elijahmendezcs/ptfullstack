@@ -39,18 +39,25 @@ const BWPage1 = () => {
       {/* Full height flex container to distribute space between image and text */}
       <div className="flex flex-col md:flex-row h-full">
         {/* Image section (40% width on medium screens) */}
-        <div className="md:w-2/5 h-full">
+        <div className="ml-3 mt-3 mb-[60px] md:w-2/5">
           <img
             src={blackandwhite5}
             alt="Satellite"
-            className="object-cover w-full h-full"
+            className="object-cover h-[900px] w-[900px] rounded-lg"
           />
         </div>
 
         {/* Content section (60% width on medium screens) */}
-        <div className="p-8 md:w-3/5 h-full flex flex-col">
+        <div className="p-8
+         md:w-3/5 
+         h-full flex 
+         flex-col">
           <CardHeader className="p-0">
-            <CardTitle className="text-3xl font-cormorant italic mb-2">
+            <CardTitle className="
+             text-3xl
+             font-cormorant
+              italic
+               mb-2">
               Black and White 1
             </CardTitle>
             <CardDescription className="text-lg">
@@ -114,7 +121,7 @@ const BWPage1 = () => {
             </div>
           </CardContent>
 
-          <CardFooter className="mt-auto p-0 pt-4">
+          <CardFooter className="mt-[475px] p-0 pt-4">
             <Button onClick={handleBuyNow} className="w-full">
               Buy Now
             </Button>
