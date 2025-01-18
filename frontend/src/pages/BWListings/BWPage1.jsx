@@ -35,8 +35,8 @@ const BWPage1 = () => {
   };
 
   return (
-    <Card className="w-full min-h-screen p-4 md:p-8 bg-gray-50">
-      <div className="flex flex-col md:flex-row gap-6 h-full">
+    <Card className="w-full p-4 md:p-8 bg-white rounded-lg mt-[70px] border-white">
+      <div className="flex flex-col md:flex-row gap-6">
         {/* Image section */}
         <div className="flex-1 max-h-[60vh] overflow-hidden rounded-lg">
           <img
@@ -98,7 +98,7 @@ const BWPage1 = () => {
             </div>
           </CardContent>
 
-          <CardFooter className="mt-auto p-0 pt-4">
+          <CardFooter className="mt-[195px]">
             <Button onClick={handleBuyNow} className="w-full">
               Buy Now
             </Button>
