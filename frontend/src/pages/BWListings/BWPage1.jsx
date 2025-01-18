@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { priceIds } from "../../lib/priceIds";
 
 import { Button } from "@/components/ui/button";
@@ -15,6 +15,12 @@ import { Input } from "@/components/ui/input";
 import blackandwhite5 from "../../images/BlackAndWhiteImages/blackandwhite5.jpg";
 
 const BWPage1 = () => {
+  const [selectedSize, setSelectedSize] = useState(null); // State for selected button
+
+  const handleSizeClick = (size) => {
+    setSelectedSize(size); // Update the selected size
+  };
+
   const handleBuyNow = async () => {
     try {
       const res = await fetch(
@@ -69,15 +75,19 @@ const BWPage1 = () => {
                 Frame Size:
               </Label>
               <div className="flex gap-2">
-                <Button variant="outline" className="font-cormorant">
-                  8x10
-                </Button>
-                <Button variant="outline" className="font-cormorant">
-                  11x14
-                </Button>
-                <Button variant="outline" className="font-cormorant">
-                  16x20
-                </Button>
+                {["8x10", "11x14", "16x20"].map((size) => (
+                  <Button
+                    key={size}
+                    onClick={() => handleSizeClick(size)}
+                    className={`font-cormorant ${
+                      selectedSize === size
+                        ? "bg-black text-white"
+                        : "bg-white text-black border-black"
+                    }`}
+                  >
+                    {size}
+                  </Button>
+                ))}
               </div>
             </div>
 
@@ -93,6 +103,7 @@ const BWPage1 = () => {
                 id="quantity"
                 type="number"
                 defaultValue={1}
+                min={1}
                 className="w-24"
               />
             </div>
