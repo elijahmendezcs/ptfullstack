@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
-import blackandwhite5 from "../../images/BlackAndWhiteImages/blackandwhite5.jpg";
+import blackandwhite from "../../images/BlackAndWhiteImages/blackandwhite5.jpg";
 
 const BWPage1 = () => {
   const [selectedSize, setSelectedSize] = useState(null); // State for selected button
@@ -46,7 +46,7 @@ const BWPage1 = () => {
         {/* Image section */}
         <div className="flex-1 max-h-[60vh] overflow-hidden rounded-lg">
           <img
-            src={blackandwhite5}
+            src={blackandwhite}
             alt="Art print"
             className="object-cover w-full h-full rounded-lg"
           />
