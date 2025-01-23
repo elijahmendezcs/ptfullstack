@@ -1,14 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import { priceIds } from "../../lib/priceIds";
-import AspectRatio from "@mui/joy/AspectRatio";
-import Button from "@mui/joy/Button";
-import Card from "@mui/joy/Card";
-import CardContent from "@mui/joy/CardContent";
-import IconButton from "@mui/joy/IconButton";
-import Typography from "@mui/joy/Typography";
-import BookmarkAdd from "@mui/icons-material/BookmarkAddOutlined";
 
-const BWPage3 = () => {
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Label } from "@/components/ui/label";
+import { Input } from "@/components/ui/input";
+import blackandwhite from "../../images/BlackAndWhiteImages/blackandwhite3.jpg";
+
+const BWPage1 = () => {
+  const [selectedSize, setSelectedSize] = useState(null);
+
+  const handleSizeClick = (size) => {
+    setSelectedSize(size);
+  };
+
   const handleBuyNow = async () => {
     try {
       const res = await fetch(
@@ -17,7 +29,7 @@ const BWPage3 = () => {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
-            priceId: priceIds["BlackAndWhite3"], // or whichever listing this page represents
+            priceId: priceIds["BlackAndWhite1"],
           }),
         }
       );
@@ -29,59 +41,89 @@ const BWPage3 = () => {
   };
 
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        height: "90vh",
-        fontSize: "2rem",
-      }}
-    >
-      <Card sx={{ width: 320 }}>
-        <div>
-          <Typography level="title-lg">Yosemite National Park</Typography>
-          <Typography level="body-sm">April 24 to May 02, 2021</Typography>
-          <IconButton
-            aria-label="bookmark Bahamas Islands"
-            variant="plain"
-            color="neutral"
-            size="sm"
-            sx={{ position: "absolute", top: "0.875rem", right: "0.5rem" }}
-          >
-            <BookmarkAdd />
-          </IconButton>
-        </div>
-        <AspectRatio minHeight="120px" maxHeight="200px">
+    <Card className="w-full p-4 md:p-8 bg-white rounded-lg mt-[70px] border-white">
+      <div className="flex flex-col md:flex-row gap-6">
+        {/* Image section */}
+        <div className="flex-1 max-h-[60vh] overflow-hidden rounded-lg">
           <img
-            src="https://images.unsplash.com/photo-1527549993586-dff825b37782?auto=format&fit=crop&w=286"
-            srcSet="https://images.unsplash.com/photo-1527549993586-dff825b37782?auto=format&fit=crop&w=286&dpr=2 2x"
-            loading="lazy"
-            alt=""
+            src={blackandwhite}
+            alt="Art print"
+            className="object-cover w-full h-full rounded-lg"
           />
-        </AspectRatio>
-        <CardContent orientation="horizontal">
+        </div>
+
+        {/* Content section */}
+        <div className="flex-1 flex flex-col justify-between">
+          {/* Container for header & main text */}
           <div>
-            <Typography level="body-xs">Total price:</Typography>
-            <Typography sx={{ fontSize: "lg", fontWeight: "lg" }}>
-              $2,900
-            </Typography>
+            <CardHeader className="p-0">
+              <CardTitle className="text-2xl md:text-3xl font-cormorant italic mb-2">
+                Black and White 2
+              </CardTitle>
+              <CardDescription className="text-base md:text-lg font-cormorant">
+                from $25.00
+              </CardDescription>
+            </CardHeader>
+
+            <CardContent className="mt-4 md:mt-6 p-0">
+              <p className="font-cormorant text-base md:text-lg italic mb-6 text-black-700">
+                This is an art print. The handcrafted canvas makes it perfect
+                for both home and office wall decor. Option to frame.
+              </p>
+
+              {/* Frame options */}
+              <div className="mb-6">
+                <Label className="mb-2 block font-cormorant italic text-base md:text-lg">
+                  Frame Size:
+                </Label>
+                <div className="flex gap-2">
+                  {["8x10", "11x14", "16x20"].map((size) => (
+                    <Button
+                      key={size}
+                      onClick={() => handleSizeClick(size)}
+                      className={`font-cormorant ${
+                        selectedSize === size
+                          ? "bg-black text-white"
+                          : "bg-white text-black border-black"
+                      }`}
+                    >
+                      {size}
+                    </Button>
+                  ))}
+                </div>
+              </div>
+
+              {/* Quantity */}
+              <div className="mb-6">
+                <Label
+                  htmlFor="quantity"
+                  className="mb-2 block font-cormorant italic text-base md:text-lg"
+                >
+                  Quantity:
+                </Label>
+                <Input
+                  id="quantity"
+                  type="number"
+                  defaultValue={1}
+                  min={1}
+                  className="w-24"
+                />
+              </div>
+            </CardContent>
           </div>
-          <Button
-            onClick={handleBuyNow}
-            variant="solid"
-            size="md"
-            color="primary"
-            aria-label="Explore Bahamas Islands"
-            sx={{ ml: "auto", alignSelf: "center", fontWeight: 600 }}
-          >
-            Buy Now
-          </Button>
-        </CardContent>
-      </Card>
-      {/* Show your product's real details */}
-    </div>
+
+          <CardFooter className="p-0 mt-4">
+            <Button
+              onClick={handleBuyNow}
+              className="w-full font-cormorant bg-black text-white"
+            >
+              Buy Now
+            </Button>
+          </CardFooter>
+        </div>
+      </div>
+    </Card>
   );
 };
 
-export default BWPage3;
+export default BWPage1;
