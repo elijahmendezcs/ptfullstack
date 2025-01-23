@@ -1,10 +1,12 @@
 export const priceIds = {
-  "BlackAndWhite1": "price_1Qgbsp06SIMuWkYg3yWAP0EN",
-  "BlackAndWhite2": "price_1QgbtC06SIMuWkYgrdT31ucX",
-  "BlackAndWhite3": "price_1QgbtR06SIMuWkYgaSRKiRBM",
-  "BlackAndWhite4": "price_1Qgbty06SIMuWkYgvHg4hY8B",
-  "BlackAndWhite5": "price_1Qgbu706SIMuWkYgCNbDQfmc",
-  "BlackAndWhite6": "price_1QgbuP06SIMuWkYgVuGo5F8K",
-  "BlackAndWhite7": "price_1QgbvW06SIMuWkYgmNbnYSuO",
-  "BlackAndWhite8": "price_1Qgbvo06SIMuWkYg4JTBV6RO",  
+  BlackAndWhite1: "price_1QkZde06SIMuWkYgYBzqc8Iz",
+  BlackAndWhite2: "price_1QkZd706SIMuWkYgDLV6qgNF",
+  BlackAndWhite3: "price_1QkZcg06SIMuWkYgxuzoZlRs",
+  BlackAndWhite4: "price_1QkZb306SIMuWkYgK8LZdLeJ",
+  BlackAndWhite5: "price_1QkZag06SIMuWkYg0roL0sHs",
+  BlackAndWhite6: "price_1QkZaM06SIMuWkYgz2PcIGau",
+  BlackAndWhite7: "price_1QkZZ706SIMuWkYgTFxkNq3l",
+  BlackAndWhite8: "price_1QkZRn06SIMuWkYgAHNoSchO",
 };
+
+// UPDATED PRICE IDS TO THE $25 ONES
