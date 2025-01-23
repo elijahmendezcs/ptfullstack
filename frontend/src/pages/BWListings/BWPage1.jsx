@@ -41,23 +41,18 @@ const BWPage1 = () => {
   };
 
   return (
-    <Card className="w-full p-4 md:p-8 bg-white rounded-lg mt-[70px] border-white">
+    <Card className="w-full p-4 md:p-8 bg-white mt-[70px] border-white border-0">
       <div className="flex flex-col md:flex-row gap-6">
         {/* Image section */}
-        <div className="flex-1 max-h-[60vh] overflow-hidden rounded-lg">
+        <div className="flex-1 max-h-[60vh] overflow-hidden">
           <img
             src={blackandwhite}
             alt="Art print"
-            className="object-cover w-full h-full rounded-lg"
+            className="object-cover w-full h-full"
           />
         </div>
 
         {/* Content section */}
-        {/* 
-          Make this a flex-column container that spans all available vertical 
-          space and justifies content between the top and bottom so the CardFooter 
-          ends up at the bottom.
-        */}
         <div className="flex-1 flex flex-col justify-between">
           <div>
             <CardHeader className="p-0">
@@ -85,11 +80,14 @@ const BWPage1 = () => {
                     <Button
                       key={size}
                       onClick={() => handleSizeClick(size)}
-                      className={`font-cormorant ${
+                      className={`font-cormorant border-2 ${
                         selectedSize === size
                           ? "bg-black text-white"
-                          : "bg-white text-black border-black"
+                          : "bg-white text-black"
                       }`}
+                      style={{
+                        borderRadius: 0, // Square corners for buttons
+                      }}
                     >
                       {size}
                     </Button>
@@ -102,6 +100,9 @@ const BWPage1 = () => {
                 <Label
                   htmlFor="quantity"
                   className="mb-2 block font-cormorant italic text-base md:text-lg"
+                  style={{
+                    borderRadius: 0, // Square corners for labels
+                  }}
                 >
                   Quantity:
                 </Label>
@@ -111,6 +112,9 @@ const BWPage1 = () => {
                   defaultValue={1}
                   min={1}
                   className="w-24"
+                  style={{
+                    borderRadius: 0, // Square corners for input
+                  }}
                 />
               </div>
             </CardContent>
@@ -118,7 +122,13 @@ const BWPage1 = () => {
 
           {/* Footer (Buy Now) at the bottom */}
           <CardFooter className="p-0 mt-4">
-            <Button onClick={handleBuyNow} className="w-full font-cormorant bg-black text-white">
+            <Button
+              onClick={handleBuyNow}
+              className="w-full font-cormorant bg-black text-white"
+              style={{
+                borderRadius: 0, // Square corners for Buy Now button
+              }}
+            >
               Buy Now
             </Button>
           </CardFooter>

@@ -44,11 +44,11 @@ const BWPage1 = () => {
     <Card className="w-full p-4 md:p-8 bg-white rounded-lg mt-[70px] border-white">
       <div className="flex flex-col md:flex-row gap-6">
         {/* Image section */}
-        <div className="flex-1 max-h-[60vh] overflow-hidden rounded-lg">
+        <div className="flex-1 max-h-[60vh] overflow-hidden">
           <img
             src={blackandwhite}
             alt="Art print"
-            className="object-cover w-full h-full rounded-lg"
+            className="object-cover w-full h-full"
           />
         </div>
 
@@ -58,7 +58,7 @@ const BWPage1 = () => {
           <div>
             <CardHeader className="p-0">
               <CardTitle className="text-2xl md:text-3xl font-cormorant italic mb-2">
-                Black and White 2
+                Black and White 8
               </CardTitle>
               <CardDescription className="text-base md:text-lg font-cormorant">
                 from $25.00
@@ -86,6 +86,9 @@ const BWPage1 = () => {
                           ? "bg-black text-white"
                           : "bg-white text-black border-black"
                       }`}
+                      style={{
+                        borderRadius: 0,
+                      }}
                     >
                       {size}
                     </Button>
@@ -98,6 +101,9 @@ const BWPage1 = () => {
                 <Label
                   htmlFor="quantity"
                   className="mb-2 block font-cormorant italic text-base md:text-lg"
+                  style={{
+                    borderRadius: 0,
+                  }}
                 >
                   Quantity:
                 </Label>
@@ -107,6 +113,9 @@ const BWPage1 = () => {
                   defaultValue={1}
                   min={1}
                   className="w-24"
+                  style={{
+                    borderRadius: 0,
+                  }}
                 />
               </div>
             </CardContent>
@@ -116,6 +125,9 @@ const BWPage1 = () => {
             <Button
               onClick={handleBuyNow}
               className="w-full font-cormorant bg-black text-white"
+              style={{
+                borderRadius: 0,
+              }}
             >
               Buy Now
             </Button>
