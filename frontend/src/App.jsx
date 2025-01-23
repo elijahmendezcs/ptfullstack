@@ -7,9 +7,7 @@ import "./index.css";
 import About from "./pages/About";
 import Prints from "./pages/Prints";
 import BlackAndWhites from "./pages/BlackAndWhites";
-import Hues from "./pages/Hues";
 import Home from "./pages/Home";
-import Urban from "./pages/Urban"
 import BWPage from "./pages/BWListings/BWPage1";
 import BWPage2 from "./pages/BWListings/BWPage2";
 import BWPage3 from "./pages/BWListings/BWPage3";
@@ -34,8 +32,6 @@ function AnimatedRoutes() {
           <Route path="/about" element={<About />} />
           <Route path="/prints" element={<Prints />} />
           <Route path="/blackandwhites" element={<BlackAndWhites />} />
-          <Route path="/hues" element={<Hues />} />
-          <Route path="/urban" element={<Urban />} />
           <Route path="prints/bwpage" element={<BWPage />} />
           <Route path="prints/bwpage2" element={<BWPage2 />} />
           <Route path="prints/bwpage3" element={<BWPage3 />} />
