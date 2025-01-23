@@ -98,7 +98,7 @@ export default function RecipeReviewCard() {
             },
             marginBottom: 2,
             fontSize: 16,
-            marginLeft: 2, 
+            marginLeft: 1.5, 
           }}
         >
           Buy Now

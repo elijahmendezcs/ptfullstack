@@ -97,12 +97,12 @@ export default function RecipeReviewCard() {
             borderRadius: 0,
             fontFamily: "'Cormorant Garamond', serif",
             textTransform: "none",
-            "&:hover": {
+            "&:hover": {                                       
               backgroundColor: "black",
             },
             marginBottom: 2,
             fontSize: 16,
-            marginLeft: 2, 
+            marginLeft: .5, 
           }}
         >
           Buy Now
