@@ -8,10 +8,13 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 router.post("/create-checkout-session", async (req, res) => {
   try {
     // 1) Grab the product details from req.body
-    //    e.g., a priceId or an item name/price if you are hardcoding
+    const { priceId, quantity } = req.body; 
 
-    const { priceId } = req.body; 
-    
+    // Validate the quantity to ensure it's a positive integer
+    if (!quantity || quantity < 1) {
+      return res.status(400).json({ error: "Invalid quantity" });
+    }
+
     // 2) Create the Checkout Session
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ["card"],
@@ -19,7 +22,7 @@ router.post("/create-checkout-session", async (req, res) => {
       line_items: [
         {
           price: priceId, 
-          quantity: 1,
+          quantity, // Use the quantity passed from the frontend
         },
       ],
       success_url: "http://localhost:5173/thankyou",
