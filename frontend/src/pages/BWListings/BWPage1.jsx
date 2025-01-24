@@ -16,9 +16,15 @@ import blackandwhite from "../../images/BlackAndWhiteImages/blackandwhite5.jpg";
 
 const BWPage1 = () => {
   const [selectedSize, setSelectedSize] = useState(null);
+  const [quantity, setQuantity] = useState(1); // State for quantity
 
   const handleSizeClick = (size) => {
     setSelectedSize(size);
+  };
+
+  const handleQuantityChange = (e) => {
+    const value = Math.max(1, parseInt(e.target.value, 10)); // Ensure quantity is at least 1
+    setQuantity(value || 1); // Fallback to 1 if input is invalid
   };
 
   const handleBuyNow = async () => {
@@ -30,6 +36,7 @@ const BWPage1 = () => {
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
             priceId: priceIds["BW1_8x10"],
+            quantity, // Pass the quantity to the backend
           }),
         }
       );
@@ -109,7 +116,8 @@ const BWPage1 = () => {
                 <Input
                   id="quantity"
                   type="number"
-                  defaultValue={1}
+                  value={quantity}
+                  onChange={handleQuantityChange} // Update quantity state
                   min={1}
                   className="w-24"
                   style={{
