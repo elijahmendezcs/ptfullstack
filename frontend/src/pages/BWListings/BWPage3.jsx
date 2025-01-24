@@ -12,13 +12,19 @@ import {
 } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
-import blackandwhite from "../../images/BlackAndWhiteImages/blackandwhite3.jpg";
+import blackandwhite from "../../images/BlackAndWhiteImages/blackandwhite5.jpg";
 
 const BWPage1 = () => {
   const [selectedSize, setSelectedSize] = useState(null);
+  const [quantity, setQuantity] = useState(1); // State for quantity
 
   const handleSizeClick = (size) => {
     setSelectedSize(size);
+  };
+
+  const handleQuantityChange = (e) => {
+    const value = Math.max(1, parseInt(e.target.value, 10)); // Ensure quantity is at least 1
+    setQuantity(value || 1); // Fallback to 1 if input is invalid
   };
 
   const handleBuyNow = async () => {
@@ -30,6 +36,7 @@ const BWPage1 = () => {
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
             priceId: priceIds["BW3_8x10"],
+            quantity, // Pass the quantity to the backend
           }),
         }
       );
@@ -41,7 +48,7 @@ const BWPage1 = () => {
   };
 
   return (
-    <Card className="w-full p-4 md:p-8 bg-white rounded-lg mt-[70px] border-white">
+    <Card className="w-full p-4 md:p-8 bg-white mt-[70px] border-white border-0">
       <div className="flex flex-col md:flex-row gap-6">
         {/* Image section */}
         <div className="flex-1 max-h-[60vh] overflow-hidden">
@@ -54,7 +61,6 @@ const BWPage1 = () => {
 
         {/* Content section */}
         <div className="flex-1 flex flex-col justify-between">
-          {/* Container for header & main text */}
           <div>
             <CardHeader className="p-0">
               <CardTitle className="text-2xl md:text-3xl font-cormorant italic mb-2">
@@ -81,13 +87,13 @@ const BWPage1 = () => {
                     <Button
                       key={size}
                       onClick={() => handleSizeClick(size)}
-                      className={`font-cormorant ${
+                      className={`font-cormorant border-2 ${
                         selectedSize === size
                           ? "bg-black text-white"
-                          : "bg-white text-black border-black"
+                          : "bg-white text-black"
                       }`}
                       style={{
-                        borderRadius: 0,
+                        borderRadius: 0, // Square corners for buttons
                       }}
                     >
                       {size}
@@ -102,7 +108,7 @@ const BWPage1 = () => {
                   htmlFor="quantity"
                   className="mb-2 block font-cormorant italic text-base md:text-lg"
                   style={{
-                    borderRadius: 0,
+                    borderRadius: 0, // Square corners for labels
                   }}
                 >
                   Quantity:
@@ -110,23 +116,25 @@ const BWPage1 = () => {
                 <Input
                   id="quantity"
                   type="number"
-                  defaultValue={1}
+                  value={quantity}
+                  onChange={handleQuantityChange} // Update quantity state
                   min={1}
                   className="w-24"
                   style={{
-                    borderRadius: 0,
+                    borderRadius: 0, // Square corners for input
                   }}
                 />
               </div>
             </CardContent>
           </div>
 
+          {/* Footer (Buy Now) at the bottom */}
           <CardFooter className="p-0 mt-4">
             <Button
               onClick={handleBuyNow}
               className="w-full font-cormorant bg-black text-white"
               style={{
-                borderRadius: 0,
+                borderRadius: 0, // Square corners for Buy Now button
               }}
             >
               Buy Now
