@@ -17,51 +17,52 @@ router.post("/create-checkout-session", async (req, res) => {
       return res.status(400).json({ error: "Invalid quantity" });
     }
 
-    // Create the Stripe Checkout Session
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ["card"],
       mode: "payment",
       line_items: [
         {
-          price: priceId,
+          price: priceId, // Already set to "General – Tangible Goods" in Dashboard
           quantity,
         },
       ],
-      // Stripe will display the shipping address form on the Checkout page:
-      shipping_address_collection: {
-        // Set which countries you ship to:
-        allowed_countries: ["US", "CA"],
+      // Enable automatic tax calculation (requires Stripe Tax enabled + Registration)
+      automatic_tax: {
+        enabled: true,
       },
-      // Define your shipping rate(s) inline:
+      // Collect shipping address on the Checkout page
+      shipping_address_collection: {
+        allowed_countries: ["US"], // Add more if needed
+      },
+      // Define shipping cost, including a tax code for shipping
       shipping_options: [
         {
           shipping_rate_data: {
             display_name: "Flat Shipping",
             type: "fixed_amount",
             fixed_amount: {
-              amount: 500, // $5.00 in cents
+              amount: 500, // $5 in cents
               currency: "usd",
             },
-            // Optionally set a delivery estimate (shown on the checkout page)
+            // Many US states, including Ohio, treat mandatory shipping as taxable.
+            // This is the shipping tax code recommended by Stripe for "Shipping."
+            tax_code: "txcd_92010001",
+            // Typically "exclusive" if you want the tax to be added on top of $5
+            tax_behavior: "exclusive",
+            // Optional: Show a delivery estimate on the Checkout page
             delivery_estimate: {
-              minimum: {
-                unit: "business_day",
-                value: 3,
-              },
-              maximum: {
-                unit: "business_day",
-                value: 5,
-              },
+              minimum: { unit: "business_day", value: 3 },
+              maximum: { unit: "business_day", value: 5 },
             },
           },
         },
       ],
-      // Where to redirect upon success/cancel:
+      // Post-checkout success & cancel URLs
       success_url: "http://localhost:5173/thankyou",
       cancel_url: "http://localhost:5173/cancel",
     });
 
-    // Return the session URL
+    // Send the Checkout Session URL back to client
     res.json({ url: session.url });
   } catch (err) {
     console.error("Stripe error:", err);
