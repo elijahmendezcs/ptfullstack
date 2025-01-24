@@ -29,7 +29,7 @@ const BWPage1 = () => {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
-            priceId: priceIds["BlackAndWhite1"],
+            priceId: priceIds["BW3_8x10"],
           }),
         }
       );
