@@ -1,6 +1,6 @@
 import React from "react";
 import { Typography } from "@mui/material";
-import BlackAndWhiteImageList from "../components/BlackAndWhiteImageList";
+import LandscapeImageList from "../components/LandscapeImageList.jsx";
 
 const BlackAndWhites = () => {
   return (
@@ -18,7 +18,7 @@ const BlackAndWhites = () => {
             }}
             className="mb-2 text-gray-800 italic"
           >
-            Nature
+            Landscape
           </Typography>
         </div>
 
@@ -37,7 +37,7 @@ const BlackAndWhites = () => {
         </div>
       </div>
 
-      <BlackAndWhiteImageList />
+      <LandscapeImageList />
     </div>
   );
 };

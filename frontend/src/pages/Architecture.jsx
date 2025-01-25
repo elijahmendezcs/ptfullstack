@@ -1,8 +1,8 @@
 import React from "react";
 import { Typography } from "@mui/material";
-import BlackAndWhiteImageList from "../components/BlackAndWhiteImageList";
+import ArchImageList from "../components/ArchImageList";
 
-const BlackAndWhites = () => {
+const Architecture = () => {
   return (
     <div className="max-w-4xl mx-auto px-4 py-10">
       {/* 2-column layout on md+ */}
@@ -37,9 +37,9 @@ const BlackAndWhites = () => {
         </div>
       </div>
 
-      <BlackAndWhiteImageList />
+      <ArchImageList />
     </div>
   );
 };
 
-export default BlackAndWhites;
+export default Architecture;

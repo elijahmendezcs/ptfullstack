@@ -6,7 +6,7 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
-const pages = ["Black and Whites", "Nature", "Architecture", "Prints", "About"];
+const pages = ["Landscape", "Architecture", "Prints", "About"];
 
 function ResponsiveAppBar() {
   return (

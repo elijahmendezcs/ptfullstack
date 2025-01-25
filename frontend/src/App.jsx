@@ -6,7 +6,7 @@ import Footer from "./components/Footer";
 import "./index.css";
 import About from "./pages/About";
 import Prints from "./pages/Prints";
-import BlackAndWhites from "./pages/BlackAndWhites";
+import Landscape from "./pages/Landscape";
 import Home from "./pages/Home";
 import BWPage from "./pages/BWListings/BWPage1";
 import BWPage2 from "./pages/BWListings/BWPage2";
@@ -18,7 +18,6 @@ import BWPage7 from "./pages/BWListings/BWPage7";
 import BWPage8 from "./pages/BWListings/BWPage8";
 import ThankYou from "./pages/ThankYou";
 import Cancel from "./pages/Cancel";
-import Nature from "./pages/Nature";
 import Architecture from "./pages/Architecture";
 
 function AnimatedRoutes() {
@@ -31,7 +30,7 @@ function AnimatedRoutes() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/prints" element={<Prints />} />
-          <Route path="/blackandwhites" element={<BlackAndWhites />} />
+          <Route path="/landscape" element={<Landscape />} />
           <Route path="prints/bwpage" element={<BWPage />} />
           <Route path="prints/bwpage2" element={<BWPage2 />} />
           <Route path="prints/bwpage3" element={<BWPage3 />} />
@@ -42,7 +41,6 @@ function AnimatedRoutes() {
           <Route path="prints/bwpage8" element={<BWPage8 />} />
           <Route path="/thankyou" element={<ThankYou />} />
           <Route path="/cancel" element={<Cancel />} />
-          <Route path="/nature" element={<Nature />} />
           <Route path="/architecture" element={<Architecture />} />
         </Routes>
       </CSSTransition>
