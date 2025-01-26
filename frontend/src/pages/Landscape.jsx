@@ -1,8 +1,8 @@
 import React from "react";
 import { Typography } from "@mui/material";
-import LandscapeImageList from "../components/LandscapeImageList.jsx";
+import LandscapeImageList from "../components/Landscape3x3.jsx";
 
-const BlackAndWhites = () => {
+const Landscape = () => {
   return (
     <div className="max-w-4xl mx-auto px-4 py-10">
       {/* 2-column layout on md+ */}
@@ -42,4 +42,4 @@ const BlackAndWhites = () => {
   );
 };
 
-export default BlackAndWhites;
+export default Landscape;

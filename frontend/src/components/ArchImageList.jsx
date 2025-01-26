@@ -168,19 +168,19 @@ const itemData = [
   {
     img: ArchImg5,
     title: "Black and White Fence and Treee",
-    cols: 3,
+    cols: 1,
     rows: 2,
   },
   {
     img: ArchImg6,
     title: "Black and White Bridge",
-    cols: 1,
+    cols: 2,
     rows: 2,
   },
   {
     img: ArchImg7,
     title: "Black and White Double Doors",
-    cols: 2,
+    cols: 3,
     rows: 2,
   
   }

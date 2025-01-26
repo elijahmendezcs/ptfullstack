@@ -2,14 +2,14 @@ import React, { useState } from "react";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 
-import homeImg from "../images/MainImages/home1.jpg";
-import homeImg2 from "../images/MainImages/home2.jpg";
-import homeImg3 from "../images/MainImages/home3.jpg";
-import homeImg4 from "../images/MainImages/home4.jpg";
-import homeImg5 from "../images/MainImages/home5.jpg";
-import homeImg6 from "../images/MainImages/home6.jpg";
-import homeImg7 from "../images/MainImages/home7.jpg";
-import homeImg8 from "../images/MainImages/home8.jpg";
+import BlackandWhiteImg from "../images/BlackandWhiteImages/blackandwhite.jpg";
+import BlackandWhiteImg2 from "../images/BlackandWhiteImages/blackandwhite2.jpg";
+import BlackandWhiteImg3 from "../images/BlackandWhiteImages/blackandwhite3.jpg";
+import BlackandWhiteImg4 from "../images/BlackandWhiteImages/blackandwhite4.jpg";
+import BlackandWhiteImg5 from "../images/BlackandWhiteImages/blackandwhite5.jpg";
+import BlackandWhiteImg6 from "../images/BlackandWhiteImages/blackandwhite6.jpg";
+import BlackandWhiteImg7 from "../images/BlackandWhiteImages/blackandwhite7.jpg";
+import BlackandWhiteImg8 from "../images/BlackandWhiteImages/blackandwhite8.jpeg";
 import homeImg9 from "../images/MainImages/home9.jpg";
 
 export default function ResponsiveImageGrid() {
@@ -55,10 +55,10 @@ export default function ResponsiveImageGrid() {
   };
 
   return (
-    <div className=" mt-5 px-4 min-h-screen">
+    <div className="mt-5 min-h-screen justify-center ">
       <ImageList
         sx={{
-          width: "70%",
+          width: "100%",
           height: "auto",
           margin: "0 auto",
         }}
@@ -138,35 +138,35 @@ export default function ResponsiveImageGrid() {
 
 const itemData = [
   {
-    img: homeImg,
+    img: BlackandWhiteImg,
     title: "Senior Male Sitting",
   },
   {
-    img: homeImg2,
+    img: BlackandWhiteImg2,
     title: "Senior Female Sitting",
   },
   {
-    img: homeImg3,
+    img: BlackandWhiteImg3,
     title: "Male Senior Trees",
   },
   {
-    img: homeImg4,
+    img: BlackandWhiteImg4,
     title: "Male Senior Cap and Gown",
   },
   {
-    img: homeImg5,
+    img: BlackandWhiteImg5,
     title: "Senior Bench",
   },
   {
-    img: homeImg6,
+    img: BlackandWhiteImg6,
     title: "Female Senior Cap and Gown",
   },
   {
-    img: homeImg7,
+    img: BlackandWhiteImg7,
     title: "Senior Field",
   },
   {
-    img: homeImg8,
+    img: BlackandWhiteImg8,
     title: "Senior Park",
   },
   {
