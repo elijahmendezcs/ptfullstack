@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 
-import BlackandWhiteImg from "../images/BlackandWhiteImages/blackandwhite.jpg";
+import BlackandWhiteImg1 from "../images/BlackandWhiteImages/blackandwhite1.jpg";
 import BlackandWhiteImg2 from "../images/BlackandWhiteImages/blackandwhite2.jpg";
 import BlackandWhiteImg3 from "../images/BlackandWhiteImages/blackandwhite3.jpg";
 import BlackandWhiteImg4 from "../images/BlackandWhiteImages/blackandwhite4.jpg";
@@ -142,7 +142,7 @@ export default function ResponsiveImageGrid() {
 
 const itemData = [
   {
-    img: BlackandWhiteImg,
+    img: BlackandWhiteImg1,
     title: "Senior Male Sitting",
   },
   {
@@ -173,8 +173,8 @@ const itemData = [
     img: BlackandWhiteImg8,
     title: "Senior Park",
   },
-  {
-    img: homeImg9,
-    title: "Senior Laying",
-  },
+  // {
+  //   img: homeImg9,
+  //   title: "Senior Laying",
+  // },
 ];
