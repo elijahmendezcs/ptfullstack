@@ -55,14 +55,18 @@ export default function ResponsiveImageGrid() {
   };
 
   return (
-    <div className="mt-5 min-h-screen justify-center ">
+    <div className="mt-5 min-h-screen px-4justify-center">
       <ImageList
         sx={{
+          maxWidth: "100%",
+          marginLeft: "auto",
+          marginRight: "0 auto",
           width: "100%",
           height: "auto",
-          margin: "0 auto",
+          '@media (max-width: 900px)': { cols: 2, gap: 6 }, // Adjust for medium screens
+          '@media (max-width: 600px)': { cols: 1, gap: 4 }, // Adjust for small screens
         }}
-        cols={3}
+        cols={3} // Default columns for larger screens
         gap={8}
       >
         {itemData.map((item, index) => (

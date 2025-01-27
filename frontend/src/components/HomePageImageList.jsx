@@ -55,10 +55,10 @@ export default function ResponsiveImageGrid() {
   };
 
   return (
-    <div className=" mt-5 px-4 min-h-screen">
+    <div className="mb-[60px] mt-5 px-4 min-h-screen">
       <ImageList
         sx={{
-          width: "70%",
+          width: "100%",
           height: "auto",
           margin: "0 auto",
         }}
