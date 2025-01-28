@@ -1,10 +1,10 @@
 import React from "react";
 import { Typography } from "@mui/material";
-import ArchImageList from "../components/ArchImageList";
+import ArchImageList from "../components/Arch3x3.jsx";
 
 const Architecture = () => {
   return (
-    <div className="max-w-4xl mx-auto px-4 py-10">
+    <div className="w-full mx-auto px-4 py-10"> {/* Removed max-w-4xl */}
       {/* 2-column layout on md+ */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
         {/* Left column: heading */}
