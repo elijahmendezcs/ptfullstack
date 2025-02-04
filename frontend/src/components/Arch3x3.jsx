@@ -9,6 +9,8 @@ import ArchImg4 from "../images/Architecture/arch4.jpg";
 import ArchImg5 from "../images/Architecture/arch5.jpg";
 import ArchImg6 from "../images/Architecture/arch6.jpg";
 import ArchImg7 from "../images/Architecture/arch7.jpg";
+import ArchImg8 from "../images/Architecture/arch8.jpg";
+import ArchImg9 from "../images/Architecture/arch9.jpg";
 
 export default function ResponsiveImageGrid() {
   const [currentIndex, setCurrentIndex] = useState(null); // Track the current image index
@@ -61,8 +63,8 @@ export default function ResponsiveImageGrid() {
           marginRight: "0 auto",
           width: "100%",
           height: "auto",
-          '@media (max-width: 900px)': { cols: 2, gap: 6 }, // Adjust for medium screens
-          '@media (max-width: 600px)': { cols: 1, gap: 4 }, // Adjust for small screens
+          "@media (max-width: 900px)": { cols: 2, gap: 6 }, // Adjust for medium screens
+          "@media (max-width: 600px)": { cols: 1, gap: 4 }, // Adjust for small screens
         }}
         cols={3} // Default columns for larger screens
         gap={8}
@@ -167,4 +169,13 @@ const itemData = [
     img: ArchImg7,
     title: "Senior Field",
   },
+  {
+    img: ArchImg8,
+    title: "Senior Field",
+  },
+  {
+    img: ArchImg9,
+    title: "Senior Field",
+  },
+  {},
 ];

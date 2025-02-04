@@ -2,15 +2,15 @@ import React, { useState } from "react";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 
-import homeImg from "../images/MainImages/home1.jpg";
-import homeImg2 from "../images/MainImages/home2.jpg";
-import homeImg3 from "../images/MainImages/home3.jpg";
-import homeImg4 from "../images/MainImages/home4.jpg";
-import homeImg5 from "../images/MainImages/home5.jpg";
-import homeImg6 from "../images/MainImages/home6.jpg";
-import homeImg7 from "../images/MainImages/home7.jpg";
-import homeImg8 from "../images/MainImages/home8.jpg";
-import homeImg9 from "../images/MainImages/home9.jpg";
+import homeImg1 from "../images/BlackAndWhiteImages/blackandwhite2.jpg";
+import homeImg2 from "../images/BlackAndWhiteImages/blackandwhite3.JPG";
+import homeImg3 from "../images/BlackAndWhiteImages/blackandwhite4.jpg";
+import homeImg4 from "../images/BlackAndWhiteImages/blackandwhite1.jpg";
+import homeImg5 from "../images/BlackAndWhiteImages/blackandwhite6.jpg";
+import homeImg6 from "../images/BlackAndWhiteImages/blackandwhite7.jpg";
+import homeImg7 from "../images/BlackAndWhiteImages/blackandwhite8.jpeg";
+import homeImg8 from "../images/Architecture/arch8.jpg";
+import homeImg9 from "../images/Architecture/arch9.jpg";
 
 export default function ResponsiveImageGrid() {
   const [currentIndex, setCurrentIndex] = useState(null); // Track the current image index
@@ -138,7 +138,7 @@ export default function ResponsiveImageGrid() {
 
 const itemData = [
   {
-    img: homeImg,
+    img: homeImg8,
     title: "Senior Male Sitting",
   },
   {
@@ -166,7 +166,7 @@ const itemData = [
     title: "Senior Field",
   },
   {
-    img: homeImg8,
+    img: homeImg1,
     title: "Senior Park",
   },
   {
