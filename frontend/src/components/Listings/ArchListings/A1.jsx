@@ -71,7 +71,7 @@ export default function RecipeReviewCard() {
             fontSize: 22,
           }}
         >
-          Architecture 1
+          St. Joseph's Catholic School
         </Typography>
         <Typography
         align = "center"

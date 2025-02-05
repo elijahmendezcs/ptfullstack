@@ -67,7 +67,7 @@ export default function RecipeReviewCard() {
             fontSize: 22,
           }}
         >
-          Black and White 8
+          Aftermath
         </Typography>
         <Typography
         align = "center"

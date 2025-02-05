@@ -71,7 +71,7 @@ export default function RecipeReviewCard() {
             fontSize: 22,
           }}
         >
-          Architecture 2
+          Nazareth Hall
         </Typography>
         <Typography
         align = "center"

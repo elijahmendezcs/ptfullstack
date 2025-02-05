@@ -71,7 +71,7 @@ export default function RecipeReviewCard() {
             fontSize: 22,
           }}
         >
-          Muse
+          Toledo Repertoire Theatre
         </Typography>
         <Typography
         align = "center"

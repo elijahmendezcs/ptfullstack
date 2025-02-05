@@ -6,11 +6,11 @@ import { Box, Typography } from "@mui/material";
 const About = () => {
   // 1) State for each form field
   const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName]   = useState("");
-  const [email, setEmail]         = useState("");
-  const [subject, setSubject]     = useState("");
-  const [address, setAddress]     = useState("");
-  const [message, setMessage]     = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [address, setAddress] = useState("");
+  const [message, setMessage] = useState("");
 
   // 2) Handle form submission
   const handleSubmit = async (e) => {
@@ -94,10 +94,11 @@ const About = () => {
             color: "#888",
           }}
         >
-          I'm a paragraph. Click here to add your own text and edit me. It’s easy.
-          Just click “Edit Text” or double click me to add your own content and
-          make changes to the font. I’m a great place for you to tell a story and
-          let your users know a little more about you.
+          Liza is a skilled photographer specializing in landscape and
+          architecture imagery, primarily working with black and white photos to
+          capture polished and detailed results. She brings a professional eye
+          for detail to every project, ensuring high-quality and visually
+          striking outcomes.
         </Typography>
       </Box>
 
@@ -134,13 +135,9 @@ const About = () => {
             color: "#888",
           }}
         >
-          500 Terry Francine Street
+          luxecreativestudio@gmail.com
           <br />
-          San Francisco, CA 94158
-          <br />
-          info@mysite.com
-          <br />
-          Tel: 123-456-7890
+          Or fill out the form below
         </Typography>
       </Box>
 

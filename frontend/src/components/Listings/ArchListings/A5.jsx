@@ -71,7 +71,7 @@ export default function RecipeReviewCard() {
             fontSize: 22,
           }}
         >
-          Architecture 5
+          Muse
         </Typography>
         <Typography
         align = "center"

@@ -67,7 +67,7 @@ export default function RecipeReviewCard() {
             fontSize: 22,
           }}
         >
-          Black and White 6
+          Tindall Bridge
         </Typography>
         <Typography
         align = "center"

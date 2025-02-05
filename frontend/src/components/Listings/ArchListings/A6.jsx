@@ -71,7 +71,7 @@ export default function RecipeReviewCard() {
             fontSize: 22,
           }}
         >
-          Architecture 6
+          The Spirit Lives in You
         </Typography>
         <Typography
         align = "center"

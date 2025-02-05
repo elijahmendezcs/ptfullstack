@@ -71,7 +71,7 @@ export default function RecipeReviewCard() {
             fontSize: 22,
           }}
         >
-          Black and White 1
+          Croghan
         </Typography>
         <Typography
         align = "center"
