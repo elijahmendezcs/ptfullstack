@@ -8,6 +8,10 @@ import BW5 from "../components/Listings/BlackAndWhiteListings/BW1";
 import BW6 from "../components/Listings/BlackAndWhiteListings/BW6";
 import BW7 from "../components/Listings/BlackAndWhiteListings/BW5";
 import BW8 from "../components/Listings/BlackAndWhiteListings/BW8";
+import BW11 from "../components/Listings/BlackAndWhiteListings/BW11";
+import BW12 from "../components/Listings/BlackAndWhiteListings/BW12";
+import BW13 from "../components/Listings/BlackAndWhiteListings/BW13";
+import BW14 from "../components/Listings/BlackAndWhiteListings/BW14";
 import A1 from "../components/Listings/ArchListings/A1";
 import A2 from "../components/Listings/ArchListings/A2";
 import A3 from "../components/Listings/ArchListings/A3";
@@ -15,6 +19,8 @@ import A4 from "../components/Listings/ArchListings/A4";
 import A5 from "../components/Listings/ArchListings/A5";
 import A6 from "../components/Listings/ArchListings/A6";
 import A7 from "../components/Listings/ArchListings/A7";
+import A8 from "../components/Listings/ArchListings/A8";
+import A9 from "../components/Listings/ArchListings/A9";
 
 const Prints = () => {
   return (
@@ -86,6 +92,16 @@ const Prints = () => {
           <A5 />
           <A6 />
           <A7 />
+        </div>
+        <div className="flex justify-center items-center gap-10 row-style-3">
+          <A8 />
+          <A9 />
+          <BW11 />
+        </div>
+        <div className="flex justify-center items-center gap-10 row-style-3">
+          <BW12 />
+          <BW13 />
+          <BW14 />
         </div>
       </div>
     </div>

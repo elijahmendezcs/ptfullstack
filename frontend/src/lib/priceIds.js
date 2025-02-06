@@ -1,5 +1,4 @@
 export const priceIds = {
-
   // 8x10 Prints
   BW1_8x10: "price_1Qkcap06SIMuWkYg6YSTiCSY",
   BW2_8x10: "price_1Qkcb106SIMuWkYgzpkTo7Px",
@@ -9,6 +8,10 @@ export const priceIds = {
   BW6_8x10: "price_1Qkcc306SIMuWkYgByPP1orJ",
   BW7_8x10: "price_1QkccF06SIMuWkYgdLmIAa8w",
   BW8_8x10: "price_1QkccQ06SIMuWkYgidnCgHdS",
+  BW11_8x10: "price_1QpL8M06SIMuWkYgtzOS9zeD",
+  BW12_8x10: "price_1QpWT806SIMuWkYgIwD9mYvb",
+  BW13_8x10: "price_1QpWTM06SIMuWkYgnG0H3eeG",
+  BW14_8x10: "price_1QpWTe06SIMuWkYgG9BgTLYj",
 
   // 11x14 Prints
   BW1_11x14: "price_1Qkcco06SIMuWkYgH1KDMOCT",
@@ -19,6 +22,10 @@ export const priceIds = {
   BW6_11x14: "price_1Qkce306SIMuWkYgmAJogA2m",
   BW7_11x14: "price_1QkcfV06SIMuWkYgzDgxFd2F",
   BW8_11x14: "price_1Qkcff06SIMuWkYgnEQ9FG6O",
+  BW11_11x14: "price_1QpWU406SIMuWkYgHxhCWjCt",
+  BW12_11x14: "price_1QpWUJ06SIMuWkYgfTyxmwYF",
+  BW13_11x14: "price_1QpWUi06SIMuWkYggDaXAE6g",
+  BW14_11x14: "price_1QpWV706SIMuWkYgJXOLHDAy",
 
   // 16x20 Prints
   BW1_16x20: "price_1QkcgO06SIMuWkYgYFsvc2zF",
@@ -29,14 +36,20 @@ export const priceIds = {
   BW6_16x20: "price_1Qkchp06SIMuWkYgMqQPwGO6",
   BW7_16x20: "price_1Qkci906SIMuWkYgojfkdrb6",
   BW8_16x20: "price_1Qkcid06SIMuWkYgx9KoYZMh",
+  BW11_16x20: "price_1QpWW206SIMuWkYgL4RzOPpg",
+  BW12_16x20: "price_1QpWWI06SIMuWkYgOLfer6TW",
+  BW13_16x20: "price_1QpWWa06SIMuWkYgEiPRxhn9",
+  BW14_16x20: "price_1QpWWr06SIMuWkYgQpHLSmDH",
 
   A1_8x10: "price_1QlymQ06SIMuWkYgfS07yc6S",
   A2_8x10: "price_1Qlymi06SIMuWkYgjWB56L2E",
   A3_8x10: "price_1Qlymw06SIMuWkYgvmeV60yd",
   A4_8x10: "price_1QlynA06SIMuWkYgSBRQDi3Q",
   A5_8x10: "price_1QlynO06SIMuWkYgcSBtKiho",
-  A6_8x10: "price_1Qlync06SIMuWkYgDSG29Atg", 
+  A6_8x10: "price_1Qlync06SIMuWkYgDSG29Atg",
   A7_8x10: "price_1Qlynu06SIMuWkYgr1rhfDkr",
+  A8_8x10: "price_1QpKwm06SIMuWkYgHAyZW8KR",
+  A9_8x10: "price_1QpKx206SIMuWkYgPQQAqE5x",
 
   A1_11x14: "price_1Qlyps06SIMuWkYgGZdTzWUc",
   A2_11x14: "price_1Qlyq506SIMuWkYg9YtmnbDQ",
@@ -45,6 +58,8 @@ export const priceIds = {
   A5_11x14: "price_1Qlyqf06SIMuWkYg2PddghW2",
   A6_11x14: "price_1Qlyqt06SIMuWkYgIlVJfI4Y",
   A7_11x14: "price_1Qlyr506SIMuWkYg9Ao1ywpn",
+  A8_11x14: "price_1QpKxI06SIMuWkYgnM0m6Ozs",
+  A9_11x14: "price_1QpKxU06SIMuWkYgQLkQznfO",
 
   A1_16x20: "price_1QlyrR06SIMuWkYg19aGIwoE",
   A2_16x20: "price_1Qlyrf06SIMuWkYg8mlWeGtS",
@@ -53,6 +68,6 @@ export const priceIds = {
   A5_16x20: "price_1QlyvJ06SIMuWkYgav4BBImp",
   A6_16x20: "price_1QlyvV06SIMuWkYgCz245FxI",
   A7_16x20: "price_1Qlyvk06SIMuWkYgTQ2xdg02",
+  A8_16x20: "price_1QpL0Z06SIMuWkYgkdXkpyvl",
+  A9_16x20: "price_1QpL0o06SIMuWkYgXHCMsorw",
 };
-
-// UPDATED PRICE IDS TO THE $25 ONES

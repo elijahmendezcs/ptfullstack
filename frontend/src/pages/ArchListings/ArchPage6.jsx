@@ -84,7 +84,7 @@ const BWPage1 = () => {
                 The Spirit Lives In You
               </CardTitle>
               <CardDescription className="text-base md:text-lg font-cormorant">
-                from $25.00
+              8x10: $25.00 | 11x14: $35.00 | 16x20: $45.00
               </CardDescription>
             </CardHeader>
 

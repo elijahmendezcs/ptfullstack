@@ -1,5 +1,6 @@
+// src/pages/BWPage1.jsx
 import React, { useState } from "react";
-import { priceIds } from "../../lib/priceIds";
+import { priceIds } from "../../lib/priceIds"; // <-- adjust path if needed
 
 import { Button } from "@/components/ui/button";
 import {
@@ -12,38 +13,54 @@ import {
 } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
-import blackandwhite from "../../images/BlackAndWhiteImages/blackandwhite8.jpeg";
+import blackandwhite from "../../images/BlackandWhiteImages/blackandwhite12.jpg"; // Adjust if needed
 
 const BWPage1 = () => {
   const [selectedSize, setSelectedSize] = useState(null);
-  const [quantity, setQuantity] = useState(1); // State for quantity
+  const [quantity, setQuantity] = useState(1);
 
   const handleSizeClick = (size) => {
     setSelectedSize(size);
   };
 
   const handleQuantityChange = (e) => {
-    const value = Math.max(1, parseInt(e.target.value, 10)); // Ensure quantity is at least 1
-    setQuantity(value || 1); // Fallback to 1 if input is invalid
+    const value = Math.max(1, parseInt(e.target.value, 10));
+    setQuantity(value || 1); // fallback to 1 if input is invalid
   };
 
   const handleBuyNow = async () => {
     try {
-      const res = await fetch(
-        "http://localhost:3000/api/stripe/create-checkout-session",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            priceId: priceIds["BW8_8x10"],
-            quantity, // Pass the quantity to the backend
-          }),
-        }
-      );
+      // Make sure a size is chosen
+      if (!selectedSize) {
+        alert("Please select a frame size first.");
+        return;
+      }
+
+      // Build the key for the priceIds object, e.g. "BW1_8x10"
+      const priceKey = `BW12_${selectedSize}`;
+
+      // Make the request to your Express Stripe route
+      const res = await fetch("http://localhost:3000/api/stripe/create-checkout-session", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          priceId: priceIds[priceKey], // Use the correct Price ID
+          quantity,
+        }),
+      });
+
+      if (!res.ok) {
+        // If server returns an error status, handle or throw an error
+        const errorData = await res.json();
+        throw new Error(errorData.error || "Request failed");
+      }
+
+      // On success, get the Stripe Checkout URL and redirect
       const data = await res.json();
-      window.location.href = data.url; // Redirect to Stripe Checkout
+      window.location.href = data.url;
     } catch (err) {
-      console.error(err);
+      console.error("Error creating checkout session:", err);
+      alert("Something went wrong with Checkout. Check console for details.");
     }
   };
 
@@ -64,7 +81,7 @@ const BWPage1 = () => {
           <div>
             <CardHeader className="p-0">
               <CardTitle className="text-2xl md:text-3xl font-cormorant italic mb-2">
-                Aftermath
+                Muse
               </CardTitle>
               <CardDescription className="text-base md:text-lg font-cormorant">
               8x10: $25.00 | 11x14: $35.00 | 16x20: $45.00
@@ -93,7 +110,7 @@ const BWPage1 = () => {
                           : "bg-white text-black"
                       }`}
                       style={{
-                        borderRadius: 0, // Square corners for buttons
+                        borderRadius: 0, // Square corners
                       }}
                     >
                       {size}
@@ -108,7 +125,7 @@ const BWPage1 = () => {
                   htmlFor="quantity"
                   className="mb-2 block font-cormorant italic text-base md:text-lg"
                   style={{
-                    borderRadius: 0, // Square corners for labels
+                    borderRadius: 0, // Square corners
                   }}
                 >
                   Quantity:
@@ -117,11 +134,11 @@ const BWPage1 = () => {
                   id="quantity"
                   type="number"
                   value={quantity}
-                  onChange={handleQuantityChange} // Update quantity state
+                  onChange={handleQuantityChange}
                   min={1}
                   className="w-24"
                   style={{
-                    borderRadius: 0, // Square corners for input
+                    borderRadius: 0, // Square corners
                   }}
                 />
               </div>
@@ -134,7 +151,7 @@ const BWPage1 = () => {
               onClick={handleBuyNow}
               className="w-full font-cormorant bg-black text-white"
               style={{
-                borderRadius: 0, // Square corners for Buy Now button
+                borderRadius: 0, // Square corners
               }}
             >
               Buy Now
