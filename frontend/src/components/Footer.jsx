@@ -37,14 +37,6 @@ export default function ResponsiveFooter() {
           icon={<InstagramIcon sx={{ color: "black", fontSize: 20 }} />}
           sx={{ minWidth: "auto", padding: "0 8px" }}
         />
-        <BottomNavigationAction
-          icon={<PinterestIcon sx={{ color: "black", fontSize: 20 }} />}
-          sx={{ minWidth: "auto", padding: "0 8px" }}
-        />
-        <BottomNavigationAction
-          icon={<TwitterIcon sx={{ color: "black", fontSize: 20 }} />}
-          sx={{ minWidth: "auto", padding: "0 8px" }}
-        />
       </BottomNavigation>
     </Box>
   );
