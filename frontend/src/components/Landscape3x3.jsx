@@ -7,10 +7,10 @@ import BlackandWhiteImg2 from "../images/BlackandWhiteImages/blackandwhite2.jpg"
 import BlackandWhiteImg3 from "../images/BlackandWhiteImages/blackandwhite3.jpg";
 import BlackandWhiteImg4 from "../images/BlackandWhiteImages/blackandwhite4.jpg";
 import BlackandWhiteImg5 from "../images/BlackandWhiteImages/blackandwhite5.jpg";
-import BlackandWhiteImg6 from "../images/BlackandWhiteImages/blackandwhite6.jpg";
-import BlackandWhiteImg7 from "../images/BlackandWhiteImages/blackandwhite7.jpg";
-import BlackandWhiteImg8 from "../images/BlackandWhiteImages/blackandwhite8.jpeg";
-import homeImg9 from "../images/MainImages/home9.jpg";
+import BlackandWhiteImg11 from "../images/BlackandWhiteImages/blackandwhite11.jpg";
+import BlackandWhiteImg12 from "../images/BlackandWhiteImages/blackandwhite12.jpg";
+import BlackandWhiteImg13 from "../images/BlackandWhiteImages/blackandwhite13.jpg";
+import BlackandWhiteImg14 from "../images/BlackandWhiteImages/blackandwhite14.jpg";
 
 export default function ResponsiveImageGrid() {
   const [currentIndex, setCurrentIndex] = useState(null); // Track the current image index
@@ -55,7 +55,7 @@ export default function ResponsiveImageGrid() {
   };
 
   return (
-    <div className="mt-5 min-h-screen px-4justify-center">
+    <div className="mt-5 min-h-screen px-4justify-center mb-[60px]">
       <ImageList
         sx={{
           maxWidth: "100%",
@@ -63,8 +63,8 @@ export default function ResponsiveImageGrid() {
           marginRight: "0 auto",
           width: "100%",
           height: "auto",
-          '@media (max-width: 900px)': { cols: 2, gap: 6 }, // Adjust for medium screens
-          '@media (max-width: 600px)': { cols: 1, gap: 4 }, // Adjust for small screens
+          "@media (max-width: 900px)": { cols: 2, gap: 6 }, // Adjust for medium screens
+          "@media (max-width: 600px)": { cols: 1, gap: 4 }, // Adjust for small screens
         }}
         cols={3} // Default columns for larger screens
         gap={8}
@@ -146,7 +146,7 @@ const itemData = [
     title: "Senior Male Sitting",
   },
   {
-    img: BlackandWhiteImg2,
+    img: BlackandWhiteImg14,
     title: "Senior Female Sitting",
   },
   {
@@ -158,23 +158,23 @@ const itemData = [
     title: "Male Senior Cap and Gown",
   },
   {
+    img: BlackandWhiteImg2, //
+    title: "Senior Bench",
+  },
+  {
     img: BlackandWhiteImg5,
     title: "Senior Bench",
   },
   {
-    img: BlackandWhiteImg6,
-    title: "Female Senior Cap and Gown",
+    img: BlackandWhiteImg11,
+    title: "Senior Bench",
   },
   {
-    img: BlackandWhiteImg7,
-    title: "Senior Field",
+    img: BlackandWhiteImg12,
+    title: "Senior Bench",
   },
   {
-    img: BlackandWhiteImg8,
-    title: "Senior Park",
+    img: BlackandWhiteImg13,
+    title: "Senior Bench",
   },
-  // {
-  //   img: homeImg9,
-  //   title: "Senior Laying",
-  // },
 ];

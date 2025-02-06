@@ -81,7 +81,7 @@ const BWPage1 = () => {
           <div>
             <CardHeader className="p-0">
               <CardTitle className="text-2xl md:text-3xl font-cormorant italic mb-2">
-                Architecture 6
+                The Spirit Lives In You
               </CardTitle>
               <CardDescription className="text-base md:text-lg font-cormorant">
                 from $25.00

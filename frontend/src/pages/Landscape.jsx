@@ -4,7 +4,9 @@ import LandscapeImageList from "../components/Landscape3x3.jsx";
 
 const Landscape = () => {
   return (
-    <div className="w-full mx-auto px-4 py-10"> {/* Removed max-w-4xl */}
+    <div className="w-full mx-auto px-4 py-10">
+      {" "}
+      {/* Removed max-w-4xl */}
       {/* 2-column layout on md+ */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
         {/* Left column: heading */}
@@ -29,14 +31,16 @@ const Landscape = () => {
             sx={{ fontFamily: "Playfair Display" }}
             className="text-gray-600 leading-relaxed"
           >
-            This is where the project description goes. Give an overview or go
-            in depth – what it’s all about, what inspired you, how you created
-            it, or anything else you’d like visitors to know. To add Project
-            descriptions, go to Manage Projects.
+            Explore a stunning collection of black-and-white landscape
+            photography that captures the serene beauty of nature. From quiet
+            rural scenes to timeless paths and bridges, each image tells a story
+            of tranquility and nostalgia. Perfect for bringing a sense of calm
+            and elegance to your home or office, these prints are available for
+            purchase, allowing you to transform your space with art that
+            inspires and soothes the soul.
           </Typography>
         </div>
       </div>
-
       <LandscapeImageList />
     </div>
   );

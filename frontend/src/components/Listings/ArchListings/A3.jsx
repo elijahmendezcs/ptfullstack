@@ -71,7 +71,7 @@ export default function RecipeReviewCard() {
             fontSize: 22,
           }}
         >
-          Nazerath Hall Chapel
+          Nazareth Hall Chapel
         </Typography>
         <Typography
         align = "center"

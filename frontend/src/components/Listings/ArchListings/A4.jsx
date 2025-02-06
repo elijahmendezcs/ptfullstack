@@ -71,7 +71,7 @@ export default function RecipeReviewCard() {
             fontSize: 22,
           }}
         >
-          Nazerath Hall Stained Glass
+          Nazareth Hall Stained Glass
         </Typography>
         <Typography
         align = "center"

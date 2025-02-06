@@ -2,15 +2,16 @@ import React, { useState } from "react";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 
-import homeImg1 from "../images/BlackAndWhiteImages/blackandwhite2.jpg";
 import homeImg2 from "../images/BlackAndWhiteImages/blackandwhite3.JPG";
-import homeImg3 from "../images/BlackAndWhiteImages/blackandwhite4.jpg";
+import homeImg11 from "../images/BlackAndWhiteImages/blackandwhite5.jpg";
 import homeImg4 from "../images/BlackAndWhiteImages/blackandwhite1.jpg";
 import homeImg5 from "../images/BlackAndWhiteImages/blackandwhite6.jpg";
 import homeImg6 from "../images/BlackAndWhiteImages/blackandwhite7.jpg";
-import homeImg7 from "../images/BlackAndWhiteImages/blackandwhite8.jpeg";
+import homeImg12 from "../images/BlackAndWhiteImages/blackandwhite12.jpg";
 import homeImg8 from "../images/Architecture/arch8.jpg";
 import homeImg9 from "../images/Architecture/arch9.jpg";
+import homeImg10 from "../images/BlackandWhiteImages/blackandwhite14.jpg";
+
 
 export default function ResponsiveImageGrid() {
   const [currentIndex, setCurrentIndex] = useState(null); // Track the current image index
@@ -146,7 +147,7 @@ const itemData = [
     title: "Senior Female Sitting",
   },
   {
-    img: homeImg3,
+    img: homeImg12,
     title: "Male Senior Trees",
   },
   {
@@ -162,11 +163,11 @@ const itemData = [
     title: "Female Senior Cap and Gown",
   },
   {
-    img: homeImg7,
+    img: homeImg10,
     title: "Senior Field",
   },
   {
-    img: homeImg1,
+    img: homeImg11,
     title: "Senior Park",
   },
   {

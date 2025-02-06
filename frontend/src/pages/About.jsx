@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Box, Typography } from "@mui/material";
 
 const About = () => {
-  // 1) State for each form field
+  // State for each form field
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -12,18 +12,63 @@ const About = () => {
   const [address, setAddress] = useState("");
   const [message, setMessage] = useState("");
 
-  // 2) Handle form submission
-  const handleSubmit = async (e) => {
-    e.preventDefault(); // prevent page refresh
+  // Error state for each field
+  const [errors, setErrors] = useState({
+    firstName: false,
+    lastName: false,
+    email: false,
+    subject: false,
+    address: false,
+    message: false,
+  });
 
-    // Simple front-end validation (optional)
-    if (!email) {
-      alert("Please enter an email address");
-      return;
+  // Handle form submission with simple validation
+  const handleSubmit = async (e) => {
+    e.preventDefault(); // Prevent page refresh
+
+    // Validate all required fields
+    let valid = true;
+    const newErrors = {
+      firstName: false,
+      lastName: false,
+      email: false,
+      subject: false,
+      address: false,
+      message: false,
+    };
+
+    if (!firstName.trim()) {
+      newErrors.firstName = true;
+      valid = false;
+    }
+    if (!lastName.trim()) {
+      newErrors.lastName = true;
+      valid = false;
+    }
+    if (!email.trim()) {
+      newErrors.email = true;
+      valid = false;
+    }
+    if (!subject.trim()) {
+      newErrors.subject = true;
+      valid = false;
+    }
+    if (!address.trim()) {
+      newErrors.address = true;
+      valid = false;
+    }
+    if (!message.trim()) {
+      newErrors.message = true;
+      valid = false;
     }
 
+    setErrors(newErrors);
+
+    // If any field is empty, stop submission
+    if (!valid) return;
+
     try {
-      // 3) Send data to your backend
+      // Send data to your backend
       const response = await fetch("http://localhost:3000/api/contact", {
         method: "POST",
         headers: {
@@ -43,13 +88,21 @@ const About = () => {
         throw new Error("Failed to send message");
       }
 
-      // 4) Clear the form (optional)
+      // Clear the form and error states on success
       setFirstName("");
       setLastName("");
       setEmail("");
       setSubject("");
       setAddress("");
       setMessage("");
+      setErrors({
+        firstName: false,
+        lastName: false,
+        email: false,
+        subject: false,
+        address: false,
+        message: false,
+      });
 
       alert("Message sent successfully!");
     } catch (error) {
@@ -57,6 +110,26 @@ const About = () => {
       alert("An error occurred while sending your message.");
     }
   };
+
+  // A helper function to update field values and clear errors if necessary
+  const handleInputChange = (setter, field) => (e) => {
+    setter(e.target.value);
+    if (errors[field] && e.target.value.trim() !== "") {
+      setErrors((prevErrors) => ({ ...prevErrors, [field]: false }));
+    }
+  };
+
+  // Tailwind classes for the input fields with error highlighting
+  const inputClass = (hasError) =>
+    `border ${hasError ? "border-red-500" : "border-black"} 
+     rounded-none px-2 py-1 text-sm font-playfair 
+     placeholder:font-playfair ${hasError ? "placeholder:text-red-500" : "placeholder:text-black-700"} 
+     placeholder:italic`;
+
+  // A generic error message component
+  const ErrorMessage = () => (
+    <p className="text-red-500 text-xs mt-1 font-playfair">Please fill in this field to submit</p>
+  );
 
   return (
     <>
@@ -141,7 +214,7 @@ const About = () => {
         </Typography>
       </Box>
 
-      {/* 5) Wrap form fields in a form, attach onSubmit */}
+      {/* Form */}
       <form
         onSubmit={handleSubmit}
         className="flex flex-col items-center mb-12 gap-6 mt-12"
@@ -155,17 +228,10 @@ const About = () => {
             <Input
               placeholder="First Name"
               value={firstName}
-              onChange={(e) => setFirstName(e.target.value)}
-              className="
-                border border-black
-                rounded-none
-                px-2 py-1 text-sm
-                font-playfair
-                placeholder:font-playfair
-                placeholder:text-black-700
-                placeholder:italic
-              "
+              onChange={handleInputChange(setFirstName, "firstName")}
+              className={inputClass(errors.firstName)}
             />
+            {errors.firstName && <ErrorMessage />}
           </div>
 
           <div className="flex flex-col flex-1">
@@ -175,17 +241,10 @@ const About = () => {
             <Input
               placeholder="Last Name"
               value={lastName}
-              onChange={(e) => setLastName(e.target.value)}
-              className="
-                border border-black
-                rounded-none
-                px-2 py-1 text-sm
-                font-playfair
-                placeholder:font-playfair
-                placeholder:text-black-700
-                placeholder:italic
-              "
+              onChange={handleInputChange(setLastName, "lastName")}
+              className={inputClass(errors.lastName)}
             />
+            {errors.lastName && <ErrorMessage />}
           </div>
         </div>
 
@@ -198,17 +257,10 @@ const About = () => {
             type="email"
             placeholder="Enter Your Email Address"
             value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            className="
-              border border-black
-              rounded-none
-              px-2 py-1 text-sm
-              font-playfair
-              placeholder:font-playfair
-              placeholder:text-black-700
-              placeholder:italic
-            "
+            onChange={handleInputChange(setEmail, "email")}
+            className={inputClass(errors.email)}
           />
+          {errors.email && <ErrorMessage />}
         </div>
 
         {/* Subject Field */}
@@ -219,17 +271,10 @@ const About = () => {
           <Input
             placeholder="Enter Your Subject"
             value={subject}
-            onChange={(e) => setSubject(e.target.value)}
-            className="
-              border border-black
-              rounded-none
-              px-2 py-1 text-sm
-              font-playfair
-              placeholder:font-playfair
-              placeholder:text-black-700
-              placeholder:italic
-            "
+            onChange={handleInputChange(setSubject, "subject")}
+            className={inputClass(errors.subject)}
           />
+          {errors.subject && <ErrorMessage />}
         </div>
 
         {/* Address Field */}
@@ -240,17 +285,10 @@ const About = () => {
           <Input
             placeholder="Enter Your Address"
             value={address}
-            onChange={(e) => setAddress(e.target.value)}
-            className="
-              border border-black
-              rounded-none
-              px-2 py-1 text-sm
-              font-playfair
-              placeholder:font-playfair
-              placeholder:text-black-700
-              placeholder:italic
-            "
+            onChange={handleInputChange(setAddress, "address")}
+            className={inputClass(errors.address)}
           />
+          {errors.address && <ErrorMessage />}
         </div>
 
         {/* Message Field */}
@@ -261,18 +299,13 @@ const About = () => {
           <textarea
             placeholder="Enter Your Message"
             value={message}
-            onChange={(e) => setMessage(e.target.value)}
-            className="
-              border border-black
-              rounded-none
-              px-2 py-1 text-sm
-              font-playfair
-              placeholder:font-playfair
-              placeholder:text-black-700
-              placeholder:italic
+            onChange={handleInputChange(setMessage, "message")}
+            className={`
+              ${inputClass(errors.message)}
               h-32
-            "
+            `}
           ></textarea>
+          {errors.message && <ErrorMessage />}
         </div>
 
         {/* Send Button */}
@@ -296,6 +329,7 @@ const About = () => {
           Send
         </Button>
       </form>
+
       <Box
         sx={{
           display: "flex",

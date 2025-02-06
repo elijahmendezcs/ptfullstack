@@ -4,7 +4,9 @@ import ArchImageList from "../components/Arch3x3.jsx";
 
 const Architecture = () => {
   return (
-    <div className="w-full mx-auto px-4 py-10"> {/* Removed max-w-4xl */}
+    <div className="w-full mx-auto px-4 py-10">
+      {" "}
+      {/* Removed max-w-4xl */}
       {/* 2-column layout on md+ */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
         {/* Left column: heading */}
@@ -29,14 +31,16 @@ const Architecture = () => {
             sx={{ fontFamily: "Playfair Display" }}
             className="text-gray-600 leading-relaxed"
           >
-            This is where the project description goes. Give an overview or go
-            in depth – what it’s all about, what inspired you, how you created
-            it, or anything else you’d like visitors to know. To add Project
-            descriptions, go to Manage Projects.
+            Step into a world of black-and-white architectural photography,
+            where timeless structures and intricate details come to life. From
+            historic buildings to modern design elements, each piece showcases
+            the artistry and craftsmanship of architecture. Perfect for
+            enhancing your space with sophistication and style, these prints are
+            available for purchase, offering you the chance to bring captivating
+            architectural beauty into your home or office.
           </Typography>
         </div>
       </div>
-
       <ArchImageList />
     </div>
   );
