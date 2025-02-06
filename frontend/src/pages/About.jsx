@@ -167,7 +167,7 @@ const About = () => {
             color: "#888",
           }}
         >
-          Liza is a skilled photographer specializing in landscape and
+          Liza is a skilled photographer based in Sanduksy County, Ohio, specializing in landscape and
           architecture imagery, primarily working with black and white photos to
           capture polished and detailed results. She brings a professional eye
           for detail to every project, ensuring high-quality and visually

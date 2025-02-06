@@ -40,14 +40,17 @@ const BWPage1 = () => {
       const priceKey = `BW1_${selectedSize}`;
 
       // Make the request to your Express Stripe route
-      const res = await fetch("http://localhost:3000/api/stripe/create-checkout-session", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          priceId: priceIds[priceKey], // Use the correct Price ID
-          quantity,
-        }),
-      });
+      const res = await fetch(
+        "http://localhost:3000/api/stripe/create-checkout-session",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            priceId: priceIds[priceKey], // Use the correct Price ID
+            quantity,
+          }),
+        }
+      );
 
       if (!res.ok) {
         // If server returns an error status, handle or throw an error
@@ -90,8 +93,7 @@ const BWPage1 = () => {
 
             <CardContent className="mt-4 md:mt-6 p-0">
               <p className="font-cormorant text-base md:text-lg italic mb-6 text-black-700">
-                This is an art print. The handcrafted canvas makes it perfect
-                for both home and office wall decor. Option to frame.
+                This is an fine art print.
               </p>
 
               {/* Frame options */}

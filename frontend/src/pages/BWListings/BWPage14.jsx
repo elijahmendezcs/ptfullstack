@@ -81,7 +81,7 @@ const BWPage1 = () => {
           <div>
             <CardHeader className="p-0">
               <CardTitle className="text-2xl md:text-3xl font-cormorant italic mb-2">
-                Muse
+                Sandusky Bay Cattails
               </CardTitle>
               <CardDescription className="text-base md:text-lg font-cormorant">
               8x10: $25.00 | 11x14: $35.00 | 16x20: $45.00
@@ -90,8 +90,7 @@ const BWPage1 = () => {
 
             <CardContent className="mt-4 md:mt-6 p-0">
               <p className="font-cormorant text-base md:text-lg italic mb-6 text-black-700">
-                This is an art print. The handcrafted canvas makes it perfect
-                for both home and office wall decor. Option to frame.
+                This is an fine art print.
               </p>
 
               {/* Frame options */}

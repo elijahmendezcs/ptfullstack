@@ -67,7 +67,7 @@ export default function RecipeReviewCard() {
             fontSize: 22,
           }}
         >
-          Chairs
+          Never Alone
         </Typography>
         <Typography
         align = "center"

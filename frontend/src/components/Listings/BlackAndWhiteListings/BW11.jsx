@@ -67,7 +67,7 @@ export default function RecipeReviewCard() {
             fontSize: 22,
           }}
         >
-          Trees
+          Kitch-iti-kipi
         </Typography>
         <Typography
         align = "center"

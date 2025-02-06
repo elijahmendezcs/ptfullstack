@@ -71,7 +71,7 @@ export default function RecipeReviewCard() {
             fontSize: 22,
           }}
         >
-          Toledo Bridge
+          Anthony Wayne Bridge
         </Typography>
         <Typography
         align = "center"

@@ -71,7 +71,7 @@ export default function RecipeReviewCard() {
             fontSize: 22,
           }}
         >
-          Church Hall
+          Rosary Cathedral
         </Typography>
         <Typography
         align = "center"

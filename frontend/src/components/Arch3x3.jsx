@@ -11,6 +11,7 @@ import ArchImg6 from "../images/Architecture/arch6.jpg";
 import ArchImg7 from "../images/Architecture/arch7.jpg";
 import ArchImg8 from "../images/Architecture/arch8.jpg";
 import ArchImg9 from "../images/Architecture/arch9.jpg";
+import BlackWhite8 from "../images/BlackandWhiteImages/blackandwhite8.jpeg";
 
 export default function ResponsiveImageGrid() {
   const [currentIndex, setCurrentIndex] = useState(null); // Track the current image index
@@ -166,7 +167,7 @@ const itemData = [
     title: "Female Senior Cap and Gown",
   },
   {
-    img: ArchImg7,
+    img: BlackWhite8,
     title: "Senior Field",
   },
   {

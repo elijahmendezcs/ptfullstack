@@ -67,7 +67,7 @@ export default function RecipeReviewCard() {
             fontSize: 22,
           }}
         >
-          Wheat
+          Sandusky Bay Cattails
         </Typography>
         <Typography
         align = "center"

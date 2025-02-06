@@ -41,13 +41,15 @@ export default function RecipeReviewCard() {
   };
 
   return (
-    <Card sx={{
-      maxWidth: 345,
-      borderRadius: 0, // Square corners
-      border: '0.5px solid lightgray' // Minimal light gray border
-    }}>
+    <Card
+      sx={{
+        maxWidth: 345,
+        borderRadius: 0, // Square corners
+        border: "0.5px solid lightgray", // Minimal light gray border
+      }}
+    >
       <CardMedia
-        sx={{ width: 400, height: 300}} 
+        sx={{ width: 400, height: 300 }}
         component="img"
         height="194"
         image="/src/images/BlackandWhiteImages/blackandwhite13.jpg"
@@ -57,7 +59,7 @@ export default function RecipeReviewCard() {
         <Typography
           variant="h6"
           component="div"
-          align = "center"
+          align="center"
           sx={{
             fontFamily: "'Cormorant Garamond', serif",
             color: "text.primary",
@@ -67,42 +69,42 @@ export default function RecipeReviewCard() {
             fontSize: 22,
           }}
         >
-        Bush
+          Sound Of Silence
         </Typography>
         <Typography
-        align = "center"
-        variant="body2"
-        sx={{
-          fontFamily: "'Cormorant Garamond', serif",
-          color: "text.secondary",
-          marginTop: -2,
-          fontSize: 16,
-          marginBottom: -2,
-        }}
+          align="center"
+          variant="body2"
+          sx={{
+            fontFamily: "'Cormorant Garamond', serif",
+            color: "text.secondary",
+            marginTop: -2,
+            fontSize: 16,
+            marginBottom: -2,
+          }}
         >
           Starting at: $25
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
-        <Link to = "bwpage13">
-        <Button
-          variant="contained"
-          sx={{
-            width: 300,
-            backgroundColor: "black",
-            borderRadius: 0,
-            fontFamily: "'Cormorant Garamond', serif",
-            textTransform: "none",
-            "&:hover": {
+        <Link to="bwpage13">
+          <Button
+            variant="contained"
+            sx={{
+              width: 300,
               backgroundColor: "black",
-            },
-            marginBottom: 2,
-            fontSize: 16,
-            marginLeft: 1.5, 
-          }}
-        >
-          Buy Now
-        </Button>
+              borderRadius: 0,
+              fontFamily: "'Cormorant Garamond', serif",
+              textTransform: "none",
+              "&:hover": {
+                backgroundColor: "black",
+              },
+              marginBottom: 2,
+              fontSize: 16,
+              marginLeft: 1.5,
+            }}
+          >
+            Buy Now
+          </Button>
         </Link>
       </CardActions>
     </Card>
