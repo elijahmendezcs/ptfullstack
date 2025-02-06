@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 
@@ -13,11 +15,68 @@ import ArchImg8 from "../images/Architecture/arch8.jpg";
 import ArchImg9 from "../images/Architecture/arch9.jpg";
 import BlackWhite8 from "../images/BlackandWhiteImages/blackandwhite8.jpeg";
 
+// Updated image data. (Note: the final empty object has been skipped during rendering.)
+const itemData = [
+  {
+    img: ArchImg1,
+    title: "Senior Male Sitting",
+  },
+  {
+    img: ArchImg2,
+    title: "Senior Female Sitting",
+  },
+  {
+    img: ArchImg3,
+    title: "Male Senior Trees",
+  },
+  {
+    img: ArchImg4,
+    title: "Male Senior Cap and Gown",
+  },
+  {
+    img: ArchImg5,
+    title: "Senior Bench",
+  },
+  {
+    img: ArchImg6,
+    title: "Female Senior Cap and Gown",
+  },
+  {
+    img: BlackWhite8,
+    title: "Senior Field",
+  },
+  {
+    img: ArchImg8,
+    title: "Senior Field",
+  },
+  {
+    img: ArchImg9,
+    title: "Senior Field",
+  },
+  // If needed, remove or update any empty entries.
+];
+
 export default function ResponsiveImageGrid() {
-  const [currentIndex, setCurrentIndex] = useState(null); // Track the current image index
-  const [isModalOpen, setIsModalOpen] = useState(false); // Track modal state
-  const [isAnimating, setIsAnimating] = useState(false); // Track animation state
-  const [isImageFading, setIsImageFading] = useState(false); // Track image fade state
+  const [currentIndex, setCurrentIndex] = useState(null); // Current image index for the modal
+  const [isModalOpen, setIsModalOpen] = useState(false); // Modal open/close state
+  const [isAnimating, setIsAnimating] = useState(false); // Modal open/close animation state
+  const [isImageFading, setIsImageFading] = useState(false); // Image fade transition state
+
+  // Use MUI theme breakpoints to set responsive columns and gap sizes
+  const theme = useTheme();
+  const isXs = useMediaQuery(theme.breakpoints.down("sm"));
+  const isMd = useMediaQuery(theme.breakpoints.down("md"));
+  let cols, gap;
+  if (isXs) {
+    cols = 1;
+    gap = 4;
+  } else if (isMd) {
+    cols = 2;
+    gap = 6;
+  } else {
+    cols = 3;
+    gap = 8;
+  }
 
   const openModal = (index) => {
     setCurrentIndex(index);
@@ -56,39 +115,41 @@ export default function ResponsiveImageGrid() {
   };
 
   return (
-    <div className="mt-5 min-h-screen px-4justify-center mb-[60px]">
+    <div className="mt-5 min-h-screen px-4 justify-center mb-[60px]">
       <ImageList
         sx={{
           maxWidth: "100%",
           marginLeft: "auto",
-          marginRight: "0 auto",
+          marginRight: "auto",
           width: "100%",
           height: "auto",
-          "@media (max-width: 900px)": { cols: 2, gap: 6 }, // Adjust for medium screens
-          "@media (max-width: 600px)": { cols: 1, gap: 4 }, // Adjust for small screens
         }}
-        cols={3} // Default columns for larger screens
-        gap={8}
+        cols={cols}
+        gap={gap}
       >
-        {itemData.map((item, index) => (
-          <ImageListItem
-            key={item.img}
-            className="group cursor-pointer"
-            onClick={() => openModal(index)}
-          >
-            <img
-              src={item.img}
-              alt={item.title}
-              loading="lazy"
-              className="transition-opacity duration-300 ease-in-out group-hover:opacity-90"
-              style={{
-                width: "100%",
-                height: "auto",
-                objectFit: "cover",
-              }}
-            />
-          </ImageListItem>
-        ))}
+        {itemData.map((item, index) => {
+          // Skip rendering any entry without an image source.
+          if (!item.img) return null;
+          return (
+            <ImageListItem
+              key={item.img}
+              className="group cursor-pointer"
+              onClick={() => openModal(index)}
+            >
+              <img
+                src={item.img}
+                alt={item.title}
+                loading="lazy"
+                className="transition-opacity duration-300 ease-in-out group-hover:opacity-90"
+                style={{
+                  width: "100%",
+                  height: "auto",
+                  objectFit: "cover",
+                }}
+              />
+            </ImageListItem>
+          );
+        })}
       </ImageList>
 
       {isModalOpen && (
@@ -140,43 +201,3 @@ export default function ResponsiveImageGrid() {
     </div>
   );
 }
-
-const itemData = [
-  {
-    img: ArchImg1,
-    title: "Senior Male Sitting",
-  },
-  {
-    img: ArchImg2,
-    title: "Senior Female Sitting",
-  },
-  {
-    img: ArchImg3,
-    title: "Male Senior Trees",
-  },
-  {
-    img: ArchImg4,
-    title: "Male Senior Cap and Gown",
-  },
-  {
-    img: ArchImg5,
-    title: "Senior Bench",
-  },
-  {
-    img: ArchImg6,
-    title: "Female Senior Cap and Gown",
-  },
-  {
-    img: BlackWhite8,
-    title: "Senior Field",
-  },
-  {
-    img: ArchImg8,
-    title: "Senior Field",
-  },
-  {
-    img: ArchImg9,
-    title: "Senior Field",
-  },
-  {},
-];

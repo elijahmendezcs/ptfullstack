@@ -5,9 +5,7 @@ import ArchImageList from "../components/Arch3x3.jsx";
 const Architecture = () => {
   return (
     <div className="w-full mx-auto px-4 py-10">
-      {" "}
-      {/* Removed max-w-4xl */}
-      {/* 2-column layout on md+ */}
+      {/* Two-column layout on medium screens and above */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
         {/* Left column: heading */}
         <div>
@@ -24,7 +22,7 @@ const Architecture = () => {
           </Typography>
         </div>
 
-        {/* Right column: paragraph */}
+        {/* Right column: descriptive paragraph */}
         <div>
           <Typography
             variant="body1"

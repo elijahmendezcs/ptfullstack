@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 
@@ -12,11 +14,66 @@ import BlackandWhiteImg12 from "../images/BlackandWhiteImages/blackandwhite12.jp
 import BlackandWhiteImg13 from "../images/BlackandWhiteImages/blackandwhite13.jpg";
 import BlackandWhiteImg14 from "../images/BlackandWhiteImages/blackandwhite14.jpg";
 
+const itemData = [
+  {
+    img: BlackandWhiteImg1,
+    title: "Senior Male Sitting",
+  },
+  {
+    img: BlackandWhiteImg14,
+    title: "Senior Female Sitting",
+  },
+  {
+    img: BlackandWhiteImg3,
+    title: "Male Senior Trees",
+  },
+  {
+    img: BlackandWhiteImg4,
+    title: "Male Senior Cap and Gown",
+  },
+  {
+    img: BlackandWhiteImg2,
+    title: "Senior Bench",
+  },
+  {
+    img: BlackandWhiteImg5,
+    title: "Senior Bench",
+  },
+  {
+    img: BlackandWhiteImg11,
+    title: "Senior Bench",
+  },
+  {
+    img: BlackandWhiteImg12,
+    title: "Senior Bench",
+  },
+  {
+    img: BlackandWhiteImg13,
+    title: "Senior Bench",
+  },
+];
+
 export default function ResponsiveImageGrid() {
-  const [currentIndex, setCurrentIndex] = useState(null); // Track the current image index
-  const [isModalOpen, setIsModalOpen] = useState(false); // Track modal state
-  const [isAnimating, setIsAnimating] = useState(false); // Track animation state
-  const [isImageFading, setIsImageFading] = useState(false); // Track image fade state
+  const [currentIndex, setCurrentIndex] = useState(null); // Current image index for the modal
+  const [isModalOpen, setIsModalOpen] = useState(false); // Modal open/close state
+  const [isAnimating, setIsAnimating] = useState(false); // Modal open/close animation state
+  const [isImageFading, setIsImageFading] = useState(false); // Image fade transition state
+
+  // Use MUI theme breakpoints to set responsive columns and gap
+  const theme = useTheme();
+  const isXs = useMediaQuery(theme.breakpoints.down("sm"));
+  const isMd = useMediaQuery(theme.breakpoints.down("md"));
+  let cols, gap;
+  if (isXs) {
+    cols = 1;
+    gap = 4;
+  } else if (isMd) {
+    cols = 2;
+    gap = 6;
+  } else {
+    cols = 3;
+    gap = 8;
+  }
 
   const openModal = (index) => {
     setCurrentIndex(index);
@@ -31,7 +88,7 @@ export default function ResponsiveImageGrid() {
       setCurrentIndex(null);
       setIsModalOpen(false);
       setIsAnimating(false);
-    }, 300); // 300ms matches the animation duration
+    }, 300);
   };
 
   const goToPrevious = () => {
@@ -55,19 +112,17 @@ export default function ResponsiveImageGrid() {
   };
 
   return (
-    <div className="mt-5 min-h-screen px-4justify-center mb-[60px]">
+    <div className="mt-5 min-h-screen px-4 justify-center mb-[60px]">
       <ImageList
         sx={{
           maxWidth: "100%",
           marginLeft: "auto",
-          marginRight: "0 auto",
+          marginRight: "auto",
           width: "100%",
           height: "auto",
-          "@media (max-width: 900px)": { cols: 2, gap: 6 }, // Adjust for medium screens
-          "@media (max-width: 600px)": { cols: 1, gap: 4 }, // Adjust for small screens
         }}
-        cols={3} // Default columns for larger screens
-        gap={8}
+        cols={cols}
+        gap={gap}
       >
         {itemData.map((item, index) => (
           <ImageListItem
@@ -139,42 +194,3 @@ export default function ResponsiveImageGrid() {
     </div>
   );
 }
-
-const itemData = [
-  {
-    img: BlackandWhiteImg1,
-    title: "Senior Male Sitting",
-  },
-  {
-    img: BlackandWhiteImg14,
-    title: "Senior Female Sitting",
-  },
-  {
-    img: BlackandWhiteImg3,
-    title: "Male Senior Trees",
-  },
-  {
-    img: BlackandWhiteImg4,
-    title: "Male Senior Cap and Gown",
-  },
-  {
-    img: BlackandWhiteImg2, //
-    title: "Senior Bench",
-  },
-  {
-    img: BlackandWhiteImg5,
-    title: "Senior Bench",
-  },
-  {
-    img: BlackandWhiteImg11,
-    title: "Senior Bench",
-  },
-  {
-    img: BlackandWhiteImg12,
-    title: "Senior Bench",
-  },
-  {
-    img: BlackandWhiteImg13,
-    title: "Senior Bench",
-  },
-];

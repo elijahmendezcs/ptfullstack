@@ -128,7 +128,9 @@ const About = () => {
 
   // A generic error message component
   const ErrorMessage = () => (
-    <p className="text-red-500 text-xs mt-1 font-playfair">Please fill in this field to submit</p>
+    <p className="text-red-500 text-xs mt-1 font-playfair">
+      Please fill in this field to submit
+    </p>
   );
 
   return (
@@ -142,6 +144,7 @@ const About = () => {
           justifyContent: "center",
           textAlign: "center",
           marginBottom: "40px",
+          px: { xs: 2, sm: 0 }, // Add horizontal padding on small screens
         }}
       >
         <Typography
@@ -167,11 +170,10 @@ const About = () => {
             color: "#888",
           }}
         >
-          Liza is a skilled photographer based in Sanduksy County, Ohio, specializing in landscape and
-          architecture imagery, primarily working with black and white photos to
-          capture polished and detailed results. She brings a professional eye
-          for detail to every project, ensuring high-quality and visually
-          striking outcomes.
+          Liza is a skilled photographer based in Sanduksy County, Ohio, specializing in
+          landscape and architecture imagery, primarily working with black and white photos to
+          capture polished and detailed results. She brings a professional eye for detail to every
+          project, ensuring high-quality and visually striking outcomes.
         </Typography>
       </Box>
 
@@ -184,6 +186,7 @@ const About = () => {
           justifyContent: "center",
           textAlign: "center",
           marginTop: "40px",
+          px: { xs: 2, sm: 0 }, // Add horizontal padding on small screens
         }}
       >
         <Typography
@@ -217,10 +220,10 @@ const About = () => {
       {/* Form */}
       <form
         onSubmit={handleSubmit}
-        className="flex flex-col items-center mb-12 gap-6 mt-12"
+        className="flex flex-col items-center mb-12 gap-6 mt-12 px-4"
       >
         {/* First Name and Last Name Fields */}
-        <div className="flex justify-center gap-6 w-full max-w-2xl">
+        <div className="flex flex-col sm:flex-row justify-center gap-6 w-full max-w-2xl">
           <div className="flex flex-col flex-1">
             <label className="mb-1 text-sm font-medium text-black-700 font-playfair">
               First Name *
@@ -300,10 +303,7 @@ const About = () => {
             placeholder="Enter Your Message"
             value={message}
             onChange={handleInputChange(setMessage, "message")}
-            className={`
-              ${inputClass(errors.message)}
-              h-32
-            `}
+            className={`${inputClass(errors.message)} h-32`}
           ></textarea>
           {errors.message && <ErrorMessage />}
         </div>
@@ -311,25 +311,13 @@ const About = () => {
         {/* Send Button */}
         <Button
           type="submit"
-          className="
-            w-full
-            max-w-2xl
-            border
-            border-black
-            rounded-none
-            px-2
-            py-2
-            text-sm
-            font-playfair
-            text-white
-            bg-black
-            mb-[20px]
-          "
+          className="w-full max-w-2xl border border-black rounded-none px-2 py-2 text-sm font-playfair text-white bg-black mb-[20px]"
         >
           Send
         </Button>
       </form>
 
+      {/* Footer */}
       <Box
         sx={{
           display: "flex",

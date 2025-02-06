@@ -1,5 +1,7 @@
 import React from "react";
 import { Typography } from "@mui/material";
+
+// Import your listing components
 import BW1 from "../components/Listings/BlackAndWhiteListings/BW7";
 import BW2 from "../components/Listings/BlackAndWhiteListings/BW2";
 import BW3 from "../components/Listings/BlackAndWhiteListings/BW3";
@@ -22,11 +24,34 @@ import A7 from "../components/Listings/ArchListings/A7";
 import A8 from "../components/Listings/ArchListings/A8";
 import A9 from "../components/Listings/ArchListings/A9";
 
+// Create an array of your listing components for easy mapping.
+const listings = [
+  <BW5 key="bw5" />,
+  <BW2 key="bw2" />,
+  <BW3 key="bw3" />,
+  <BW4 key="bw4" />,
+  <BW7 key="bw7" />,
+  <BW6 key="bw6" />,
+  <BW1 key="bw1" />,
+  <BW8 key="bw8" />,
+  <A1 key="a1" />,
+  <A2 key="a2" />,
+  <A3 key="a3" />,
+  <A4 key="a4" />,
+  <A5 key="a5" />,
+  <A6 key="a6" />,
+  <A7 key="a7" />,
+  <A8 key="a8" />,
+  <A9 key="a9" />,
+  <BW11 key="bw11" />,
+  <BW12 key="bw12" />,
+  <BW13 key="bw13" />,
+  <BW14 key="bw14" />,
+];
+
 const Prints = () => {
   return (
-    // TODO: Fix Buy Now button that shit is not centered.
-
-    <div className="max-w-4xl mx-auto px-4 py-10">
+    <div className="max-w-6xl mx-auto px-4 py-10">
       {/* Text section */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
         {/* Left column: heading */}
@@ -43,7 +68,6 @@ const Prints = () => {
             Prints
           </Typography>
         </div>
-
         {/* Right column: paragraph */}
         <div>
           <Typography
@@ -61,48 +85,13 @@ const Prints = () => {
         </div>
       </div>
 
-      {/* Image listings */}
-      <div className="flex flex-col items-center gap-10 mt-24 mb-24">
-        {/* First Row */}
-        <div className="flex justify-center items-center gap-10 row-style-1">
-          <BW5 />
-          <BW2 />
-          <BW3 />
-        </div>
-
-        {/* Second Row */}
-        <div className="flex justify-center items-center gap-10 row-style-2">
-          <BW4 />
-          <BW7 />
-          <BW6 />
-        </div>
-
-        {/* Third Row */}
-        <div className="flex justify-center items-center gap-10 row-style-3">
-          <BW1 />
-          <BW8 />
-          <A1 />
-        </div>
-        <div className="flex justify-center items-center gap-10 row-style-3">
-          <A2 />
-          <A3 />
-          <A4 />
-        </div>
-        <div className="flex justify-center items-center gap-10 row-style-3">
-          <A5 />
-          <A6 />
-          <A7 />
-        </div>
-        <div className="flex justify-center items-center gap-10 row-style-3">
-          <A8 />
-          <A9 />
-          <BW11 />
-        </div>
-        <div className="flex justify-center items-center gap-10 row-style-3">
-          <BW12 />
-          <BW13 />
-          <BW14 />
-        </div>
+      {/* Responsive Image listings */}
+      <div className="mt-24 mb-24 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        {listings.map((listing, index) => (
+          <div key={index} className="flex justify-center">
+            {listing}
+          </div>
+        ))}
       </div>
     </div>
   );
