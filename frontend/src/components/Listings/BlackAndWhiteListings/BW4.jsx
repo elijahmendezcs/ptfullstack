@@ -83,7 +83,7 @@ export default function RecipeReviewCard() {
           Starting at: $25
         </Typography>
       </CardContent>
-      <CardActions disableSpacing>
+      <CardActions disableSpacing style={{justifyContent: 'center'}}>
         <Link to = "bwpage4">
         <Button
           variant="contained"
@@ -98,7 +98,6 @@ export default function RecipeReviewCard() {
             },
             marginBottom: 2,
             fontSize: 16,
-            marginLeft: .5,
           }}
         >
           Buy Now
