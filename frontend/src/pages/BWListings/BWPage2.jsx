@@ -28,24 +28,43 @@ const BWPage1 = () => {
   };
 
   const handleBuyNow = async () => {
-    try {
-      const res = await fetch(
-        "http://localhost:3000/api/stripe/create-checkout-session",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            priceId: priceIds["BW2_8x10"],
-            quantity, // Pass the quantity to the backend
-          }),
+      try {
+        // Make sure a size is chosen
+        if (!selectedSize) {
+          alert("Please select a frame size first.");
+          return;
         }
-      );
-      const data = await res.json();
-      window.location.href = data.url; // Redirect to Stripe Checkout
-    } catch (err) {
-      console.error(err);
-    }
-  };
+  
+        // Build the key for the priceIds object, e.g. "BW1_8x10"
+        const priceKey = `BW2_${selectedSize}`;
+  
+        // Make the request to your Express Stripe route
+        const res = await fetch(
+          "http://localhost:3000/api/stripe/create-checkout-session",
+          {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              priceId: priceIds[priceKey], // Use the correct Price ID
+              quantity,
+            }),
+          }
+        );
+  
+        if (!res.ok) {
+          // If server returns an error status, handle or throw an error
+          const errorData = await res.json();
+          throw new Error(errorData.error || "Request failed");
+        }
+  
+        // On success, get the Stripe Checkout URL and redirect
+        const data = await res.json();
+        window.location.href = data.url;
+      } catch (err) {
+        console.error("Error creating checkout session:", err);
+        alert("Something went wrong with Checkout. Check console for details.");
+      }
+    };
 
   return (
     <Card className="w-full p-4 md:p-8 bg-white mt-[70px] border-white border-0">
