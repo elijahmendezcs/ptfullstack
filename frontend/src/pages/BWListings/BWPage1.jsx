@@ -1,6 +1,6 @@
 // src/pages/BWPage1.jsx
 import React, { useState } from "react";
-import { priceIds } from "../../lib/priceIds"; // <-- adjust path if needed
+import { priceIds } from "@/lib/priceIds"; // Using alias to refer to src/lib/priceIds
 
 import { Button } from "@/components/ui/button";
 import {
@@ -13,7 +13,7 @@ import {
 } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
-import blackandwhite from "../../images/BlackAndWhiteImages/blackandwhite5.jpg"; // Adjust if needed
+import blackandwhite from "@/images/BlackAndWhiteImages/blackandwhite5.jpg"; // Using alias to refer to src/images/BlackAndWhiteImages
 
 const BWPage1 = () => {
   const [selectedSize, setSelectedSize] = useState(null);
@@ -93,7 +93,7 @@ const BWPage1 = () => {
 
             <CardContent className="mt-4 md:mt-6 p-0">
               <p className="font-cormorant text-base md:text-lg italic mb-6 text-black-700">
-                This is an fine art print.
+                This is a fine art print.
               </p>
 
               {/* Frame options */}
