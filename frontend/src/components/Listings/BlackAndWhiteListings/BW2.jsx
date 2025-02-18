@@ -42,20 +42,24 @@ export default function RecipeReviewCard() {
 
   return (
     <Card sx={{
+
       maxWidth: 345,
       borderRadius: 0, // Square corners
       border: '0.5px solid lightgray' // Minimal light gray border
     }}>
       <CardMedia
-        sx={{ width: 400, height: 300}} 
+        sx={{ 
+          width: 400,
+          height: 300
+          }} 
         component="img"
         height="194"
-        image="/src/images/BlackandWhiteImages/blackandwhite2.jpg"
+        image="/src/images/BlackandWhiteImages/blackandwhite5.jpg"
         alt="default card"
       />
       <CardContent>
         <Typography
-          align="center"
+          align =  "center"
           variant="h6"
           component="div"
           sx={{
@@ -67,7 +71,7 @@ export default function RecipeReviewCard() {
             fontSize: 22,
           }}
         >
-          Serene
+          Croghan
         </Typography>
         <Typography
         align = "center"
@@ -84,7 +88,7 @@ export default function RecipeReviewCard() {
         </Typography>
       </CardContent>
       <CardActions disableSpacing style={{justifyContent: 'center'}}>
-        <Link to="bwpage2">
+      <Link to="bwpage">
         <Button
           variant="contained"
           sx={{
@@ -93,7 +97,7 @@ export default function RecipeReviewCard() {
             borderRadius: 0,
             fontFamily: "'Cormorant Garamond', serif",
             textTransform: "none",
-            "&:hover": {
+            "&:hover": {                                       
               backgroundColor: "black",
             },
             marginBottom: 2,

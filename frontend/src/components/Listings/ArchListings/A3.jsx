@@ -57,7 +57,8 @@ export default function RecipeReviewCard() {
         image="/src/images/Architecture/arch3.jpg"
         alt="default card"
       />
-      <CardContent>
+      <CardContent
+      align = "center">
         <Typography
           align =  "center"
           variant="h6"
