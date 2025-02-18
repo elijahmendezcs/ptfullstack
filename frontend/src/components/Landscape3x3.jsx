@@ -4,15 +4,18 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 
-import BlackandWhiteImg1 from "../images/BlackandWhiteImages/blackandwhite1.jpg";
-import BlackandWhiteImg2 from "../images/BlackandWhiteImages/blackandwhite2.jpg";
-import BlackandWhiteImg3 from "../images/BlackandWhiteImages/blackandwhite3.jpg";
-import BlackandWhiteImg4 from "../images/BlackandWhiteImages/blackandwhite4.jpg";
-import BlackandWhiteImg5 from "../images/BlackandWhiteImages/blackandwhite5.jpg";
-import BlackandWhiteImg11 from "../images/BlackandWhiteImages/blackandwhite11.jpg";
-import BlackandWhiteImg12 from "../images/BlackandWhiteImages/blackandwhite12.jpg";
-import BlackandWhiteImg13 from "../images/BlackandWhiteImages/blackandwhite13.jpg";
-import BlackandWhiteImg14 from "../images/BlackandWhiteImages/blackandwhite14.jpg";
+import BlackandWhiteImg1 from "@/images/BlackandWhiteImages/blackandwhite1.jpg";
+import BlackandWhiteImg2 from "@/images/BlackandWhiteImages/blackandwhite2.jpg";
+import BlackandWhiteImg3 from "@/images/BlackandWhiteImages/blackandwhite3.jpg";
+import BlackandWhiteImg4 from "@/images/BlackandWhiteImages/blackandwhite4.jpg";
+import BlackandWhiteImg5 from "@/images/BlackandWhiteImages/blackandwhite5.jpg";
+import BlackandWhiteImg11 from "@/images/BlackandWhiteImages/blackandwhite11.jpg";
+import BlackandWhiteImg12 from "@/images/BlackandWhiteImages/blackandwhite12.jpg";
+import BlackandWhiteImg13 from "@/images/BlackandWhiteImages/blackandwhite13.jpg";
+import BlackandWhiteImg14 from "@/images/BlackandWhiteImages/blackandwhite14.jpg";
+
+// import blackandwhite from "@/images/BlackAndWhiteImages/blackandwhite5.jpg"; // Using alias to refer to src/images/BlackAndWhiteImages
+
 
 const itemData = [
   {
