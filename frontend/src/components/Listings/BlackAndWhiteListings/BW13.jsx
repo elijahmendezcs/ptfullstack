@@ -1,4 +1,5 @@
-import * as React from "react";
+// BW7.jsx
+import React from "react";
 import { styled } from "@mui/material/styles";
 import Card from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
@@ -9,6 +10,10 @@ import IconButton from "@mui/material/IconButton";
 import Button from "@mui/material/Button";
 import { Link } from "react-router-dom";
 
+// 1) Import the image directly from src/images:
+import blackandwhite1 from "../../../images/BlackandWhiteImages/blackandwhite13.jpg";
+
+// 2) Styled component for the expand icon (if needed).
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
   return <IconButton {...other} />;
@@ -20,20 +25,17 @@ const ExpandMore = styled((props) => {
   variants: [
     {
       props: ({ expand }) => !expand,
-      style: {
-        transform: "rotate(0deg)",
-      },
+      style: { transform: "rotate(0deg)" },
     },
     {
       props: ({ expand }) => !!expand,
-      style: {
-        transform: "rotate(180deg)",
-      },
+      style: { transform: "rotate(180deg)" },
     },
   ],
 }));
 
-export default function RecipeReviewCard() {
+// 3) Main component
+export default function BW7() {
   const [expanded, setExpanded] = React.useState(false);
 
   const handleExpandClick = () => {
@@ -49,11 +51,12 @@ export default function RecipeReviewCard() {
       }}
     >
       <CardMedia
-        sx={{ width: 400, height: 300 }}
         component="img"
-        height="194"
-        image="/src/images/BlackandWhiteImages/blackandwhite13.jpg"
-        alt="default card"
+        // 4) Use the imported variable for the image prop
+        image={blackandwhite1}
+        alt="Black and White Print"
+        // You can still set width/height
+        sx={{ width: 400, height: 300 }}
       />
       <CardContent>
         <Typography
@@ -85,8 +88,8 @@ export default function RecipeReviewCard() {
           Starting at: $25
         </Typography>
       </CardContent>
-      <CardActions disableSpacing>
-        <Link to="bwpage13">
+      <CardActions disableSpacing style={{ justifyContent: "center" }}>
+        <Link to="bwpage7">
           <Button
             variant="contained"
             sx={{
@@ -100,7 +103,6 @@ export default function RecipeReviewCard() {
               },
               marginBottom: 2,
               fontSize: 16,
-              marginLeft: 1.5,
             }}
           >
             Buy Now
