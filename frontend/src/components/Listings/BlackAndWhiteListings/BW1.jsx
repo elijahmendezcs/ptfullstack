@@ -89,7 +89,7 @@ export default function BW7() {
         </Typography>
       </CardContent>
       <CardActions disableSpacing style={{ justifyContent: "center" }}>
-        <Link to="bwpage1">
+        <Link to="bwpage">
           <Button
             variant="contained"
             sx={{
