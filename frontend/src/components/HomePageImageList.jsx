@@ -4,15 +4,15 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 
-import homeImg2 from "../images/BlackAndWhiteImages/blackandwhite3.JPG";
-import homeImg11 from "../images/BlackAndWhiteImages/blackandwhite5.jpg";
-import homeImg4 from "../images/BlackAndWhiteImages/blackandwhite1.jpg";
-import homeImg5 from "../images/BlackAndWhiteImages/blackandwhite6.jpg";
-import homeImg6 from "../images/BlackAndWhiteImages/blackandwhite7.jpg";
-import homeImg12 from "../images/BlackAndWhiteImages/blackandwhite12.jpg";
-import homeImg8 from "../images/Architecture/arch8.jpg";
-import homeImg9 from "../images/Architecture/arch9.jpg";
-import homeImg10 from "../images/BlackandWhiteImages/blackandwhite14.jpg";
+import homeImg2 from "@/images/BlackAndWhiteImages/blackandwhite3.jpg";
+import homeImg11 from "@/images/BlackAndWhiteImages/blackandwhite5.jpg";
+import homeImg4 from "@/images/BlackAndWhiteImages/blackandwhite1.JPG";
+import homeImg5 from "@/images/BlackAndWhiteImages/blackandwhite6.JPG";
+import homeImg6 from "@/images/BlackAndWhiteImages/blackandwhite7.JPG";
+import homeImg12 from "@/images/BlackAndWhiteImages/blackandwhite12.jpg";
+import homeImg8 from "@/images/Architecture/arch8.jpg";
+import homeImg9 from "@/images/Architecture/arch9.jpg";
+import homeImg10 from "@/images/BlackAndWhiteImages/blackandwhite14.jpg";
 
 const itemData = [
   {
