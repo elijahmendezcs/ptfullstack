@@ -1,71 +1,55 @@
+// src/components/Arch3x3.jsx
 import React, { useState } from "react";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 
-import ArchImg1 from "../images/Architecture/arch1.jpg";
-import ArchImg2 from "../images/Architecture/arch2.jpg";
-import ArchImg3 from "../images/Architecture/arch3.jpg";
-import ArchImg4 from "../images/Architecture/arch4.jpg";
-import ArchImg5 from "../images/Architecture/arch5.jpg";
-import ArchImg6 from "../images/Architecture/arch6.jpg";
-import ArchImg7 from "../images/Architecture/arch7.jpg";
-import ArchImg8 from "../images/Architecture/arch8.jpg";
-import ArchImg9 from "../images/Architecture/arch9.jpg";
-import BlackWhite8 from "../images/BlackandWhiteImages/blackandwhite8.jpeg";
-
-// Updated image data. (Note: the final empty object has been skipped during rendering.)
-
-// 8 -> 1
-
-// 1 -> 7
-
-// 7 -> 8
+// Instead of importing images, we now reference them via absolute paths.
+// Ensure these files exist in your public folder under /images/Architecture/ and /images/BlackandWhiteImages/
 const itemData = [
   {
-    img: ArchImg8,
+    img: "/images/Architecture/arch8.jpg",
     title: "Senior Male Sitting",
   },
   {
-    img: ArchImg2,
+    img: "/images/Architecture/arch2.jpg",
     title: "Senior Female Sitting",
   },
   {
-    img: ArchImg3,
+    img: "/images/Architecture/arch3.jpg",
     title: "Male Senior Trees",
   },
   {
-    img: ArchImg4,
+    img: "/images/Architecture/arch4.jpg",
     title: "Male Senior Cap and Gown",
   },
   {
-    img: ArchImg5,
+    img: "/images/Architecture/arch5.jpg",
     title: "Senior Bench",
   },
   {
-    img: ArchImg6,
+    img: "/images/Architecture/arch6.jpg",
     title: "Female Senior Cap and Gown",
   },
   {
-    img: ArchImg1,
+    img: "/images/Architecture/arch1.jpg",
     title: "Senior Field",
   },
   {
-    img: BlackWhite8,
+    img: "/images/BW/blackandwhite8.jpeg",
     title: "Senior Field",
   },
   {
-    img: ArchImg9,
+    img: "/images/Architecture/arch9.jpg",
     title: "Senior Field",
   },
-  // If needed, remove or update any empty entries.
 ];
 
 export default function ResponsiveImageGrid() {
   const [currentIndex, setCurrentIndex] = useState(null); // Current image index for the modal
   const [isModalOpen, setIsModalOpen] = useState(false); // Modal open/close state
-  const [isAnimating, setIsAnimating] = useState(false); // Modal open/close animation state
+  const [isAnimating, setIsAnimating] = useState(false); // Modal animation state
   const [isImageFading, setIsImageFading] = useState(false); // Image fade transition state
 
   // Use MUI theme breakpoints to set responsive columns and gap sizes
@@ -88,7 +72,7 @@ export default function ResponsiveImageGrid() {
     setCurrentIndex(index);
     setIsModalOpen(true);
     setIsAnimating(true);
-    setTimeout(() => setIsAnimating(false), 300); // 300ms matches the animation duration
+    setTimeout(() => setIsAnimating(false), 300); // 300ms for the animation duration
   };
 
   const closeModal = () => {
@@ -97,7 +81,7 @@ export default function ResponsiveImageGrid() {
       setCurrentIndex(null);
       setIsModalOpen(false);
       setIsAnimating(false);
-    }, 300); // 300ms matches the animation duration
+    }, 300);
   };
 
   const goToPrevious = () => {
@@ -107,7 +91,7 @@ export default function ResponsiveImageGrid() {
         prevIndex > 0 ? prevIndex - 1 : itemData.length - 1
       );
       setIsImageFading(false);
-    }, 300); // 300ms matches fade-out duration
+    }, 300); // 300ms for fade-out transition
   };
 
   const goToNext = () => {
@@ -117,7 +101,7 @@ export default function ResponsiveImageGrid() {
         prevIndex < itemData.length - 1 ? prevIndex + 1 : 0
       );
       setIsImageFading(false);
-    }, 300); // 300ms matches fade-out duration
+    }, 300); // 300ms for fade-out transition
   };
 
   return (
@@ -169,7 +153,6 @@ export default function ResponsiveImageGrid() {
             className="relative w-[95vw] h-[95vh] flex items-center justify-center bg-transparent"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Current Image */}
             <img
               src={itemData[currentIndex].img}
               alt={itemData[currentIndex].title}
@@ -178,7 +161,6 @@ export default function ResponsiveImageGrid() {
               }`}
             />
 
-            {/* Previous Arrow */}
             <button
               className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white bg-transparent hover:bg-opacity-20 p-4 text-3xl rounded-full focus:outline-none"
               onClick={goToPrevious}
@@ -186,7 +168,6 @@ export default function ResponsiveImageGrid() {
               &#8592;
             </button>
 
-            {/* Next Arrow */}
             <button
               className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white bg-transparent hover:bg-opacity-20 p-4 text-3xl rounded-full focus:outline-none"
               onClick={goToNext}
@@ -194,7 +175,6 @@ export default function ResponsiveImageGrid() {
               &#8594;
             </button>
 
-            {/* Close Button */}
             <button
               className="absolute top-4 right-4 text-white bg-transparent hover:bg-opacity-20 p-3 text-2xl rounded-full focus:outline-none"
               onClick={closeModal}

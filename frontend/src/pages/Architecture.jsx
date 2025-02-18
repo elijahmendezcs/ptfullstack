@@ -1,3 +1,4 @@
+// src/pages/Architecture.jsx
 import React from "react";
 import { Typography } from "@mui/material";
 import ArchImageList from "../components/Arch3x3.jsx";
