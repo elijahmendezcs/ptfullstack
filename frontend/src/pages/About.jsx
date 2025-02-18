@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Box, Typography } from "@mui/material";
-import bioImage from "../images/MainImages/bio.jpg"; // Import the image
+import bioImage from "@/images/MainImages/bio.jpg"; // Using alias for the image
 
 const About = () => {
   // State for each form field
@@ -69,8 +69,9 @@ const About = () => {
     if (!valid) return;
 
     try {
-      // Send data to your backend
-      const response = await fetch("http://localhost:3000/api/contact", {
+      // Use environment variable for the API URL, with fallback for local development
+      const apiUrl = import.meta.env.VITE_API_URL || "http://localhost:3000";
+      const response = await fetch(`${apiUrl}/api/contact`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -145,7 +146,7 @@ const About = () => {
           justifyContent: "center",
           textAlign: "center",
           marginBottom: "40px",
-          px: { xs: 2, sm: 0 }, // Horizontal padding on small screens
+          px: { xs: 2, sm: 0 },
         }}
       >
         {/* Responsive Image Above the About Me Text */}
@@ -154,9 +155,9 @@ const About = () => {
           src={bioImage}
           alt="Bio"
           sx={{
-            width: { xs: "90%", sm: "70%", md: "500px" }, // Smaller image widths
+            width: { xs: "90%", sm: "70%", md: "500px" },
             height: "auto",
-            mt: "20px", // Increased margin top
+            mt: "20px",
             mb: "20px",
           }}
         />
