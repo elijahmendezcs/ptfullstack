@@ -43,7 +43,7 @@ const ThankYou = () => {
         >
           We appreciate your trust and support. Your purchase means a lot to us.
           If you have any questions or need further assistance, please don't
-          hesitate to reach out.
+          hesitate to reach out at luxecreativestudiophoto@gmail.com!
         </Typography>
       </Box>
 
