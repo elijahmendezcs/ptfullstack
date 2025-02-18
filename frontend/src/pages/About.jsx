@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Box, Typography } from "@mui/material";
-import bioImage from "@/images/MainImages/bio.jpg"; // Using alias for the image
 
 const About = () => {
   // State for each form field
@@ -69,7 +68,7 @@ const About = () => {
     if (!valid) return;
 
     try {
-      // Use environment variable for the API URL, with fallback for local development
+      // Use environment variable for the API URL, with fallback for local dev
       const apiUrl = import.meta.env.VITE_API_URL || "http://localhost:3000";
       const response = await fetch(`${apiUrl}/api/contact`, {
         method: "POST",
@@ -152,7 +151,8 @@ const About = () => {
         {/* Responsive Image Above the About Me Text */}
         <Box
           component="img"
-          src={bioImage}
+          // Reference the image in public folder
+          src="/images/MainImages/bio.jpg"
           alt="Bio"
           sx={{
             width: { xs: "90%", sm: "70%", md: "500px" },
