@@ -13,7 +13,7 @@ import {
 } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
-import blackandwhite from "../../images/BlackandWhiteImages/blackandwhite14.jpg"; // Adjust if needed
+import blackandwhite from "@/images/BlackAndWhiteImages/blackandwhite14.jpg"; // Using alias to refer to src/images/BlackAndWhiteImages
 
 const BWPage1 = () => {
   const [selectedSize, setSelectedSize] = useState(null);
