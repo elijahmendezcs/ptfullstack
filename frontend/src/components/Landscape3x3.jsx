@@ -1,57 +1,47 @@
+// src/components/Landscape3x3.jsx
 import React, { useState } from "react";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 
-import BlackandWhiteImg1 from "@/images/BlackandWhiteImages/blackandwhite1.jpg";
-import BlackandWhiteImg2 from "@/images/BlackandWhiteImages/blackandwhite2.jpg";
-import BlackandWhiteImg3 from "@/images/BlackandWhiteImages/blackandwhite3.jpg";
-import BlackandWhiteImg4 from "@/images/BlackandWhiteImages/blackandwhite4.jpg";
-import BlackandWhiteImg5 from "@/images/BlackandWhiteImages/blackandwhite5.jpg";
-import BlackandWhiteImg11 from "@/images/BlackandWhiteImages/blackandwhite11.jpg";
-import BlackandWhiteImg12 from "@/images/BlackandWhiteImages/blackandwhite12.jpg";
-import BlackandWhiteImg13 from "@/images/BlackandWhiteImages/blackandwhite13.jpg";
-import BlackandWhiteImg14 from "@/images/BlackandWhiteImages/blackandwhite14.jpg";
-
-// import blackandwhite from "@/images/BlackAndWhiteImages/blackandwhite5.jpg"; // Using alias to refer to src/images/BlackAndWhiteImages
-
-
+// Instead of importing images, we now reference them via absolute paths.
+// Ensure these files exist in your public folder under /images/BlackAndWhiteImages/
 const itemData = [
   {
-    img: BlackandWhiteImg1,
+    img: "/images/BW/blackandwhite1.JPG",
     title: "Senior Male Sitting",
   },
   {
-    img: BlackandWhiteImg14,
+    img: "/images/BW/blackandwhite14.jpg",
     title: "Senior Female Sitting",
   },
   {
-    img: BlackandWhiteImg3,
+    img: "/images/BW/blackandwhite3.jpg",
     title: "Male Senior Trees",
   },
   {
-    img: BlackandWhiteImg4,
+    img: "/images/BW/blackandwhite4.jpg",
     title: "Male Senior Cap and Gown",
   },
   {
-    img: BlackandWhiteImg2,
+    img: "/images/BW/blackandwhite2.jpg",
     title: "Senior Bench",
   },
   {
-    img: BlackandWhiteImg5,
+    img: "/images/BW/blackandwhite5.jpg",
     title: "Senior Bench",
   },
   {
-    img: BlackandWhiteImg11,
+    img: "/images/BW/blackandwhite11.jpg",
     title: "Senior Bench",
   },
   {
-    img: BlackandWhiteImg12,
+    img: "/images/BW/blackandwhite12.jpg",
     title: "Senior Bench",
   },
   {
-    img: BlackandWhiteImg13,
+    img: "/images/BW/blackandwhite13.jpg",
     title: "Senior Bench",
   },
 ];
@@ -59,7 +49,7 @@ const itemData = [
 export default function ResponsiveImageGrid() {
   const [currentIndex, setCurrentIndex] = useState(null); // Current image index for the modal
   const [isModalOpen, setIsModalOpen] = useState(false); // Modal open/close state
-  const [isAnimating, setIsAnimating] = useState(false); // Modal open/close animation state
+  const [isAnimating, setIsAnimating] = useState(false); // Modal animation state
   const [isImageFading, setIsImageFading] = useState(false); // Image fade transition state
 
   // Use MUI theme breakpoints to set responsive columns and gap
@@ -82,7 +72,7 @@ export default function ResponsiveImageGrid() {
     setCurrentIndex(index);
     setIsModalOpen(true);
     setIsAnimating(true);
-    setTimeout(() => setIsAnimating(false), 300); // 300ms matches the animation duration
+    setTimeout(() => setIsAnimating(false), 300); // 300ms for the animation duration
   };
 
   const closeModal = () => {
@@ -101,7 +91,7 @@ export default function ResponsiveImageGrid() {
         prevIndex > 0 ? prevIndex - 1 : itemData.length - 1
       );
       setIsImageFading(false);
-    }, 300); // 300ms matches fade-out duration
+    }, 300); // 300ms for fade-out transition
   };
 
   const goToNext = () => {
@@ -111,7 +101,7 @@ export default function ResponsiveImageGrid() {
         prevIndex < itemData.length - 1 ? prevIndex + 1 : 0
       );
       setIsImageFading(false);
-    }, 300); // 300ms matches fade-out duration
+    }, 300); // 300ms for fade-out transition
   };
 
   return (
@@ -159,7 +149,6 @@ export default function ResponsiveImageGrid() {
             className="relative w-[95vw] h-[95vh] flex items-center justify-center bg-transparent"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Current Image */}
             <img
               src={itemData[currentIndex].img}
               alt={itemData[currentIndex].title}
@@ -168,7 +157,6 @@ export default function ResponsiveImageGrid() {
               }`}
             />
 
-            {/* Previous Arrow */}
             <button
               className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white bg-transparent hover:bg-opacity-20 p-4 text-3xl rounded-full focus:outline-none"
               onClick={goToPrevious}
@@ -176,7 +164,6 @@ export default function ResponsiveImageGrid() {
               &#8592;
             </button>
 
-            {/* Next Arrow */}
             <button
               className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white bg-transparent hover:bg-opacity-20 p-4 text-3xl rounded-full focus:outline-none"
               onClick={goToNext}
@@ -184,7 +171,6 @@ export default function ResponsiveImageGrid() {
               &#8594;
             </button>
 
-            {/* Close Button */}
             <button
               className="absolute top-4 right-4 text-white bg-transparent hover:bg-opacity-20 p-3 text-2xl rounded-full focus:outline-none"
               onClick={closeModal}

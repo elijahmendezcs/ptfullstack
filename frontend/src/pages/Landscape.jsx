@@ -1,3 +1,4 @@
+// src/pages/Landscape.jsx
 import React from "react";
 import { Typography } from "@mui/material";
 import LandscapeImageList from "../components/Landscape3x3.jsx";
@@ -29,13 +30,12 @@ const Landscape = () => {
             sx={{ fontFamily: "Playfair Display" }}
             className="text-gray-600 leading-relaxed"
           >
-            Explore a stunning collection of black-and-white landscape
-            photography that captures the serene beauty of nature. From quiet
-            rural scenes to timeless paths and bridges, each image tells a story
-            of tranquility and nostalgia. Perfect for bringing a sense of calm
-            and elegance to your home or office, these prints are available for
-            purchase, allowing you to transform your space with art that
-            inspires and soothes the soul.
+            Explore a stunning collection of black-and-white landscape photography that
+            captures the serene beauty of nature. From quiet rural scenes to timeless paths and
+            bridges, each image tells a story of tranquility and nostalgia. Perfect for bringing a
+            sense of calm and elegance to your home or office, these prints are available for
+            purchase, allowing you to transform your space with art that inspires and soothes the
+            soul.
           </Typography>
         </div>
       </div>
