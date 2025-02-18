@@ -10,8 +10,8 @@ import IconButton from "@mui/material/IconButton";
 import Button from "@mui/material/Button";
 import { Link } from "react-router-dom";
 
-// 1) Import the image directly from src/images:
-import blackandwhite1 from "@/images/BlackAndWhiteImages/blackandwhite5.jpg";
+// 1) Remove the old import:
+// import arch1 from "../../../images/Architecture/arch1.jpg";
 
 // 2) Styled component for the expand icon (if needed).
 const ExpandMore = styled((props) => {
@@ -52,8 +52,8 @@ export default function BW7() {
     >
       <CardMedia
         component="img"
-        // 4) Use the imported variable for the image prop
-        image={blackandwhite1}
+        // 4) Reference the image from the public folder:
+        image="/images/BW/blackandwhite5.jpg"
         alt="Black and White Print"
         // You can still set width/height
         sx={{ width: 400, height: 300 }}
@@ -89,7 +89,7 @@ export default function BW7() {
         </Typography>
       </CardContent>
       <CardActions disableSpacing style={{ justifyContent: "center" }}>
-        <Link to="bwpage">
+        <Link to="bwpage1">
           <Button
             variant="contained"
             sx={{
