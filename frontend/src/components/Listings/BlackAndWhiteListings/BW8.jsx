@@ -11,7 +11,7 @@ import Button from "@mui/material/Button";
 import { Link } from "react-router-dom";
 
 // 1) Import the image directly from src/images:
-import blackandwhite1 from "../../../images/BlackAndWhiteImages/blackandwhite8.jpeg";
+import blackandwhite1 from "@/images/BlackAndWhiteImages/blackandwhite8.jpeg";
 
 // 2) Styled component for the expand icon (if needed).
 const ExpandMore = styled((props) => {
