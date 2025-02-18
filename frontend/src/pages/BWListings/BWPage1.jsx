@@ -1,6 +1,6 @@
 // src/pages/BWPage1.jsx
 import React, { useState } from "react";
-import { priceIds } from "@/lib/priceIds"; // Using alias for lib
+import { priceIds } from "../../lib/priceIds"; // <-- adjust path if needed
 
 import { Button } from "@/components/ui/button";
 import {
@@ -14,8 +14,8 @@ import {
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 
-// Use the alias to import the image
-import blackandwhite from "@/images/BlackAndWhiteImages/blackandwhite5.jpg";
+// Remove the old import
+// import architecture from "../../images/Architecture/arch1.jpg"; // Not needed anymore
 
 const BWPage1 = () => {
   const [selectedSize, setSelectedSize] = useState(null);
@@ -27,23 +27,28 @@ const BWPage1 = () => {
 
   const handleQuantityChange = (e) => {
     const value = Math.max(1, parseInt(e.target.value, 10));
-    setQuantity(value || 1);
+    setQuantity(value || 1); // fallback to 1 if input is invalid
   };
 
   const handleBuyNow = async () => {
     try {
+      // Make sure a size is chosen
       if (!selectedSize) {
         alert("Please select a frame size first.");
         return;
       }
-      const priceKey = `BW1_${selectedSize}`;
+
+      // Build the key for the priceIds object, e.g. "BW1_8x10"
+      const priceKey = `A1_${selectedSize}`;
+
+      // Make the request to your Express Stripe route
       const res = await fetch(
         "http://localhost:3000/api/stripe/create-checkout-session",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
-            priceId: priceIds[priceKey],
+            priceId: priceIds[priceKey], // Use the correct Price ID
             quantity,
           }),
         }
@@ -53,6 +58,8 @@ const BWPage1 = () => {
         const errorData = await res.json();
         throw new Error(errorData.error || "Request failed");
       }
+
+      // On success, get the Stripe Checkout URL and redirect
       const data = await res.json();
       window.location.href = data.url;
     } catch (err) {
@@ -66,8 +73,9 @@ const BWPage1 = () => {
       <div className="flex flex-col md:flex-row gap-6">
         {/* Image section */}
         <div className="flex-1 max-h-[60vh] overflow-hidden">
+          {/* Reference the image from public folder */}
           <img
-            src={blackandwhite}
+            src="/images/BW/blackandwhite5.jpg"
             alt="Art print"
             className="object-cover w-full h-full"
           />
@@ -105,7 +113,9 @@ const BWPage1 = () => {
                           ? "bg-black text-white"
                           : "bg-white text-black"
                       }`}
-                      style={{ borderRadius: 0 }}
+                      style={{
+                        borderRadius: 0, // Square corners
+                      }}
                     >
                       {size}
                     </Button>
@@ -118,7 +128,9 @@ const BWPage1 = () => {
                 <Label
                   htmlFor="quantity"
                   className="mb-2 block font-cormorant italic text-base md:text-lg"
-                  style={{ borderRadius: 0 }}
+                  style={{
+                    borderRadius: 0, // Square corners
+                  }}
                 >
                   Quantity:
                 </Label>
@@ -129,18 +141,22 @@ const BWPage1 = () => {
                   onChange={handleQuantityChange}
                   min={1}
                   className="w-24"
-                  style={{ borderRadius: 0 }}
+                  style={{
+                    borderRadius: 0, // Square corners
+                  }}
                 />
               </div>
             </CardContent>
           </div>
 
-          {/* Footer (Buy Now) */}
+          {/* Footer (Buy Now) at the bottom */}
           <CardFooter className="p-0 mt-4">
             <Button
               onClick={handleBuyNow}
               className="w-full font-cormorant bg-black text-white"
-              style={{ borderRadius: 0 }}
+              style={{
+                borderRadius: 0, // Square corners
+              }}
             >
               Buy Now
             </Button>

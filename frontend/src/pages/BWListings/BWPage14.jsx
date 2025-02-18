@@ -13,7 +13,9 @@ import {
 } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
-import blackandwhite from "@/images/BlackAndWhiteImages/blackandwhite14.jpg"; // Using alias to refer to src/images/BlackAndWhiteImages
+
+// Remove the old import
+// import architecture from "../../images/Architecture/arch1.jpg"; // Not needed anymore
 
 const BWPage1 = () => {
   const [selectedSize, setSelectedSize] = useState(null);
@@ -37,20 +39,22 @@ const BWPage1 = () => {
       }
 
       // Build the key for the priceIds object, e.g. "BW1_8x10"
-      const priceKey = `BW14_${selectedSize}`;
+      const priceKey = `A1_${selectedSize}`;
 
       // Make the request to your Express Stripe route
-      const res = await fetch("http://localhost:3000/api/stripe/create-checkout-session", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          priceId: priceIds[priceKey], // Use the correct Price ID
-          quantity,
-        }),
-      });
+      const res = await fetch(
+        "http://localhost:3000/api/stripe/create-checkout-session",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            priceId: priceIds[priceKey], // Use the correct Price ID
+            quantity,
+          }),
+        }
+      );
 
       if (!res.ok) {
-        // If server returns an error status, handle or throw an error
         const errorData = await res.json();
         throw new Error(errorData.error || "Request failed");
       }
@@ -69,8 +73,9 @@ const BWPage1 = () => {
       <div className="flex flex-col md:flex-row gap-6">
         {/* Image section */}
         <div className="flex-1 max-h-[60vh] overflow-hidden">
+          {/* Reference the image from public folder */}
           <img
-            src={blackandwhite}
+            src="/images/BW/blackandwhite14.jpg"
             alt="Art print"
             className="object-cover w-full h-full"
           />
@@ -84,13 +89,13 @@ const BWPage1 = () => {
                 Sandusky Bay Cattails
               </CardTitle>
               <CardDescription className="text-base md:text-lg font-cormorant">
-              8x10: $25.00 | 11x14: $35.00 | 16x20: $45.00
+                8x10: $25.00 | 11x14: $35.00 | 16x20: $45.00
               </CardDescription>
             </CardHeader>
 
             <CardContent className="mt-4 md:mt-6 p-0">
               <p className="font-cormorant text-base md:text-lg italic mb-6 text-black-700">
-                This is an fine art print.
+                This is a fine art print.
               </p>
 
               {/* Frame options */}

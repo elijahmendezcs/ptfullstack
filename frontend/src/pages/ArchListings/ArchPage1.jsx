@@ -13,7 +13,9 @@ import {
 } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
-import architecture from "../../images/Architecture/arch1.jpg"; // Adjust if needed
+
+// Remove the old import
+// import architecture from "../../images/Architecture/arch1.jpg"; // Not needed anymore
 
 const BWPage1 = () => {
   const [selectedSize, setSelectedSize] = useState(null);
@@ -53,7 +55,6 @@ const BWPage1 = () => {
       );
 
       if (!res.ok) {
-        // If server returns an error status, handle or throw an error
         const errorData = await res.json();
         throw new Error(errorData.error || "Request failed");
       }
@@ -72,8 +73,9 @@ const BWPage1 = () => {
       <div className="flex flex-col md:flex-row gap-6">
         {/* Image section */}
         <div className="flex-1 max-h-[60vh] overflow-hidden">
+          {/* Reference the image from public folder */}
           <img
-            src={architecture}
+            src="/images/Architecture/arch1.jpg"
             alt="Art print"
             className="object-cover w-full h-full"
           />
@@ -93,7 +95,7 @@ const BWPage1 = () => {
 
             <CardContent className="mt-4 md:mt-6 p-0">
               <p className="font-cormorant text-base md:text-lg italic mb-6 text-black-700">
-                This is an fine art print.
+                This is a fine art print.
               </p>
 
               {/* Frame options */}

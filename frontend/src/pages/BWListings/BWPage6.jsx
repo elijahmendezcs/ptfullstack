@@ -1,5 +1,6 @@
+// src/pages/BWPage1.jsx
 import React, { useState } from "react";
-import { priceIds } from "../../lib/priceIds";
+import { priceIds } from "../../lib/priceIds"; // <-- adjust path if needed
 
 import { Button } from "@/components/ui/button";
 import {
@@ -12,67 +13,69 @@ import {
 } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
-import blackandwhite from "@/images/BlackAndWhiteImages/blackandwhite6.jpg"; // Using alias to refer to src/images/BlackAndWhiteImages
+
+// Remove the old import
+// import architecture from "../../images/Architecture/arch1.jpg"; // Not needed anymore
 
 const BWPage1 = () => {
   const [selectedSize, setSelectedSize] = useState(null);
-  const [quantity, setQuantity] = useState(1); // State for quantity
+  const [quantity, setQuantity] = useState(1);
 
   const handleSizeClick = (size) => {
     setSelectedSize(size);
   };
 
   const handleQuantityChange = (e) => {
-    const value = Math.max(1, parseInt(e.target.value, 10)); // Ensure quantity is at least 1
-    setQuantity(value || 1); // Fallback to 1 if input is invalid
+    const value = Math.max(1, parseInt(e.target.value, 10));
+    setQuantity(value || 1); // fallback to 1 if input is invalid
   };
 
   const handleBuyNow = async () => {
-      try {
-        // Make sure a size is chosen
-        if (!selectedSize) {
-          alert("Please select a frame size first.");
-          return;
-        }
-  
-        // Build the key for the priceIds object, e.g. "BW1_8x10"
-        const priceKey = `BW6_${selectedSize}`;
-  
-        // Make the request to your Express Stripe route
-        const res = await fetch(
-          "http://localhost:3000/api/stripe/create-checkout-session",
-          {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-              priceId: priceIds[priceKey], // Use the correct Price ID
-              quantity,
-            }),
-          }
-        );
-  
-        if (!res.ok) {
-          // If server returns an error status, handle or throw an error
-          const errorData = await res.json();
-          throw new Error(errorData.error || "Request failed");
-        }
-  
-        // On success, get the Stripe Checkout URL and redirect
-        const data = await res.json();
-        window.location.href = data.url;
-      } catch (err) {
-        console.error("Error creating checkout session:", err);
-        alert("Something went wrong with Checkout. Check console for details.");
+    try {
+      // Make sure a size is chosen
+      if (!selectedSize) {
+        alert("Please select a frame size first.");
+        return;
       }
-    };
+
+      // Build the key for the priceIds object, e.g. "BW1_8x10"
+      const priceKey = `A1_${selectedSize}`;
+
+      // Make the request to your Express Stripe route
+      const res = await fetch(
+        "http://localhost:3000/api/stripe/create-checkout-session",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            priceId: priceIds[priceKey], // Use the correct Price ID
+            quantity,
+          }),
+        }
+      );
+
+      if (!res.ok) {
+        const errorData = await res.json();
+        throw new Error(errorData.error || "Request failed");
+      }
+
+      // On success, get the Stripe Checkout URL and redirect
+      const data = await res.json();
+      window.location.href = data.url;
+    } catch (err) {
+      console.error("Error creating checkout session:", err);
+      alert("Something went wrong with Checkout. Check console for details.");
+    }
+  };
 
   return (
     <Card className="w-full p-4 md:p-8 bg-white mt-[70px] border-white border-0">
       <div className="flex flex-col md:flex-row gap-6">
         {/* Image section */}
         <div className="flex-1 max-h-[60vh] overflow-hidden">
+          {/* Reference the image from public folder */}
           <img
-            src={blackandwhite}
+            src="/images/BW/blackandwhite6.JPG"
             alt="Art print"
             className="object-cover w-full h-full"
           />
@@ -92,7 +95,7 @@ const BWPage1 = () => {
 
             <CardContent className="mt-4 md:mt-6 p-0">
               <p className="font-cormorant text-base md:text-lg italic mb-6 text-black-700">
-                This is an fine art print.
+                This is a fine art print.
               </p>
 
               {/* Frame options */}
@@ -111,7 +114,7 @@ const BWPage1 = () => {
                           : "bg-white text-black"
                       }`}
                       style={{
-                        borderRadius: 0, // Square corners for buttons
+                        borderRadius: 0, // Square corners
                       }}
                     >
                       {size}
@@ -126,7 +129,7 @@ const BWPage1 = () => {
                   htmlFor="quantity"
                   className="mb-2 block font-cormorant italic text-base md:text-lg"
                   style={{
-                    borderRadius: 0, // Square corners for labels
+                    borderRadius: 0, // Square corners
                   }}
                 >
                   Quantity:
@@ -135,11 +138,11 @@ const BWPage1 = () => {
                   id="quantity"
                   type="number"
                   value={quantity}
-                  onChange={handleQuantityChange} // Update quantity state
+                  onChange={handleQuantityChange}
                   min={1}
                   className="w-24"
                   style={{
-                    borderRadius: 0, // Square corners for input
+                    borderRadius: 0, // Square corners
                   }}
                 />
               </div>
@@ -152,7 +155,7 @@ const BWPage1 = () => {
               onClick={handleBuyNow}
               className="w-full font-cormorant bg-black text-white"
               style={{
-                borderRadius: 0, // Square corners for Buy Now button
+                borderRadius: 0, // Square corners
               }}
             >
               Buy Now
