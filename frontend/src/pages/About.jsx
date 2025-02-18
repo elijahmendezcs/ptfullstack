@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Box, Typography } from "@mui/material";
+import bioImage from "../images/MainImages/bio.jpg"; // Import the image
 
 const About = () => {
   // State for each form field
@@ -144,9 +145,22 @@ const About = () => {
           justifyContent: "center",
           textAlign: "center",
           marginBottom: "40px",
-          px: { xs: 2, sm: 0 }, // Add horizontal padding on small screens
+          px: { xs: 2, sm: 0 }, // Horizontal padding on small screens
         }}
       >
+        {/* Responsive Image Above the About Me Text */}
+        <Box
+          component="img"
+          src={bioImage}
+          alt="Bio"
+          sx={{
+            width: { xs: "90%", sm: "70%", md: "500px" }, // Smaller image widths
+            height: "auto",
+            mt: "20px", // Increased margin top
+            mb: "20px",
+          }}
+        />
+
         <Typography
           sx={{
             fontFamily: '"Cormorant Garamond", serif',
@@ -186,7 +200,7 @@ const About = () => {
           justifyContent: "center",
           textAlign: "center",
           marginTop: "40px",
-          px: { xs: 2, sm: 0 }, // Add horizontal padding on small screens
+          px: { xs: 2, sm: 0 },
         }}
       >
         <Typography
@@ -330,7 +344,7 @@ const About = () => {
       >
         <Typography
           sx={{
-            marginBottom: "40px",
+            marginBottom: "50px",
             fontFamily: '"Cormorant Garamond", serif',
             fontSize: "14px",
             fontStyle: "italic",

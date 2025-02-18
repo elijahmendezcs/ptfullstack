@@ -16,9 +16,15 @@ import ArchImg9 from "../images/Architecture/arch9.jpg";
 import BlackWhite8 from "../images/BlackandWhiteImages/blackandwhite8.jpeg";
 
 // Updated image data. (Note: the final empty object has been skipped during rendering.)
+
+// 8 -> 1
+
+// 1 -> 7
+
+// 7 -> 8
 const itemData = [
   {
-    img: ArchImg1,
+    img: ArchImg8,
     title: "Senior Male Sitting",
   },
   {
@@ -42,11 +48,11 @@ const itemData = [
     title: "Female Senior Cap and Gown",
   },
   {
-    img: BlackWhite8,
+    img: ArchImg1,
     title: "Senior Field",
   },
   {
-    img: ArchImg8,
+    img: BlackWhite8,
     title: "Senior Field",
   },
   {
