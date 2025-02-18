@@ -1,3 +1,4 @@
+// src/pages/Home.jsx
 import React from "react";
 import HomePageImageList from "../components/HomePageImageList";
 import Typography from "@mui/material/Typography";

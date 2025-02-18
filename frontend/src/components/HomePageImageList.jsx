@@ -1,54 +1,46 @@
+// src/components/HomePageImageList.jsx
 import React, { useState } from "react";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 
-import homeImg2 from "@/images/BlackAndWhiteImages/blackandwhite3.jpg";
-import homeImg11 from "@/images/BlackAndWhiteImages/blackandwhite5.jpg";
-import homeImg4 from "@/images/BlackAndWhiteImages/blackandwhite1.JPG";
-import homeImg5 from "@/images/BlackAndWhiteImages/blackandwhite6.JPG";
-import homeImg6 from "@/images/BlackAndWhiteImages/blackandwhite7.JPG";
-import homeImg12 from "@/images/BlackAndWhiteImages/blackandwhite12.jpg";
-import homeImg8 from "@/images/Architecture/arch8.jpg";
-import homeImg9 from "@/images/Architecture/arch9.jpg";
-import homeImg10 from "@/images/BlackAndWhiteImages/blackandwhite14.jpg";
-
+// Remove image imports and use absolute paths instead:
 const itemData = [
   {
-    img: homeImg8,
+    img: "/images/Architecture/arch8.jpg",
     title: "Senior Male Sitting",
   },
   {
-    img: homeImg2,
+    img: "/images/BW/blackandwhite3.jpg",
     title: "Senior Female Sitting",
   },
   {
-    img: homeImg12,
+    img: "/images/BW/blackandwhite12.jpg",
     title: "Male Senior Trees",
   },
   {
-    img: homeImg4,
+    img: "/images/BW/blackandwhite1.JPG",
     title: "Male Senior Cap and Gown",
   },
   {
-    img: homeImg5,
+    img: "/images/BW/blackandwhite6.JPG",
     title: "Senior Bench",
   },
   {
-    img: homeImg6,
+    img: "/images/BW/blackandwhite7.JPG",
     title: "Female Senior Cap and Gown",
   },
   {
-    img: homeImg10,
+    img: "/images/BW/blackandwhite14.jpg",
     title: "Senior Field",
   },
   {
-    img: homeImg11,
+    img: "/images/BW/blackandwhite5.jpg",
     title: "Senior Park",
   },
   {
-    img: homeImg9,
+    img: "/images/Architecture/arch9.jpg",
     title: "Senior Laying",
   },
 ];
@@ -154,7 +146,6 @@ export default function ResponsiveImageGrid() {
             className="relative w-[95vw] h-[95vh] flex items-center justify-center bg-transparent"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Current Image */}
             <img
               src={itemData[currentIndex].img}
               alt={itemData[currentIndex].title}
@@ -163,7 +154,6 @@ export default function ResponsiveImageGrid() {
               }`}
             />
 
-            {/* Previous Arrow */}
             <button
               className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white bg-transparent hover:bg-opacity-20 p-4 text-3xl rounded-full focus:outline-none"
               onClick={goToPrevious}
@@ -171,7 +161,6 @@ export default function ResponsiveImageGrid() {
               &#8592;
             </button>
 
-            {/* Next Arrow */}
             <button
               className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white bg-transparent hover:bg-opacity-20 p-4 text-3xl rounded-full focus:outline-none"
               onClick={goToNext}
@@ -179,7 +168,6 @@ export default function ResponsiveImageGrid() {
               &#8594;
             </button>
 
-            {/* Close Button */}
             <button
               className="absolute top-4 right-4 text-white bg-transparent hover:bg-opacity-20 p-3 text-2xl rounded-full focus:outline-none"
               onClick={closeModal}
