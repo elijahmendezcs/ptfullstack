@@ -42,17 +42,17 @@ const BWPage1 = () => {
       const priceKey = `A1_${selectedSize}`;
 
       // Make the request to your Express Stripe route
-      const res = await fetch(
-        "http://localhost:3000/api/stripe/create-checkout-session",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            priceId: priceIds[priceKey], // Use the correct Price ID
-            quantity,
-          }),
-        }
-      );
+
+      const apiUrl = import.meta.env.VITE_API_URL || "http://localhost:3000";
+
+      const res = await fetch(`${apiUrl}/api/stripe/create-checkout-session`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          priceId: priceIds[priceKey], // Use the correct Price ID
+          quantity,
+        }),
+      });
 
       if (!res.ok) {
         const errorData = await res.json();

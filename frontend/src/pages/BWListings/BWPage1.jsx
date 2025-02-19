@@ -14,9 +14,6 @@ import {
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 
-// Remove the old import
-// import architecture from "../../images/Architecture/arch1.jpg"; // Not needed anymore
-
 const BWPage1 = () => {
   const [selectedSize, setSelectedSize] = useState(null);
   const [quantity, setQuantity] = useState(1);
@@ -38,21 +35,21 @@ const BWPage1 = () => {
         return;
       }
 
-      // Build the key for the priceIds object, e.g. "BW1_8x10"
+      // Build the key for the priceIds object, e.g., "A1_8x10"
       const priceKey = `A1_${selectedSize}`;
 
+      // Use the environment variable for the backend URL, with a local fallback
+      const apiUrl = import.meta.env.VITE_API_URL || "http://localhost:3000";
+
       // Make the request to your Express Stripe route
-      const res = await fetch(
-        "http://localhost:3000/api/stripe/create-checkout-session",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            priceId: priceIds[priceKey], // Use the correct Price ID
-            quantity,
-          }),
-        }
-      );
+      const res = await fetch(`${apiUrl}/api/stripe/create-checkout-session`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          priceId: priceIds[priceKey], // Use the correct Price ID
+          quantity,
+        }),
+      });
 
       if (!res.ok) {
         const errorData = await res.json();
@@ -73,7 +70,6 @@ const BWPage1 = () => {
       <div className="flex flex-col md:flex-row gap-6">
         {/* Image section */}
         <div className="flex-1 max-h-[60vh] overflow-hidden">
-          {/* Reference the image from public folder */}
           <img
             src="/images/BW/blackandwhite5.jpg"
             alt="Art print"
