@@ -33,6 +33,9 @@ import ThankYou from "./pages/ThankYou";
 import Cancel from "./pages/Cancel";
 import Architecture from "./pages/Architecture";
 
+// 1) Import Helmet
+import { Helmet } from "react-helmet";
+
 function AnimatedRoutes() {
   const location = useLocation();
 
@@ -76,11 +79,24 @@ function AnimatedRoutes() {
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <Navbar />
-      <AnimatedRoutes />
-      <Footer />
-    </BrowserRouter>
+    <>
+      {/* 2) Use Helmet to set the title */}
+      <Helmet>
+        <title>Luxe Creative Studio</title>
+        <link
+          rel="icon"
+          type="image/png"
+          href="/images/MainImages/luxelogo.png"
+          sizes="16x16"
+        />
+      </Helmet>
+
+      <BrowserRouter>
+        <Navbar />
+        <AnimatedRoutes />
+        <Footer />
+      </BrowserRouter>
+    </>
   );
 };
 
