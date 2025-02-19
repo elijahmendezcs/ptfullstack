@@ -68,7 +68,7 @@ const BWPage1 = () => {
   };
 
   return (
-    <Card className="w-full p-4 md:p-8 bg-white mt-[70px] border-white border-0">
+    <Card className="w-full p-4 md:p-8 bg-white mt-[70px] mb-[70px] border-white border-0">
       <div className="flex flex-col md:flex-row gap-6">
         {/* Image section */}
         <div className="flex-1 max-h-[60vh] overflow-hidden">

@@ -35,7 +35,7 @@ const BWPage1 = () => {
         return;
       }
 
-      // Build the key for the priceIds object, e.g., "A1_8x10"
+      // Build the key for the priceIds object, e.g., "BW1_8x10"
       const priceKey = `BW1_${selectedSize}`;
 
       // Use the environment variable for the backend URL, with a local fallback
@@ -66,7 +66,7 @@ const BWPage1 = () => {
   };
 
   return (
-    <Card className="w-full p-4 md:p-8 bg-white mt-[70px] border-white border-0">
+    <Card className="w-full p-4 md:p-8 bg-white mt-[70px] mb-[70px] border-white border-0">
       <div className="flex flex-col md:flex-row gap-6">
         {/* Image section */}
         <div className="flex-1 max-h-[60vh] overflow-hidden">
@@ -78,7 +78,9 @@ const BWPage1 = () => {
         </div>
 
         {/* Content section */}
-        <div className="flex-1 flex flex-col justify-between">
+        {/* On mobile, we let the content stack naturally.
+            On larger screens, we space out the content & footer */}
+        <div className="flex-1 flex flex-col md:justify-between">
           <div>
             <CardHeader className="p-0">
               <CardTitle className="text-2xl md:text-3xl font-cormorant italic mb-2">
@@ -145,7 +147,7 @@ const BWPage1 = () => {
             </CardContent>
           </div>
 
-          {/* Footer (Buy Now) at the bottom */}
+          {/* Footer (Buy Now) */}
           <CardFooter className="p-0 mt-4">
             <Button
               onClick={handleBuyNow}
