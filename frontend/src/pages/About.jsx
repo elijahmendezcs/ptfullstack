@@ -152,7 +152,7 @@ const About = () => {
         <Box
           component="img"
           // Reference the image in public folder
-          src="/images/MainImages/bio.jpg"
+          src="/images/MainImages/bio1.jpg"
           alt="Bio"
           sx={{
             width: { xs: "90%", sm: "70%", md: "500px" },

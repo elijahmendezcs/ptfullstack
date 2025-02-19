@@ -53,7 +53,7 @@ export default function BW7() {
       <CardMedia
         component="img"
         // 4) Reference the image from the public folder:
-        image="/images/Architecture/arch1.jpg"
+        image="/images/Architecture/arch7.jpg"
         alt="Black and White Print"
         // You can still set width/height
         sx={{ width: 400, height: 300 }}
@@ -105,7 +105,7 @@ export default function BW7() {
               fontSize: 16,
             }}
           >
-            Buy Now
+            Pricing
           </Button>
         </Link>
       </CardActions>

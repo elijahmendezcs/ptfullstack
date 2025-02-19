@@ -105,7 +105,7 @@ export default function BW7() {
               fontSize: 16,
             }}
           >
-            Buy Now
+            Pricing
           </Button>
         </Link>
       </CardActions>
