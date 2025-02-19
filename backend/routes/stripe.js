@@ -5,6 +5,8 @@ const Stripe = require("stripe");
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
+const frontendUrl = process.env.FRONTEND_URL || "http://localhost:5173";
+
 router.post("/create-checkout-session", async (req, res) => {
   try {
     const { priceId, quantity } = req.body;
@@ -58,8 +60,8 @@ router.post("/create-checkout-session", async (req, res) => {
         },
       ],
       // Post-checkout success & cancel URLs
-      success_url: "http://localhost:5173/thankyou",
-      cancel_url: "http://localhost:5173/cancel",
+      success_url: `${frontendUrl}/thankyou`,
+      cancel_url: `${frontendUrl}/cancel`,
     });
 
     // Send the Checkout Session URL back to client

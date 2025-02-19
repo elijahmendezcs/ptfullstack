@@ -226,7 +226,7 @@ const About = () => {
             color: "#888",
           }}
         >
-          luxecreativestudio@gmail.com
+          luxecreativestudiophoto@gmail.com
           <br />
           Or fill out the form below
         </Typography>
