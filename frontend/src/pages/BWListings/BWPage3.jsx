@@ -39,7 +39,7 @@ const BWPage1 = () => {
       }
 
       // Build the key for the priceIds object, e.g. "BW1_8x10"
-      const priceKey = `A1_${selectedSize}`;
+      const priceKey = `BW3_${selectedSize}`;
 
       // Make the request to your Express Stripe route
       const apiUrl = import.meta.env.VITE_API_URL || "http://localhost:3000";

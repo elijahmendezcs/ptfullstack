@@ -39,7 +39,7 @@ const BWPage1 = () => {
       }
 
       // Build the key for the priceIds object, e.g. "BW1_8x10"
-      const priceKey = `A1_${selectedSize}`;
+      const priceKey = `BW2_${selectedSize}`;
 
       // Make the request to your Express Stripe route
 
