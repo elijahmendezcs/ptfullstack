@@ -1,5 +1,4 @@
-// src/pages/BWPage1.jsx
-import React, { useState } from "react";
+ import React, { useState } from "react";
 import { priceIds } from "../../lib/priceIds"; // <-- adjust path if needed
 
 import { Button } from "@/components/ui/button";

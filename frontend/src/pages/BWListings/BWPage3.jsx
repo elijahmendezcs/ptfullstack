@@ -1,4 +1,3 @@
-// src/pages/BWPage1.jsx
 import React, { useState } from "react";
 import { priceIds } from "../../lib/priceIds"; // <-- adjust path if needed
 
