@@ -71,7 +71,7 @@ export default function BW7() {
             fontSize: 22,
           }}
         >
-          Muse
+          Tschumy Building 
         </Typography>
         <Typography
           align="center"

@@ -84,7 +84,7 @@ const BWPage1 = () => {
           <div>
             <CardHeader className="p-0">
               <CardTitle className="text-2xl md:text-3xl font-cormorant italic mb-2">
-                Muse
+              Tschumy Building 
               </CardTitle>
               <CardDescription className="text-base md:text-lg font-cormorant">
                 8x10: $25.00 | 11x14: $35.00 | 16x20: $45.00
