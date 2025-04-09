@@ -32,6 +32,7 @@ import ArchPage9 from "./pages/ArchListings/ArchPage9";
 import ThankYou from "./pages/ThankYou";
 import Cancel from "./pages/Cancel";
 import Architecture from "./pages/Architecture";
+import { Analytics } from "@vercel/analytics/react";
 
 // 1) Import Helmet
 import { Helmet } from "react-helmet";
@@ -95,6 +96,7 @@ const App = () => {
         <Navbar />
         <AnimatedRoutes />
         <Footer />
+        <Analytics />
       </BrowserRouter>
     </>
   );
